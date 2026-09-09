@@ -1,220 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>PARADOX — Links</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="PARADOX — 100% AI generated cinematic film and stills. Commissions, exclusives, merch.">
+<title>PARADOX — Choose your world</title>
+<meta name="description" content="Enter the Paradox Universe. Original AI films, private creative commissions, Subject 8 exclusives and objects from the archive.">
 <meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#050506">
+<meta name="theme-color" content="#080a0b">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PARADOX">
-<meta property="og:title" content="PARADOX — Links">
-<meta property="og:description" content="100% AI generated cinematic film and stills.">
-<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:title" content="PARADOX — Choose your world">
+<meta property="og:description" content="Human imagination. Artificial worlds. Find your way into Paradox.">
+<link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="analytics.js" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="subject-8-portal.jpg">
 <style>
-  :root{
-    --bg:#050506; --ink:#C9D0D8; --ink-dim:#7C8592; --line:#1C2027;
-    --card:#0C0E12; --card-hi:#141821; --accent:#E8ECF1;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-    font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
-  body{min-height:100dvh;display:flex;flex-direction:column;align-items:center;
-    padding:44px 20px 40px}
-  .wrap{width:100%;max-width:520px;display:flex;flex-direction:column;gap:26px}
-
-  header{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-
-  /* The real wordmark is a photograph of brushed chrome on textured black - it has no
-     alpha channel. `mix-blend-mode: screen` is what dissolves it: screening against a
-     near-black page leaves the dark ground at roughly its own value (invisible) while
-     the bright chrome survives intact. The radial mask then feathers all four edges so
-     the photograph has no rectangle. No isolation on the wrapper - the blend has to
-     reach the page background to work. */
-  .markwrap{width:100%;display:grid;place-items:center;margin:0;padding:2px 0 0}
-  .mark{display:block;width:min(98%,430px);height:auto;
-    mix-blend-mode:screen;
-    -webkit-mask-image:radial-gradient(ellipse 68% 58% at 50% 50%,
-      #000 42%, rgba(0,0,0,.72) 66%, rgba(0,0,0,0) 100%);
-    mask-image:radial-gradient(ellipse 68% 58% at 50% 50%,
-      #000 42%, rgba(0,0,0,.72) 66%, rgba(0,0,0,0) 100%)}
-  /* Safari/older engines that ignore mix-blend-mode still get a usable mark. */
-  @supports not (mix-blend-mode:screen){ .mark{opacity:.96} }
-
-  .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin:0}
-  .lede{font-size:14.5px;line-height:1.6;color:var(--ink);margin:2px 0 0;max-width:400px}
-
-  .group{display:flex;flex-direction:column;gap:11px}
-  .glabel{font-family:'Chakra Petch',sans-serif;font-size:10.5px;letter-spacing:.24em;
-    text-transform:uppercase;color:var(--ink-dim);margin:6px 0 -3px 2px}
-
-  a.card{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);
-    background:var(--card);border:1px solid var(--line);border-radius:12px;
-    padding:16px 18px;min-height:64px;transition:background .16s ease,border-color .16s ease,transform .16s ease}
-  a.card:hover,a.card:focus-visible{background:var(--card-hi);border-color:#2C3340;transform:translateY(-1px)}
-  a.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  a.card.primary{background:linear-gradient(180deg,#171B23 0%,#0F1218 100%);border-color:#333B4A}
-  a.card.primary .t{color:#fff}
-
-  .ico{flex:0 0 auto;width:26px;height:26px;display:grid;place-items:center;color:var(--ink-dim)}
-  .ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;
-    stroke-linecap:round;stroke-linejoin:round}
-  .txt{flex:1 1 auto;min-width:0}
-  .t{display:block;font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:15px;
-    letter-spacing:.05em;text-transform:uppercase;color:var(--accent);line-height:1.25}
-  .s{display:block;font-size:12.5px;line-height:1.45;color:var(--ink-dim);margin-top:3px}
-  .chev{flex:0 0 auto;color:#39414F}
-  .chev svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;
-    stroke-linecap:round;stroke-linejoin:round}
-
-  /* Discount code sits where the chevron would, and copies on tap. */
-  .code{flex:0 0 auto;font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:12px;
-    letter-spacing:.12em;color:var(--accent);background:#1B212B;border:1px solid #333B4A;
-    border-radius:7px;padding:7px 10px;cursor:pointer;user-select:all;white-space:nowrap;
-    transition:background .16s,color .16s}
-  .code:hover{background:#242C39}
-  .code.copied{background:#20302A;border-color:#3A5A48;color:#9FD9B8}
-
-  .social{display:flex;justify-content:center;gap:14px;margin-top:2px}
-  .social a{width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--line);
-    border-radius:11px;color:var(--ink-dim);background:var(--card);transition:color .16s,border-color .16s}
-  .social a:hover{color:var(--accent);border-color:#2C3340}
-  .social svg{width:20px;height:20px;fill:currentColor}
-
-  footer{text-align:center;display:flex;flex-direction:column;gap:9px;margin-top:4px}
-  .disc{font-size:11.5px;line-height:1.6;color:#5D6673;margin:0}
-  .disc a{color:#7C8592}
-  .rule{height:1px;background:var(--line);width:100%;margin:2px 0}
-
-  @media (max-width:380px){
-    a.card{padding:14px 15px;gap:12px;min-height:60px}
-    .t{font-size:14px}
-  }
+:root{color-scheme:dark;--bg:#080a0b;--ink:#eceeea;--muted:#a2aaa9;--line:#ffffff26;--ice:#d5e0de;font-family:'DM Sans',Arial,sans-serif;font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}button,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid #c6e5e8;outline-offset:6px}img{display:block;max-width:100%}h1,h2,p{margin:0}em{font-family:'Instrument Serif',Georgia,serif;font-weight:400}::selection{background:var(--ice);color:var(--bg)}.eyebrow{font-size:10px;font-weight:500;letter-spacing:.15em;text-transform:uppercase}.skip{position:fixed;top:12px;left:12px;z-index:100;background:var(--ice);color:#111;padding:12px;transform:translateY(-180%)}.skip:focus{transform:none}
+.page{max-width:1180px;margin:auto;padding:34px 38px 100px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:30px}.wordmark{width:170px;height:30px;object-fit:contain}.location{color:var(--muted);display:flex;align-items:center;gap:10px}.dot{width:5px;height:5px;background:#c6e2df;border-radius:50%;box-shadow:0 0 12px #c6e2df40}
+.universe{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:66px;align-items:start}.portal{position:sticky;top:28px;min-height:660px;height:min(740px,calc(100svh - 56px));overflow:hidden;background:#10272d}.portal-image{position:absolute;inset:-35px -12px;will-change:transform}.portal-image img{height:100%;width:100%;object-fit:cover;object-position:50% 40%}.portal:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#080a0bf5, #080a0b35 48%,#080a0b00 73%),linear-gradient(90deg,#080a0b35,transparent)}.portal-top{position:absolute;top:28px;left:28px;right:28px;display:flex;justify-content:space-between;z-index:1;color:#d4e2e2}.portal-copy{position:absolute;z-index:1;bottom:42px;left:34px;right:24px;will-change:transform}.portal-copy h1{font-size:clamp(48px,5vw,67px);font-weight:450;letter-spacing:-.065em;line-height:.98}.portal-copy h1 em{font-size:1.5em;line-height:.88;letter-spacing:-.055em}.portal-copy p{font-size:14px;color:#c1cfce;margin-top:25px;max-width:240px}.portal-link{display:inline-flex;align-items:center;gap:28px;margin-top:25px;font-size:13px;border-bottom:1px solid #ffffff65;padding:0 0 8px}.portal-link span{font-size:20px}.motion{position:absolute;z-index:2;top:61px;right:22px;border:1px solid #ffffff32;background:#080a0b55;border-radius:50px;padding:7px 11px;font-size:10px;backdrop-filter:blur(8px)}
+.destinations{padding-top:9px}.intro-label{color:var(--muted);margin-bottom:13px}.destinations h2{font-size:38px;line-height:1.12;letter-spacing:-.035em;font-weight:450}.destinations h2 em{font-size:1.2em}.lead{color:var(--muted);font-size:14px;margin:17px 0 28px;max-width:340px}.commission{display:block;padding:25px 27px;background:var(--ice);color:#102022;transition:background .25s,transform .25s}.commission:hover{background:#e5edeb;transform:translateY(-3px)}.commission .eyebrow{color:#4c6669}.commission-main{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:15px 0 10px}.commission .t{font-size:27px;letter-spacing:-.045em}.arrow{font-size:25px;font-weight:400;transition:transform .25s;flex-shrink:0}.commission:hover .arrow,.destination:hover .arrow{transform:translate(3px,-3px)}.commission p{font-size:13px;line-height:1.7;color:#496065;max-width:300px}
+.group{margin-top:34px}.group-title{color:var(--muted);padding-bottom:9px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.destination{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:20px 0;border-bottom:1px solid var(--line)}.destination .t{font-size:18px;font-weight:450;letter-spacing:-.025em;display:block}.destination p{font-size:12px;line-height:1.65;color:var(--muted);margin-top:5px;max-width:340px}.destination .arrow{color:#a9bdbe;font-size:22px}.destination:hover .t{color:#d2e8eb}.tools .destination{padding:17px 0}.tools .t{font-size:16px}.tools .destination p{font-size:11px}.runway{display:grid;grid-template-columns:1fr auto;gap:15px;align-items:center;border-bottom:1px solid var(--line)}.runway .destination{border:0}.copy-code{border:1px solid #637679;border-radius:2px;background:transparent;padding:10px 11px;font-size:10px;letter-spacing:.08em;min-width:104px}.copy-code:hover{background:#1b272b}.code-status{font-size:11px;color:#bbd6d6;min-height:0}.code-status:not(:empty){padding-top:10px}
+.footer{display:grid;grid-template-columns:1fr 1fr;gap:66px;padding-top:35px;margin-top:35px;border-top:1px solid var(--line)}.signature{font-size:20px;line-height:1.4;letter-spacing:-.035em}.signature em{font-size:29px;color:#b6c8c8}.socials{display:flex;gap:24px;margin-bottom:18px;font-size:12px}.socials a:hover{text-decoration:underline}.disclosure{font-size:10px;line-height:1.8;color:#8b9797;max-width:430px}.legal{display:flex;flex-wrap:wrap;gap:15px;font-size:10px;color:#9aaaaa;margin-top:15px}.legal a:hover{color:white}.copyright{color:#667777;margin-top:18px;font-size:10px}.footer-left .eyebrow{color:#7f9192;margin-top:17px}
+[aria-label="Cookie choices"]{background:#101718!important;border-color:#ffffff26!important;font-family:'DM Sans',Arial,sans-serif!important;color:#c3d0d0!important}[aria-label="Cookie choices"] button{font-family:'DM Sans',Arial,sans-serif!important;letter-spacing:.04em!important;border-radius:2px!important;min-height:38px}
+@media(min-width:1600px){.page{padding-top:45px}.universe{gap:76px}.portal{height:760px}}
+@media(max-width:900px){.page{padding:25px 26px 100px}.universe,.footer{gap:35px}.portal-copy{left:25px}.portal-copy h1{font-size:45px}.commission{padding:22px}.commission .t{font-size:24px}.destination p{max-width:260px}.portal-top{left:22px;right:22px;font-size:9px}}
+@media(max-width:650px){.page{padding:22px 22px 100px;max-width:540px}.masthead{padding-bottom:22px}.wordmark{width:143px;height:26px}.location{font-size:8px;letter-spacing:.08em;gap:7px}.universe{grid-template-columns:1fr;gap:30px}.portal{position:relative;top:0;height:390px;min-height:0;margin:0 -22px}.portal-image{inset:-30px -4px}.portal-image img{object-position:50% 41%}.portal:after{background:linear-gradient(0deg,#080a0b, #080a0b18 63%)}.portal-copy{left:25px;bottom:24px}.portal-copy h1{font-size:44px}.portal-copy h1 em{font-size:1.55em}.portal-copy p{font-size:12px;max-width:220px;margin-top:17px}.portal-link{margin-top:19px;font-size:12px;gap:28px}.portal-top{top:22px}.motion{top:48px;right:19px;font-size:9px}.destinations{padding-top:0}.destinations h2{font-size:32px}.intro-label{font-size:9px;margin-bottom:9px}.lead{font-size:13px;margin:12px 0 22px}.commission{padding:24px}.commission .t{font-size:27px}.commission p{font-size:12px}.group{margin-top:29px}.destination{padding:21px 0}.destination .t{font-size:18px}.destination p{max-width:300px}.footer{grid-template-columns:1fr;gap:27px;padding-top:27px;margin-top:29px}.footer-left{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}.footer-left .eyebrow{text-align:right;font-size:8px}.signature{font-size:19px}.signature em{font-size:26px}.disclosure{font-size:10px}.socials{margin-bottom:15px}}
+@media(max-width:360px){.page{padding-left:18px;padding-right:18px}.portal{margin-left:-18px;margin-right:-18px}.location{max-width:100px}.portal-copy h1{font-size:39px}.commission .t{font-size:24px}.copy-code{min-width:93px;padding:10px 8px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.portal-image,.portal-copy{transform:none!important;will-change:auto}.motion{display:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
-
-  <header>
-    <h1 class="markwrap">
-      <img class="mark" src="paradox-logo-mark.jpg" alt="PARADOX" width="1400" height="485" fetchpriority="high">
-    </h1>
-    <p class="tag">100% AI Generated · US Based</p>
-    <p class="lede">Cinematic film and stills that never went through a camera. No crews, no locations, no reshoots.</p>
-  </header>
-
-  <div class="group">
-    <p class="glabel">Work with me</p>
-
-    <a class="card primary" href="https://paradox-ai-creatives.netlify.app/?utm_source=bio&utm_medium=social&utm_campaign=linkinbio&utm_content=hire">
-      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h18v13H3z"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
-      <span class="txt">
-        <span class="t">Hire Paradox</span>
-        <span class="s">Explore the Paradox Universe and tell us about your project. Private quotes on enquiry.</span>
-      </span>
-      <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
-    </a>
-
-  </div>
-
-  <div class="group">
-    <p class="glabel">Exclusives</p>
-
-    <a class="card primary" href="https://www.facebook.com/profile.php?id=61584315545609">
-      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.4-2.9 8.2-7 9-4.1-.8-7-4.6-7-9V7z"/><path d="M9.5 12l1.8 1.8 3.4-3.4"/></svg></span>
-      <span class="txt">
-        <span class="t">Subject 8 — Subscriber Access</span>
-        <span class="s">Exclusive stills in worlds that never hit the feed. Sometimes a clip that exists nowhere else</span>
-      </span>
-      <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
-    </a>
-
-    <a class="card" href="https://paradox-ai.printify.me/">
-      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 7h12l1.4 12.2a1 1 0 0 1-1 1.1H5.6a1 1 0 0 1-1-1.1z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg></span>
-      <span class="txt">
-        <span class="t">Merch</span>
-        <span class="s">Prints, apparel and cases from the archive</span>
-      </span>
-      <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
-    </a>
-
-  </div>
-
-  <div class="group">
-    <p class="glabel">The tools I actually use</p>
-
-    <a class="card" href="https://tolt.link/paradox_ai_creatives" rel="sponsored nofollow">
-      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg></span>
-      <span class="txt">
-        <span class="t">OpenArt</span>
-        <span class="s">Where every frame starts. Affiliate link — I earn a commission</span>
-      </span>
-      <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
-    </a>
-
-    <!-- Runway is a CODE-based affiliate programme, not a tracked link: $15 per new
-         subscriber, 25% off for them. So the card leads with the discount, not the link. -->
-    <a class="card" href="https://runway.com/" rel="sponsored nofollow" id="rw">
-      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
-      <span class="txt">
-        <span class="t">Runway — 25% off</span>
-        <span class="s">Motion and finishing. Use my code at checkout · I earn a commission</span>
-      </span>
-      <span class="code" id="rwcode" role="button" tabindex="0" aria-label="Copy discount code PARADOX25">PARADOX25</span>
-    </a>
-  </div>
-
-  <div class="social">
-    <a href="https://www.instagram.com/paradox_ai_creatives/" aria-label="Instagram">
-      <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.68.8.9 1.4.17.4.36 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.22.6-.5 1-.9 1.4-.4.4-.8.68-1.4.9-.4.17-1 .36-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.22-1-.5-1.4-.9-.4-.4-.68-.8-.9-1.4-.17-.4-.36-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.22-.6.5-1 .9-1.4.4-.4.8-.68 1.4-.9.4-.17 1-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2m0 2c-3.1 0-3.5 0-4.7.07-.9.04-1.4.2-1.7.32-.43.17-.74.37-1.06.7-.32.31-.52.62-.7 1.05-.12.3-.28.8-.32 1.7C3.45 9.3 3.44 9.7 3.44 12s0 2.7.08 3.9c.04.9.2 1.4.32 1.7.18.43.38.74.7 1.06.32.32.63.52 1.06.7.3.12.8.28 1.7.32 1.2.06 1.6.07 4.7.07s3.5 0 4.7-.07c.9-.04 1.4-.2 1.7-.32.43-.18.74-.38 1.06-.7.32-.32.52-.63.7-1.06.12-.3.28-.8.32-1.7.06-1.2.07-1.6.07-3.9s0-2.7-.07-3.9c-.04-.9-.2-1.4-.32-1.7-.18-.43-.38-.74-.7-1.06-.32-.32-.63-.52-1.06-.7-.3-.12-.8-.28-1.7-.32-1.2-.06-1.6-.07-4.7-.07m0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8m0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8m5.7-3.6a1.26 1.26 0 1 1 0 2.52 1.26 1.26 0 0 1 0-2.52"/></svg>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61584315545609" aria-label="Facebook">
-      <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12"/></svg>
-    </a>
-  </div>
-
-  <footer>
-    <div class="rule"></div>
-    <p class="disc">Every image and clip is 100% AI generated synthetic media — not photographs of real people, places or events.</p>
-    <p class="disc">Some links above are affiliate links. If you sign up through them I earn a commission, at no extra cost to you.</p>
-    <p class="disc"><a href="https://paradox-ai-creatives.netlify.app/terms.html">Terms</a> · <a href="https://paradox-ai-creatives.netlify.app/privacy.html">Privacy</a> · <a href="https://paradox-ai-creatives.netlify.app/ai-disclosure.html">AI Disclosure</a></p>
-  </footer>
-
+<a class="skip" href="#destinations">Skip to links</a>
+<div class="page">
+<header class="masthead"><a href="https://paradox-ai-creatives.pages.dev/?utm_source=bio&utm_medium=social&utm_campaign=linkinbio&utm_content=logo" aria-label="Paradox website"><img class="wordmark" src="paradox-wordmark.png" alt="PARADOX" width="181" height="32"></a><span class="eyebrow location"><i class="dot" aria-hidden="true"></i> US based · Worldwide</span></header>
+<main class="universe">
+<section class="portal" aria-labelledby="portal-title"><div class="portal-image"><img src="subject-8-portal.jpg" alt="Subject 8, the blue alien at the heart of the Paradox Universe" width="720" height="1280" fetchpriority="high"></div><div class="portal-top eyebrow"><span>The Paradox Universe</span><span>001 / Arrival</span></div><button class="motion" type="button" aria-pressed="false" hidden>Pause motion</button><div class="portal-copy"><h1 id="portal-title">SOMEWHERE<br><em>beyond.</em></h1><p>Original worlds. Unfamiliar faces.<br>A different visual language.</p><a class="portal-link" href="https://paradox-ai-creatives.pages.dev/?utm_source=bio&utm_medium=social&utm_campaign=linkinbio&utm_content=universe">Enter the universe <span aria-hidden="true">↗</span></a></div></section>
+<section class="destinations" id="destinations" aria-labelledby="links-title"><p class="eyebrow intro-label">Independent AI film & image studio</p><h2 id="links-title">Follow your<br><em>imagination.</em></h2><p class="lead">Explore the work. Go a little deeper.<br>Or bring a world of your own.</p>
+<a class="commission" href="https://paradox-ai-creatives.pages.dev/?utm_source=bio&utm_medium=social&utm_campaign=linkinbio&utm_content=hire"><span class="eyebrow">Your next world starts here</span><div class="commission-main"><span class="t">Start a project</span><span class="arrow" aria-hidden="true">↗</span></div><p>Films, imagery and impossible ideas.<br>Private quotes on enquiry.</p></a>
+<div class="group"><div class="group-title eyebrow"><span>More of the universe</span><span>01 — 02</span></div><a class="destination" href="https://www.facebook.com/profile.php?id=61584315545609"><div><span class="t">Subject 8 / Beyond the feed</span><p>Subscriber access to exclusive stills and occasional films from unseen worlds.</p></div><span class="arrow" aria-hidden="true">↗</span></a><a class="destination" href="https://paradox-ai.printify.me/"><div><span class="t">A piece of Paradox</span><p>Shop prints, apparel and cases from the archive.</p></div><span class="arrow" aria-hidden="true">↗</span></a></div>
+<div class="group tools"><div class="group-title eyebrow"><span>The tools behind the worlds</span><span>03 — 04</span></div><a class="destination" href="https://tolt.link/paradox_ai_creatives" rel="sponsored nofollow"><div><span class="t">OpenArt</span><p>Where every frame starts.<br>Affiliate link · I earn a commission.</p></div><span class="arrow" aria-hidden="true">↗</span></a><div class="runway"><a class="destination" href="https://runway.com/" rel="sponsored nofollow"><div><span class="t">Runway / 25% off</span><p>Motion and finishing. Use the code at checkout.<br>Affiliate offer · I earn a commission.</p></div><span class="arrow" aria-hidden="true">↗</span></a><button class="copy-code" type="button" aria-label="Copy discount code PARADOX25">PARADOX25</button></div><p class="code-status" role="status" aria-live="polite"></p></div>
+</section>
+</main>
+<footer class="footer"><div class="footer-left"><p class="signature">Human imagination.<br><em>Artificial worlds.</em></p><p class="eyebrow">100% AI-generated<br>Human-directed</p></div><div><nav class="socials" aria-label="Social profiles"><a href="https://www.instagram.com/paradox_ai_creatives/">Instagram ↗</a><a href="https://www.facebook.com/profile.php?id=61584315545609">Facebook ↗</a></nav><p class="disclosure">Every image and film is AI-generated synthetic media. Affiliate links may earn a commission, at no extra cost to you.</p><nav class="legal" aria-label="Legal"><a href="https://paradox-ai-creatives.pages.dev/terms.html">Terms</a><a href="https://paradox-ai-creatives.pages.dev/privacy.html">Privacy</a><a href="https://paradox-ai-creatives.pages.dev/ai-disclosure.html">AI disclosure</a></nav><p class="copyright">© PARADOX 2026</p></div></footer>
 </div>
-
 <script>
-// Tapping the code copies it instead of following the card's link - people lose the
-// code the moment they land on runway.com otherwise. Falls back to just opening the
-// site if the clipboard is unavailable (older browsers, insecure contexts).
-(function () {
-  var el = document.getElementById('rwcode');
-  if (!el) return;
-  function copy(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var done = function () {
-      el.classList.add('copied');
-      var was = el.textContent;
-      el.textContent = 'COPIED';
-      setTimeout(function () { el.textContent = was; el.classList.remove('copied'); }, 1400);
-    };
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText('PARADOX25').then(done, function () {});
-        return;
-      }
-    } catch (err) { /* fall through - the code is still selectable by hand */ }
-    done();
+(() => {
+  'use strict';
+  if (['ridetheparadox.github.io','paradox-ai-creatives.pages.dev'].includes(location.hostname)) {
+    const analytics = document.createElement('script');
+    analytics.src = 'analytics.js'; analytics.defer = true;
+    document.head.appendChild(analytics);
   }
-  el.addEventListener('click', copy);
-  el.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') copy(e);
+  const copy = document.querySelector('.copy-code');
+  const status = document.querySelector('.code-status');
+  let copyTimer;
+  copy.addEventListener('click', async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText('PARADOX25');
+      copy.textContent = 'COPIED'; status.textContent = 'Discount code copied.';
+    } catch { status.textContent = 'Your discount code is PARADOX25. Copy it when you visit Runway.'; }
+    clearTimeout(copyTimer);
+    copyTimer = setTimeout(() => { copy.textContent = 'PARADOX25'; status.textContent = ''; }, 5000);
   });
+  const portal = document.querySelector('.portal');
+  const image = document.querySelector('.portal-image');
+  const words = document.querySelector('.portal-copy');
+  const toggle = document.querySelector('.motion');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = false, frame = 0, current = 0;
+  toggle.hidden = reduced.matches;
+  const target = () => {
+    if (paused || reduced.matches || document.hidden) return 0;
+    const r = portal.getBoundingClientRect();
+    return r.bottom > 0 && r.top < innerHeight ? Math.min(scrollY, 750) : 0;
+  };
+  function tick() {
+    const goal = target(); current += (goal-current)*.085;
+    if (Math.abs(goal-current) < .1) current = goal;
+    image.style.transform = `translateY(${current*.035}px)`;
+    words.style.transform = `translateY(${-current*.014}px)`;
+    frame = Math.abs(goal-current) > .1 ? requestAnimationFrame(tick) : 0;
+  }
+  function update() { if (!frame) frame = requestAnimationFrame(tick); }
+  function reset() {
+    cancelAnimationFrame(frame); frame = 0; current = 0;
+    image.style.transform = ''; words.style.transform = '';
+    toggle.hidden = reduced.matches;
+    if (!paused && !reduced.matches && !document.hidden) update();
+  }
+  toggle.addEventListener('click', () => {
+    paused = !paused; toggle.setAttribute('aria-pressed', String(paused));
+    toggle.textContent = paused ? 'Resume motion' : 'Pause motion'; reset();
+  });
+  addEventListener('scroll', update, {passive:true});
+  addEventListener('resize', update, {passive:true});
+  document.addEventListener('visibilitychange', reset);
+  reduced.addEventListener('change', reset);
 })();
 </script>
 </body>
