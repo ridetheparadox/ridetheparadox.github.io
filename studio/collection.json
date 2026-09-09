@@ -1,0 +1,560 @@
+[
+  {
+    "src": "clips/subject-3-desert.mp4",
+    "poster": "posters/subject-3-desert.jpg",
+    "title": "Subject 3 Desert",
+    "number": "01"
+  },
+  {
+    "src": "clips/subject-5.mp4",
+    "poster": "posters/subject-5.jpg",
+    "title": "Subject 5",
+    "number": "02"
+  },
+  {
+    "src": "clips/subject-6-desert.mp4",
+    "poster": "posters/subject-6-desert.jpg",
+    "title": "Subject 6 Desert",
+    "number": "03"
+  },
+  {
+    "src": "clips/subject-7.mp4",
+    "poster": "posters/subject-7.jpg",
+    "title": "Subject 7",
+    "number": "04"
+  },
+  {
+    "src": "clips/subject-8-desert.mp4",
+    "poster": "posters/subject-8-desert.jpg",
+    "title": "Subject 8 Desert",
+    "number": "05"
+  },
+  {
+    "src": "clips/subject-9-88.mp4",
+    "poster": "posters/subject-9-88.jpg",
+    "title": "Subject 9 88",
+    "number": "06"
+  },
+  {
+    "src": "clips/ride-the-paradox-2d-i.mp4",
+    "poster": "posters/ride-the-paradox-2d-i.jpg",
+    "title": "Ride The Paradox 2D I",
+    "number": "07"
+  },
+  {
+    "src": "clips/ride-the-paradox-2d-ii.mp4",
+    "poster": "posters/ride-the-paradox-2d-ii.jpg",
+    "title": "Ride The Paradox 2D Ii",
+    "number": "08"
+  },
+  {
+    "src": "clips/master-sequence-i.mp4",
+    "poster": "posters/master-sequence-i.jpg",
+    "title": "Master Sequence I",
+    "number": "09"
+  },
+  {
+    "src": "clips/master-sequence-ii.mp4",
+    "poster": "posters/master-sequence-ii.jpg",
+    "title": "Master Sequence Ii",
+    "number": "10"
+  },
+  {
+    "src": "clips/master-sequence-iii.mp4",
+    "poster": "posters/master-sequence-iii.jpg",
+    "title": "Master Sequence Iii",
+    "number": "11"
+  },
+  {
+    "src": "clips/master-sequence-iv.mp4",
+    "poster": "posters/master-sequence-iv.jpg",
+    "title": "Master Sequence Iv",
+    "number": "12"
+  },
+  {
+    "src": "clips/master-sequence-v.mp4",
+    "poster": "posters/master-sequence-v.jpg",
+    "title": "Master Sequence V",
+    "number": "13"
+  },
+  {
+    "src": "clips/master-sequence-vi.mp4",
+    "poster": "posters/master-sequence-vi.jpg",
+    "title": "Master Sequence Vi",
+    "number": "14"
+  },
+  {
+    "src": "clips/master-sequence-vii.mp4",
+    "poster": "posters/master-sequence-vii.jpg",
+    "title": "Master Sequence Vii",
+    "number": "15"
+  },
+  {
+    "src": "clips/master-sequence-viii.mp4",
+    "poster": "posters/master-sequence-viii.jpg",
+    "title": "Master Sequence Viii",
+    "number": "16"
+  },
+  {
+    "src": "clips/cinematic-study.mp4",
+    "poster": "posters/cinematic-study.jpg",
+    "title": "Cinematic Study",
+    "number": "17"
+  },
+  {
+    "src": "clips/subject-7-90.mp4",
+    "poster": "posters/subject-7-90.jpg",
+    "title": "Subject 7 90",
+    "number": "18"
+  },
+  {
+    "src": "clips/subject-87-6.mp4",
+    "poster": "posters/subject-87-6.jpg",
+    "title": "Subject 87 6",
+    "number": "19"
+  },
+  {
+    "src": "clips/subject-90.mp4",
+    "poster": "posters/subject-90.jpg",
+    "title": "Subject 90",
+    "number": "20"
+  },
+  {
+    "src": "clips/video-4k.mp4",
+    "poster": "posters/video-4k.jpg",
+    "title": "Video 4K",
+    "number": "21"
+  },
+  {
+    "src": "clips/resolution-study-i.mp4",
+    "poster": "posters/resolution-study-i.jpg",
+    "title": "Resolution Study I",
+    "number": "22"
+  },
+  {
+    "src": "clips/resolution-study-ii.mp4",
+    "poster": "posters/resolution-study-ii.jpg",
+    "title": "Resolution Study Ii",
+    "number": "23"
+  },
+  {
+    "src": "clips/resolution-study-iii.mp4",
+    "poster": "posters/resolution-study-iii.jpg",
+    "title": "Resolution Study Iii",
+    "number": "24"
+  },
+  {
+    "src": "clips/anime-constraints.mp4",
+    "poster": "posters/anime-constraints.jpg",
+    "title": "Anime Constraints",
+    "number": "25"
+  },
+  {
+    "src": "clips/arri-alexa-65.mp4",
+    "poster": "posters/arri-alexa-65.jpg",
+    "title": "Arri Alexa 65",
+    "number": "26"
+  },
+  {
+    "src": "clips/hasselblad-h6d.mp4",
+    "poster": "posters/hasselblad-h6d.jpg",
+    "title": "Hasselblad H6D",
+    "number": "27"
+  },
+  {
+    "src": "clips/summicron-i.mp4",
+    "poster": "posters/summicron-i.jpg",
+    "title": "Summicron I",
+    "number": "28"
+  },
+  {
+    "src": "clips/summicron-ii.mp4",
+    "poster": "posters/summicron-ii.jpg",
+    "title": "Summicron Ii",
+    "number": "29"
+  },
+  {
+    "src": "clips/summicron-iii.mp4",
+    "poster": "posters/summicron-iii.jpg",
+    "title": "Summicron Iii",
+    "number": "30"
+  },
+  {
+    "src": "clips/sequence-01.mp4",
+    "poster": "posters/sequence-01.jpg",
+    "title": "Sequence 01",
+    "number": "31"
+  },
+  {
+    "src": "clips/sequence-02.mp4",
+    "poster": "posters/sequence-02.jpg",
+    "title": "Sequence 02",
+    "number": "32"
+  },
+  {
+    "src": "clips/sequence-03.mp4",
+    "poster": "posters/sequence-03.jpg",
+    "title": "Sequence 03",
+    "number": "33"
+  },
+  {
+    "src": "clips/sequence-04.mp4",
+    "poster": "posters/sequence-04.jpg",
+    "title": "Sequence 04",
+    "number": "34"
+  },
+  {
+    "src": "clips/sequence-05.mp4",
+    "poster": "posters/sequence-05.jpg",
+    "title": "Sequence 05",
+    "number": "35"
+  },
+  {
+    "src": "clips/sequence-06.mp4",
+    "poster": "posters/sequence-06.jpg",
+    "title": "Sequence 06",
+    "number": "36"
+  },
+  {
+    "src": "clips/sequence-07.mp4",
+    "poster": "posters/sequence-07.jpg",
+    "title": "Sequence 07",
+    "number": "37"
+  },
+  {
+    "src": "clips/sequence-08.mp4",
+    "poster": "posters/sequence-08.jpg",
+    "title": "Sequence 08",
+    "number": "38"
+  },
+  {
+    "src": "clips/shot-0000-0004.mp4",
+    "poster": "posters/shot-0000-0004.jpg",
+    "title": "Shot 0000 0004",
+    "number": "39"
+  },
+  {
+    "src": "clips/image-two-study.mp4",
+    "poster": "posters/image-two-study.jpg",
+    "title": "Image Two Study",
+    "number": "40"
+  },
+  {
+    "src": "clips/sixteen-k-i.mp4",
+    "poster": "posters/sixteen-k-i.jpg",
+    "title": "Sixteen K I",
+    "number": "41"
+  },
+  {
+    "src": "clips/sixteen-k-ii.mp4",
+    "poster": "posters/sixteen-k-ii.jpg",
+    "title": "Sixteen K Ii",
+    "number": "42"
+  },
+  {
+    "src": "clips/sleep-deprived-i.mp4",
+    "poster": "posters/sleep-deprived-i.jpg",
+    "title": "Sleep Deprived I",
+    "number": "43"
+  },
+  {
+    "src": "clips/sleep-deprived-ii.mp4",
+    "poster": "posters/sleep-deprived-ii.jpg",
+    "title": "Sleep Deprived Ii",
+    "number": "44"
+  },
+  {
+    "src": "clips/sleep-deprived-iii.mp4",
+    "poster": "posters/sleep-deprived-iii.jpg",
+    "title": "Sleep Deprived Iii",
+    "number": "45"
+  },
+  {
+    "src": "clips/horror-tracking.mp4",
+    "poster": "posters/horror-tracking.jpg",
+    "title": "Horror Tracking",
+    "number": "46"
+  },
+  {
+    "src": "clips/tracking-sequence.mp4",
+    "poster": "posters/tracking-sequence.jpg",
+    "title": "Tracking Sequence",
+    "number": "47"
+  },
+  {
+    "src": "clips/storyboard-part-iii.mp4",
+    "poster": "posters/storyboard-part-iii.jpg",
+    "title": "Storyboard Part Iii",
+    "number": "48"
+  },
+  {
+    "src": "clips/paradox-2d-cite.mp4",
+    "poster": "posters/paradox-2d-cite.jpg",
+    "title": "Paradox 2D Cite",
+    "number": "49"
+  },
+  {
+    "src": "clips/part-two.mp4",
+    "poster": "posters/part-two.jpg",
+    "title": "Part Two",
+    "number": "50"
+  },
+  {
+    "src": "clips/second-shot.mp4",
+    "poster": "posters/second-shot.jpg",
+    "title": "Second Shot",
+    "number": "51"
+  },
+  {
+    "src": "clips/head-twist.mp4",
+    "poster": "posters/head-twist.jpg",
+    "title": "Head Twist",
+    "number": "52"
+  },
+  {
+    "src": "clips/ecu-0000-0005.mp4",
+    "poster": "posters/ecu-0000-0005.jpg",
+    "title": "Ecu 0000 0005",
+    "number": "53"
+  },
+  {
+    "src": "clips/sixteen-k-iii.mp4",
+    "poster": "posters/sixteen-k-iii.jpg",
+    "title": "Sixteen K Iii",
+    "number": "54"
+  },
+  {
+    "src": "clips/resolution-study-iv.mp4",
+    "poster": "posters/resolution-study-iv.jpg",
+    "title": "Resolution Study Iv",
+    "number": "55"
+  },
+  {
+    "src": "clips/resolution-study-v.mp4",
+    "poster": "posters/resolution-study-v.jpg",
+    "title": "Resolution Study V",
+    "number": "56"
+  },
+  {
+    "src": "clips/reel-50.mp4",
+    "poster": "posters/reel-50.jpg",
+    "title": "Reel 50",
+    "number": "57"
+  },
+  {
+    "src": "clips/reel-51.mp4",
+    "poster": "posters/reel-51.jpg",
+    "title": "Reel 51",
+    "number": "58"
+  },
+  {
+    "src": "clips/reel-52.mp4",
+    "poster": "posters/reel-52.jpg",
+    "title": "Reel 52",
+    "number": "59"
+  },
+  {
+    "src": "clips/reel-53.mp4",
+    "poster": "posters/reel-53.jpg",
+    "title": "Reel 53",
+    "number": "60"
+  },
+  {
+    "src": "clips/reel-54.mp4",
+    "poster": "posters/reel-54.jpg",
+    "title": "Reel 54",
+    "number": "61"
+  },
+  {
+    "src": "clips/reel-55.mp4",
+    "poster": "posters/reel-55.jpg",
+    "title": "Reel 55",
+    "number": "62"
+  },
+  {
+    "src": "clips/reel-56.mp4",
+    "poster": "posters/reel-56.jpg",
+    "title": "Reel 56",
+    "number": "63"
+  },
+  {
+    "src": "clips/reel-57.mp4",
+    "poster": "posters/reel-57.jpg",
+    "title": "Reel 57",
+    "number": "64"
+  },
+  {
+    "src": "clips/reel-58.mp4",
+    "poster": "posters/reel-58.jpg",
+    "title": "Reel 58",
+    "number": "65"
+  },
+  {
+    "src": "clips/reel-59.mp4",
+    "poster": "posters/reel-59.jpg",
+    "title": "Reel 59",
+    "number": "66"
+  },
+  {
+    "src": "clips/reel-60.mp4",
+    "poster": "posters/reel-60.jpg",
+    "title": "Reel 60",
+    "number": "67"
+  },
+  {
+    "src": "clips/reel-61.mp4",
+    "poster": "posters/reel-61.jpg",
+    "title": "Reel 61",
+    "number": "68"
+  },
+  {
+    "src": "clips/reel-62.mp4",
+    "poster": "posters/reel-62.jpg",
+    "title": "Reel 62",
+    "number": "69"
+  },
+  {
+    "src": "clips/reel-63.mp4",
+    "poster": "posters/reel-63.jpg",
+    "title": "Reel 63",
+    "number": "70"
+  },
+  {
+    "src": "clips/reel-64.mp4",
+    "poster": "posters/reel-64.jpg",
+    "title": "Reel 64",
+    "number": "71"
+  },
+  {
+    "src": "clips/reel-65.mp4",
+    "poster": "posters/reel-65.jpg",
+    "title": "Reel 65",
+    "number": "72"
+  },
+  {
+    "src": "clips/reel-66.mp4",
+    "poster": "posters/reel-66.jpg",
+    "title": "Reel 66",
+    "number": "73"
+  },
+  {
+    "src": "clips/reel-67.mp4",
+    "poster": "posters/reel-67.jpg",
+    "title": "Reel 67",
+    "number": "74"
+  },
+  {
+    "src": "clips/reel-68.mp4",
+    "poster": "posters/reel-68.jpg",
+    "title": "Reel 68",
+    "number": "75"
+  },
+  {
+    "src": "clips/reel-69.mp4",
+    "poster": "posters/reel-69.jpg",
+    "title": "Reel 69",
+    "number": "76"
+  },
+  {
+    "src": "clips/reel-70.mp4",
+    "poster": "posters/reel-70.jpg",
+    "title": "Reel 70",
+    "number": "77"
+  },
+  {
+    "src": "clips/reel-71.mp4",
+    "poster": "posters/reel-71.jpg",
+    "title": "Reel 71",
+    "number": "78"
+  },
+  {
+    "src": "clips/reel-72.mp4",
+    "poster": "posters/reel-72.jpg",
+    "title": "Reel 72",
+    "number": "79"
+  },
+  {
+    "src": "clips/reel-73.mp4",
+    "poster": "posters/reel-73.jpg",
+    "title": "Reel 73",
+    "number": "80"
+  },
+  {
+    "src": "clips/reel-74.mp4",
+    "poster": "posters/reel-74.jpg",
+    "title": "Reel 74",
+    "number": "81"
+  },
+  {
+    "src": "clips/reel-75.mp4",
+    "poster": "posters/reel-75.jpg",
+    "title": "Reel 75",
+    "number": "82"
+  },
+  {
+    "src": "clips/reel-76.mp4",
+    "poster": "posters/reel-76.jpg",
+    "title": "Reel 76",
+    "number": "83"
+  },
+  {
+    "src": "clips/reel-77.mp4",
+    "poster": "posters/reel-77.jpg",
+    "title": "Reel 77",
+    "number": "84"
+  },
+  {
+    "src": "clips/reel-78.mp4",
+    "poster": "posters/reel-78.jpg",
+    "title": "Reel 78",
+    "number": "85"
+  },
+  {
+    "src": "clips/reel-79.mp4",
+    "poster": "posters/reel-79.jpg",
+    "title": "Reel 79",
+    "number": "86"
+  },
+  {
+    "src": "clips/reel-80.mp4",
+    "poster": "posters/reel-80.jpg",
+    "title": "Reel 80",
+    "number": "87"
+  },
+  {
+    "src": "clips/reel-81.mp4",
+    "poster": "posters/reel-81.jpg",
+    "title": "Reel 81",
+    "number": "88"
+  },
+  {
+    "src": "clips/reel-82.mp4",
+    "poster": "posters/reel-82.jpg",
+    "title": "Reel 82",
+    "number": "89"
+  },
+  {
+    "src": "clips/reel-83.mp4",
+    "poster": "posters/reel-83.jpg",
+    "title": "Reel 83",
+    "number": "90"
+  },
+  {
+    "src": "clips/subject-8-second-shot.mp4",
+    "poster": "posters/subject-8-second-shot.jpg",
+    "title": "Subject 8 \u2014 Second Shot",
+    "number": "91"
+  },
+  {
+    "src": "clips/subject-8-desert-journey.mp4",
+    "poster": "posters/subject-8-desert-journey.jpg",
+    "title": "Subject 8 \u2014 Desert Journey",
+    "number": "92"
+  },
+  {
+    "src": "clips/signal-chamber.mp4",
+    "poster": "posters/signal-chamber.jpg",
+    "title": "The Signal Chamber",
+    "number": "93"
+  }
+]

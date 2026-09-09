@@ -1,0 +1,35 @@
+/* Supplied artwork is shown intact; all visual motion is applied to the page layers. */
+.hero-subject8 .hero-image{left:0;right:0;top:0;bottom:0;transform-origin:58% 42%}
+.hero-artwork{width:100%;height:100%;object-fit:cover;object-position:58% center}
+.hero-subject8 .hero-shade{background:linear-gradient(90deg,#080a0bdd 0%,#080a0b50 27%,transparent 48%),linear-gradient(0deg,#080a0ba6,transparent 22%,transparent 83%,#080a0b66)}
+.hero-subject8 .hero-copy{top:32%;width:48%}
+.hero-subject8 .hero-copy h1{font-size:clamp(45px,6.2vw,109px)}
+.hero-subject8 .hero-copy h1 em{font-size:1.32em}
+.hero-subject8 .hero-play{bottom:24%}
+.hero-subject8 .hero-side-note{top:27%;color:#bfd4d7}
+.chapter-panorama .chapter-sticky{background:#10171b}
+.chapter-panorama .chapter-ghost{top:0;font-size:19vw}
+.chapter-panorama .chapter-media{right:5%;top:33%;width:90%;height:auto;aspect-ratio:3840/1648;max-height:59%;transform-origin:center}
+.chapter-panorama .chapter-media img{width:100%;height:100%;object-fit:contain}
+.chapter-panorama .panorama-second{position:absolute;inset:0;opacity:0}
+.chapter-panorama .chapter-media:after{inset:85% 0 0;background:linear-gradient(transparent,#0008)}
+.chapter-panorama .chapter-copy{top:7%;width:90%;display:grid;grid-template-columns:1.8fr 1fr;column-gap:8%;align-items:start}
+.chapter-panorama .chapter-number{grid-column:1/-1;margin-bottom:15px}
+.chapter-panorama h2{font-size:clamp(44px,5.8vw,100px);line-height:.95}
+.chapter-panorama .panorama-intro p{font-size:16px;margin-top:0}
+.chapter-panorama .panorama-intro .text-link{margin-top:18px}
+.film-cover video{width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.2,.65,.3,1);filter:saturate(.88)}
+.film-cover:hover video{transform:scale(1.04)}
+@media(min-aspect-ratio:2/1){.hero-subject8 .hero-image{left:20%;right:-10%}.hero-subject8 .hero-artwork{object-fit:contain}.hero-subject8 .hero-copy{top:35%}.chapter-panorama .chapter-media{width:75%;right:12.5%;top:37%;max-height:55%}.chapter-panorama h2{font-size:5vw}}
+@media(max-width:1000px){.hero-subject8 .hero-copy{width:55%;top:31%}.hero-subject8 .hero-image{left:0;opacity:1}.hero-subject8 .hero-play{bottom:20%}.chapter-panorama .chapter-media{top:40%;max-height:50%}.chapter-panorama .chapter-copy{top:13%}.chapter-panorama h2{font-size:6.2vw}.chapter-panorama .panorama-intro p{font-size:14px}}
+@media(max-width:700px){.hero-subject8 .hero-image{left:-25%;right:-25%;top:0;bottom:0;opacity:1}.hero-subject8 .hero-artwork{object-position:56% 38%;object-fit:cover}.hero-subject8 .hero-copy{top:22%;width:90%;right:auto}.hero-subject8 .hero-copy h1{font-size:10.4vw;line-height:.98}.hero-subject8 .hero-copy h1 em{font-size:1.36em}.hero-subject8 .hero-shade{background:linear-gradient(0deg,#080a0bdd,transparent 18%,#080a0b11 40%,#080a0b20 72%,#080a0baa),linear-gradient(90deg,#080a0b55,transparent 70%)}.hero-subject8 .hero-intro{margin-top:17px;font-size:14px}.hero-subject8 .hero-play{bottom:16%;left:24px;right:auto}.hero-subject8 .hero-annotation{top:15%;font-size:10px}.hero-subject8 .hero-bottom{bottom:48px}.chapter-panorama .chapter-copy{top:13%;width:88%;display:block}.chapter-panorama h2{font-size:12vw}.chapter-panorama .panorama-intro{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:20px}.chapter-panorama .panorama-intro p{font-size:14px;line-height:1.7;margin:0}.chapter-panorama .panorama-intro .text-link{font-size:12px;max-width:150px;gap:12px;margin:0}.chapter-panorama .chapter-media{top:52%;right:4%;width:92%;height:auto;max-height:none;opacity:1;aspect-ratio:3840/1648}.chapter-panorama .chapter-media:after{background:none}.chapter-panorama .image-corner{display:none}.chapter-panorama .chapter-foot{bottom:40px}.chapter-panorama .chapter-sticky{min-height:680px}}
+.motion-paused .chapter-panorama{height:auto}.motion-paused .chapter-panorama .chapter-sticky{height:auto;min-height:0;padding-top:320px;padding-bottom:85px;position:relative}.motion-paused .chapter-panorama .chapter-copy{top:55px}.motion-paused .chapter-panorama .chapter-media{position:relative;top:auto;right:auto;margin:0 auto;aspect-ratio:auto;max-height:none}.motion-paused .chapter-panorama .chapter-media img{height:auto}.motion-paused .chapter-panorama .chapter-media img.panorama-second{position:relative;display:block;opacity:1!important;margin-top:22px}
+@media(prefers-reduced-motion:reduce){.film-cover video{transition:none}.film-cover:hover video{transform:none}}
+
+/* Owner-selected opening film: Subject 8 in the beach / blue-city setting. */
+.hero-beach .hero-image{left:40%;right:0;top:0;bottom:0;transform-origin:55% 45%}
+.hero-beach .hero-video{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(.9)}
+.hero-beach .hero-shade{background:linear-gradient(90deg,#080a0b 0%,#080a0bef 24%,#080a0b55 48%,transparent 72%),linear-gradient(0deg,#080a0b 0%,transparent 30%,transparent 80%,#080a0b66)}
+.hero-beach .hero-copy{top:34%}.hero-beach .hero-play{bottom:18%}
+.subject8-poster{margin:0;padding:0 var(--gutter) 80px;background:var(--bg)}.subject8-poster img{width:min(100%,1080px);height:auto;margin:auto}.subject8-poster figcaption{max-width:1080px;margin:14px auto 0;color:var(--muted);font-size:12px}
+@media(max-width:700px){.hero-beach .hero-image{left:0;right:0;top:0;bottom:0}.hero-beach .hero-video{object-position:50% 40%}.hero-beach .hero-shade{background:linear-gradient(90deg,#080a0b88,transparent 95%),linear-gradient(0deg,#080a0bee 0%,#080a0b55 25%,#080a0b25 60%,#080a0b88)}.hero-beach .hero-copy{top:35%}.hero-beach .hero-annotation{top:20%}.hero-beach .hero-play{bottom:16%}.subject8-poster{padding:0 0 55px}.subject8-poster figcaption{padding:0 24px}}
