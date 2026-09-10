@@ -1,0 +1,44 @@
+{
+  "hoodie-a.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 14079696,
+    "thumb": "merch/thumbs/hoodie-a.jpg"
+  },
+  "hoodie-b.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 12996949,
+    "thumb": "merch/thumbs/hoodie-b.jpg"
+  },
+  "tote-a.png": {
+    "width": 4096,
+    "height": 4096,
+    "mode": "RGB",
+    "bytes": 18743470,
+    "thumb": "merch/thumbs/tote-a.jpg"
+  },
+  "tote-b.png": {
+    "width": 4096,
+    "height": 4096,
+    "mode": "RGB",
+    "bytes": 18129080,
+    "thumb": "merch/thumbs/tote-b.jpg"
+  },
+  "poster-a.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 17517346,
+    "thumb": "merch/thumbs/poster-a.jpg"
+  },
+  "poster-b.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 17314934,
+    "thumb": "merch/thumbs/poster-b.jpg"
+  }
+}
