@@ -2,3 +2,5 @@
 exclude:
   - studio
   - tools
+  - merch
+  - .github
