@@ -1,3 +1,4 @@
 # The studio website is served by Cloudflare Pages.
 exclude:
   - studio
+  - tools
