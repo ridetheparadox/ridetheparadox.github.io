@@ -28,7 +28,7 @@ def tracked_text(draw, xy, text, font, fill, tracking):
         x += w + tracking
 
 
-def compose(src, out, scale, bottom, subtitle, knockout, thumb):
+def compose(src, out, scale, bottom, subtitle, knockout, thumb, feather=0.0):
     base = Image.open(src).convert("RGBA")
     W, H = base.size
 
@@ -56,6 +56,18 @@ def compose(src, out, scale, bottom, subtitle, knockout, thumb):
     if knockout:
         r, g, b, _ = base.split()
         lum = ImageChops.lighter(ImageChops.lighter(r, g), b)
+        if feather:
+            # Fade the print out over the outer band so a light beam that
+            # reaches the edge never prints as a hard line on the garment.
+            f = max(1, int(min(W, H) * feather))
+            grad = Image.linear_gradient("L")  # black at top → white at bottom
+            mask = Image.new("L", (W, H), 255)
+            mask.paste(grad.resize((W, f)), (0, 0))
+            mask.paste(grad.resize((W, f)).transpose(Image.FLIP_TOP_BOTTOM), (0, H - f))
+            side = Image.new("L", (W, H), 255)
+            side.paste(grad.resize((H, f)).rotate(90, expand=True), (0, 0))
+            side.paste(grad.resize((H, f)).rotate(270, expand=True), (W - f, 0))
+            lum = ImageChops.multiply(lum, ImageChops.multiply(mask, side))
         base.putalpha(ImageChops.lighter(lum, brand_alpha))
 
     base.save(out, "PNG", optimize=True)
@@ -76,5 +88,7 @@ if __name__ == "__main__":
     ap.add_argument("--subtitle", default="", help="letterspaced line under the wordmark, e.g. SUBJECT 8")
     ap.add_argument("--knockout", action="store_true", help="make black transparent for dark garments")
     ap.add_argument("--thumb", default="", help="write a 640px JPEG preview here")
+    ap.add_argument("--feather", type=float, default=0.0,
+                    help="with --knockout, fade out over this fraction of the shorter side at every edge")
     a = ap.parse_args()
-    compose(a.src, a.out, a.scale, a.bottom, a.subtitle, a.knockout, a.thumb)
+    compose(a.src, a.out, a.scale, a.bottom, a.subtitle, a.knockout, a.thumb, a.feather)
