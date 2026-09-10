@@ -1,11 +1,10 @@
 name: merch-fetch
+# Pulls rendered artwork into the repo. Push-triggered so it runs from this
+# branch without needing to be registered on the default branch.
 on:
-  workflow_dispatch:
-    inputs:
-      manifest:
-        description: 'JSON object of {filename: url} to fetch into merch/print'
-        required: true
-        type: string
+  push:
+    branches: ['claude/printify-account-analysis-nt2omq']
+    paths: ['merch/manifest.json']
 permissions:
   contents: write
 jobs:
@@ -18,9 +17,7 @@ jobs:
           python-version: '3.12'
       - run: pip install --quiet pillow
       - name: Download renders and build thumbnails
-        env:
-          MANIFEST: ${{ inputs.manifest }}
-        run: python3 tools/merch_fetch.py
+        run: MANIFEST="$(cat merch/manifest.json)" python3 tools/merch_fetch.py
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
