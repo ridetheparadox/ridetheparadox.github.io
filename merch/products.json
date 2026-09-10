@@ -1,0 +1,47 @@
+{
+  "shop_id": "28205039",
+  "products": [
+    {
+      "key": "poster",
+      "title": "Subject 8 / Arrival — Matte Poster",
+      "description": "Subject 8 at the edge of the desert, looking up at the ring that opened above the dunes. A still from the Paradox Universe, printed on museum-grade matte paper with archival pigment inks — deep blacks, no glare, no yellowing.\n\nAvailable in 12 × 16 and 18 × 24 in. Ships rolled in a rigid tube. Frame not included.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": ["sci-fi poster", "alien art print", "cinematic poster", "surreal wall art", "matte poster", "film still print", "blue alien", "desert wall art", "portal art", "paradox universe", "subject 8", "ai art print", "space poster"],
+      "blueprint": {"tries": [["matte", "vertical", "poster"], ["matte", "poster"]], "must_not": ["framed", "canvas", "horizontal"]},
+      "providers": ["Sensaria", "Printify Choice", "Print Geek", "Ideju Druka"],
+      "sizes": ["12x16", "18x24"],
+      "colors": null,
+      "image": "merch/print/poster-a.png",
+      "positions": ["front"],
+      "margin": 0.60,
+      "min_price": 2499
+    },
+    {
+      "key": "hoodie",
+      "title": "Subject 8 / Profile — Heavyweight Hoodie",
+      "description": "The profile that opened the Paradox Universe, printed large on a heavyweight black hoodie. Subject 8, lit from above, in silver-blue on black — the image fades into the fabric with no box edge. PARADOX / SUBJECT 8 set small beneath.\n\nGildan Heavy Blend: 50/50 cotton-poly fleece, double-lined hood, front pouch pocket. Unisex, S – 3XL. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": ["sci-fi hoodie", "alien hoodie", "cinematic hoodie", "graphic hoodie", "black hoodie", "streetwear hoodie", "blue alien", "paradox universe", "subject 8", "heavyweight hoodie", "unisex hoodie", "film hoodie", "ai art hoodie"],
+      "blueprint": {"tries": [["gildan", "heavy blend", "hooded"], ["gildan", "18500"], ["heavy blend", "hoodie"]], "must_not": ["youth", "zip", "toddler"]},
+      "providers": ["Monster Digital", "SwiftPOD", "Printify Choice", "Underground Threads"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "colors": ["Black"],
+      "image": "merch/print/hoodie-a.png",
+      "positions": ["front"],
+      "margin": 0.55,
+      "min_price": 4999
+    },
+    {
+      "key": "tote",
+      "title": "An Ordinary Moment — Tote Bag",
+      "description": "Coffee in the desert. Two subjects, two cups, and a ring of light on the horizon. An ordinary moment from an extraordinary world, printed edge to edge on both sides.\n\nAll-over print on spun polyester canvas with cotton web handles, 16 × 16 in. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": ["sci-fi tote bag", "alien tote bag", "surreal tote", "art tote bag", "desert art", "coffee art", "cinematic tote", "all over print tote", "blue alien", "paradox universe", "subject 8", "film still", "ai art tote"],
+      "blueprint": {"tries": [["aop", "tote"], ["all over", "tote"], ["tote", "bag"]], "must_not": ["weekender", "laptop", "beach"]},
+      "providers": ["Underground Threads", "Printify Choice", "Duplium", "MWW On Demand"],
+      "sizes": null,
+      "colors": null,
+      "image": "merch/print/tote-a.png",
+      "positions": ["front", "back"],
+      "margin": 0.55,
+      "min_price": 2999
+    }
+  ]
+}

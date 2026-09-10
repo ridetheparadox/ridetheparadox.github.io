@@ -1,0 +1,40 @@
+name: merch-publish
+# Creates the products in merch/products.json on Printify. Push-triggered by a
+# change to merch/publish.json so a run is always an explicit decision; the
+# script is idempotent and skips products already recorded in
+# merch/published.json.
+on:
+  push:
+    branches: ['claude/printify-account-analysis-nt2omq']
+    paths: ['merch/publish.json']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Create products on Printify
+        env:
+          PRINTIFY_API_TOKEN: ${{ secrets.PRINTIFY_API_TOKEN }}
+          RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}
+        run: |
+          if [ -z "$PRINTIFY_API_TOKEN" ]; then
+            echo "::warning::PRINTIFY_API_TOKEN secret is not set — nothing was created on Printify."
+            exit 0
+          fi
+          export PRINTIFY_SHOP_ID="$(python3 -c 'import json;print(json.load(open("merch/products.json"))["shop_id"])')"
+          export PUBLISH="$(python3 -c 'import json;print(str(json.load(open("merch/publish.json")).get("publish", False)).lower())')"
+          export FORCE="$(python3 -c 'import json;print(str(json.load(open("merch/publish.json")).get("force", False)).lower())')"
+          export ONLY="$(python3 -c 'import json;print(",".join(json.load(open("merch/publish.json")).get("only", [])))')"
+          python3 tools/printify_publish.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add merch/published.json 2>/dev/null || true
+          git commit -m "Record Printify products created by workflow" || echo "nothing to commit"
+          git push
