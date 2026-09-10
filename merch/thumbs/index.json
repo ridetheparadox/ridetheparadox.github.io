@@ -117,5 +117,26 @@
     "mode": "RGB",
     "bytes": 24523360,
     "thumb": "merch/thumbs/scene-b.jpg"
+  },
+  "final-mockup-hoodie.png": {
+    "width": 2400,
+    "height": 1792,
+    "mode": "RGB",
+    "bytes": 4798214,
+    "thumb": "merch/thumbs/final-mockup-hoodie.jpg"
+  },
+  "final-mockup-poster.png": {
+    "width": 2400,
+    "height": 1792,
+    "mode": "RGB",
+    "bytes": 6130450,
+    "thumb": "merch/thumbs/final-mockup-poster.jpg"
+  },
+  "final-mockup-tote.png": {
+    "width": 2400,
+    "height": 1792,
+    "mode": "RGB",
+    "bytes": 5151119,
+    "thumb": "merch/thumbs/final-mockup-tote.jpg"
   }
 }
