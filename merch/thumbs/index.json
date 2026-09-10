@@ -103,5 +103,19 @@
     "mode": "RGB",
     "bytes": 17726995,
     "thumb": "merch/thumbs/tote-d.jpg"
+  },
+  "scene-a.png": {
+    "width": 4096,
+    "height": 4096,
+    "mode": "RGB",
+    "bytes": 24434016,
+    "thumb": "merch/thumbs/scene-a.jpg"
+  },
+  "scene-b.png": {
+    "width": 4096,
+    "height": 4096,
+    "mode": "RGB",
+    "bytes": 24523360,
+    "thumb": "merch/thumbs/scene-b.jpg"
   }
 }
