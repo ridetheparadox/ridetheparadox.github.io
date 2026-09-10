@@ -61,5 +61,47 @@
     "mode": "RGB",
     "bytes": 5788568,
     "thumb": "merch/thumbs/mockup-tote.jpg"
+  },
+  "poster-c.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 17442467,
+    "thumb": "merch/thumbs/poster-c.jpg"
+  },
+  "poster-d.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 17237799,
+    "thumb": "merch/thumbs/poster-d.jpg"
+  },
+  "hoodie-c.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 16705186,
+    "thumb": "merch/thumbs/hoodie-c.jpg"
+  },
+  "hoodie-d.png": {
+    "width": 3584,
+    "height": 4800,
+    "mode": "RGB",
+    "bytes": 15592157,
+    "thumb": "merch/thumbs/hoodie-d.jpg"
+  },
+  "tote-c.png": {
+    "width": 4096,
+    "height": 4096,
+    "mode": "RGB",
+    "bytes": 17835762,
+    "thumb": "merch/thumbs/tote-c.jpg"
+  },
+  "tote-d.png": {
+    "width": 4096,
+    "height": 4096,
+    "mode": "RGB",
+    "bytes": 17726995,
+    "thumb": "merch/thumbs/tote-d.jpg"
   }
 }
