@@ -70,7 +70,7 @@
     "variants": 6,
     "price_min": 2999,
     "price_max": 3799,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102044/subject-8-portal-tee.jpg?camera_label=front-2",
       "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102045/subject-8-portal-tee.jpg?camera_label=back-2",
@@ -90,7 +90,7 @@
     "variants": 6,
     "price_min": 4499,
     "price_max": 5299,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/98502/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/98503/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=back",
@@ -109,7 +109,7 @@
     "variants": 6,
     "price_min": 3499,
     "price_max": 3899,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/105264/subject-8-portal-long-sleeve-tee.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/105265/subject-8-portal-long-sleeve-tee.jpg?camera_label=back",
