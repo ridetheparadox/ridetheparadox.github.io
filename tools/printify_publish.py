@@ -36,6 +36,8 @@ REFRESH = [k for k in os.environ.get("REFRESH", "").split(",") if k] or (
 DRY_RUN = os.environ.get("DRY_RUN", "").lower() == "true" or bool(
     json.load(open("merch/publish.json")).get("dry_run", False) if os.path.exists("merch/publish.json") else False)
 RESOLVED = "merch/resolved.json"
+# Products to remove from Printify (and from the record); from merch/publish.json.
+DELETE = json.load(open("merch/publish.json")).get("delete", []) if os.path.exists("merch/publish.json") else []
 PUBLISH_FIELDS = {"title": True, "description": True, "images": True,
                   "variants": True, "tags": True, "keyFeatures": True,
                   "shipping_template": True}
@@ -143,13 +145,22 @@ def image_size(path):
     return None
 
 
-def placeholder_dims(cat_variants, position):
-    """Pixel size of a print area, from the first catalogue variant that has it."""
+def placeholder_dims(cat_variants, position, pick="first"):
+    """Pixel size of a print area. Variants can differ (phone models, canvas
+    sizes): 'widest' returns the lowest height/width ratio, which a contain
+    fit must respect; 'tallest' the highest, which a cover fit must fill."""
+    dims = []
     for v in cat_variants:
         for ph in v.get("placeholders") or []:
             if ph.get("position") == position and ph.get("width") and ph.get("height"):
-                return ph["width"], ph["height"]
-    return None
+                d = (ph["width"], ph["height"])
+                if pick == "first":
+                    return d
+                if d not in dims:
+                    dims.append(d)
+    if not dims:
+        return None
+    return min(dims, key=lambda d: d[1] / d[0]) if pick == "widest" else max(dims, key=lambda d: d[1] / d[0])
 
 
 def fit_scale(img_w, img_h, dims):
@@ -162,24 +173,29 @@ def fit_scale(img_w, img_h, dims):
     return round(min(1.0, (ph / pw) * (img_w / img_h)), 4)
 
 
-def placement(up, cat_variants, positions, fit="contain"):
+def placement(up, cat_variants, positions, fit="contain", align="center"):
     """contain: the whole image sits inside the print area (bands are unprinted).
-    cover: the image fills the width; if it is then taller than the area, it is
+    cover: the image fills the width, and if the area is taller than the image
+    at that width it is enlarged until the height is covered too (the sides
+    crop). An image taller than the area is centred, or with align="bottom"
     slid so the bottom edges line up and the crop comes off the top."""
     out = []
     iw, ih = up.get("width"), up.get("height")
     for pos in positions:
-        dims = placeholder_dims(cat_variants, pos)
         s, y = 1, 0.5
         if fit == "contain":
+            dims = placeholder_dims(cat_variants, pos, "widest")
             s = fit_scale(iw, ih, dims)
-        elif dims and iw and ih:
-            pw, ph = dims
-            scaled_h = ih / iw * pw          # image height once its width fills the area
-            if scaled_h > ph:
-                y = round(1 - (scaled_h / ph) / 2, 4)
+        else:
+            dims = placeholder_dims(cat_variants, pos, "tallest")
+            if dims and iw and ih:
+                pw, ph = dims
+                s = round(max(1.0, (ph / pw) * (iw / ih)), 4)
+                scaled_h = ih / iw * pw * s      # image height once placed
+                if scaled_h > ph and align == "bottom":
+                    y = round(1 - (scaled_h / ph) / 2, 4)
         out.append({"position": pos, "images": [{"id": up["id"], "x": 0.5, "y": y, "scale": s, "angle": 0}]})
-        print(f"    {pos}: placeholder {dims}, image {iw}x{ih}, fit {fit} -> scale {s}, y {y}")
+        print(f"    {pos}: placeholder {dims}, image {iw}x{ih}, fit {fit}/{align} -> scale {s}, y {y}")
     return out
 
 
@@ -208,7 +224,7 @@ def refresh_product(prod, existing):
         "description": prod["description"],
         "tags": prod["tags"],
         "variants": priced,
-        "print_areas": [{"variant_ids": ids, "placeholders": placement(up, cat.get("variants", []), prod["positions"], prod.get("fit", "contain"))}],
+        "print_areas": [{"variant_ids": ids, "placeholders": placement(up, cat.get("variants", []), prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"))}],
     }
     call("PUT", f"shops/{SHOP}/products/{pid}.json", body)
     time.sleep(15)  # Printify re-renders mockups after an update
@@ -232,6 +248,14 @@ def main():
     manifest = json.load(open("merch/products.json"))
     results = json.load(open(RESULTS)) if os.path.exists(RESULTS) else {}
     resolved = {}
+
+    for key in DELETE:
+        if key in results:
+            pid = results[key]["product_id"]
+            call("DELETE", f"shops/{SHOP}/products/{pid}.json")
+            del results[key]
+            json.dump(results, open(RESULTS, "w"), indent=2)
+            print(f"[{key}] deleted product {pid} from Printify and the record")
 
     print("resolving catalogue…")
     blueprints = call("GET", "catalog/blueprints.json")
@@ -272,7 +296,7 @@ def main():
             strict = [v for v in all_variants if variant_allowed(prod, v)]
             size = image_size(prod["image"]) or (None, None)
             places = placement({"id": "dry-run", "width": size[0], "height": size[1]},
-                               chosen, prod["positions"], prod.get("fit", "contain"))
+                               chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"))
             resolved[key] = {
                 "blueprint": f"{bp['brand']} {bp['model']} — {bp['title']}", "blueprint_id": bp["id"],
                 "print_provider": pp["title"], "print_provider_id": pp["id"],
@@ -305,7 +329,7 @@ def main():
             "blueprint_id": bp["id"],
             "print_provider_id": pp["id"],
             "variants": [{"id": i, "price": 9999, "is_enabled": True} for i in ids],
-            "print_areas": [{"variant_ids": ids, "placeholders": placement(up, chosen, prod["positions"], prod.get("fit", "contain"))}],
+            "print_areas": [{"variant_ids": ids, "placeholders": placement(up, chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"))}],
         }
         created = call("POST", f"shops/{SHOP}/products.json", body)
         pid = created["id"]

@@ -176,7 +176,8 @@
       ],
       "fit": "cover",
       "margin": 0.47,
-      "min_price": 3499
+      "min_price": 3499,
+      "align": "bottom"
     },
     {
       "key": "tee",
@@ -582,6 +583,258 @@
       "image": "merch/print/final-hoodie-flat.png",
       "fit": "contain",
       "margin": 0.5
+    },
+    {
+      "key": "phonecase",
+      "title": "Subject 8 / Portal — iPhone Tough Case",
+      "description": "The profile that opened the Paradox Universe, printed edge to edge on a dual-layer tough case. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nImpact-resistant polycarbonate shell over a soft TPU liner, raised bezel, wireless-charging compatible. Glossy or matte finish. Printed to order for current iPhone models.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": [
+        "sci-fi phone case",
+        "alien phone case",
+        "iphone tough case",
+        "cinematic case",
+        "black phone case",
+        "graphic phone case",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "iphone case",
+        "film phone case",
+        "ai art phone case",
+        "portal case"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "tough",
+            "iphone"
+          ],
+          [
+            "tough cases"
+          ],
+          [
+            "iphone",
+            "tough"
+          ]
+        ],
+        "must_not": [
+          "samsung",
+          "clear",
+          "biodegradable",
+          "wallet",
+          "flexi",
+          "slim",
+          "magsafe",
+          "google",
+          "pixel",
+          "snap",
+          "impact",
+          "eco"
+        ]
+      },
+      "providers": [
+        "Printify Choice",
+        "SPOKE",
+        "Print Geek",
+        "Sunrise"
+      ],
+      "sizes": null,
+      "colors": null,
+      "image": "merch/print/final-phone-flat.png",
+      "positions": [
+        "front"
+      ],
+      "fit": "cover",
+      "align": "center",
+      "margin": 0.55,
+      "min_price": 2499
+    },
+    {
+      "key": "canvas",
+      "title": "Subject 8 / Portal — Stretched Canvas",
+      "description": "The profile that opened the Paradox Universe, printed edge to edge on a stretched matte canvas. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nPoly-cotton canvas on a solid 0.75 in wood frame, fade-resistant pigment inks, the image wrapping the sides. Hanging hardware included. Available in 12 × 16, 18 × 24 and 24 × 32 in.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": [
+        "sci-fi canvas",
+        "alien canvas art",
+        "cinematic wall art",
+        "canvas print",
+        "stretched canvas",
+        "dark wall art",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "portrait canvas",
+        "film still canvas",
+        "ai art canvas",
+        "portal art"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "matte canvas",
+            "stretched",
+            "0.75"
+          ],
+          [
+            "matte canvas",
+            "stretched"
+          ],
+          [
+            "canvas",
+            "stretched"
+          ]
+        ],
+        "must_not": [
+          "framed",
+          "1.25",
+          "1.5",
+          "horizontal",
+          "round",
+          "panel"
+        ]
+      },
+      "providers": [
+        "Sensaria",
+        "Printify Choice",
+        "Print Geek",
+        "Ideju Druka"
+      ],
+      "sizes": [
+        "12x16",
+        "18x24",
+        "24x32",
+        "12x16(vertical)",
+        "18x24(vertical)",
+        "24x32(vertical)"
+      ],
+      "colors": null,
+      "image": "merch/print/final-canvas-flat.png",
+      "positions": [
+        "front"
+      ],
+      "fit": "cover",
+      "align": "center",
+      "margin": 0.5,
+      "min_price": 4999
+    },
+    {
+      "key": "mug",
+      "title": "Subject 8 / Portal — Black Mug",
+      "description": "The profile that opened the Paradox Universe, on a glossy black ceramic mug. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nBlack ceramic, glossy finish, C-handle, microwave and dishwasher safe. 11 oz and 15 oz. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": [
+        "sci-fi mug",
+        "alien mug",
+        "black coffee mug",
+        "cinematic mug",
+        "graphic mug",
+        "ceramic mug",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "film mug",
+        "ai art mug",
+        "portal mug",
+        "black mug"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "black",
+            "mug"
+          ]
+        ],
+        "must_not": [
+          "accent",
+          "magic",
+          "morphing",
+          "color changing",
+          "colour changing",
+          "travel",
+          "camp",
+          "enamel",
+          "latte",
+          "espresso",
+          "stein",
+          "glass",
+          "set",
+          "two-tone",
+          "bistro"
+        ]
+      },
+      "providers": [
+        "Printify Choice",
+        "District Photo",
+        "SPOKE",
+        "Print Geek"
+      ],
+      "sizes": [
+        "11oz",
+        "15oz"
+      ],
+      "colors": null,
+      "image": "merch/print/final-hoodie-flat.png",
+      "positions": [
+        "front"
+      ],
+      "fit": "contain",
+      "margin": 0.55,
+      "min_price": 1799
+    },
+    {
+      "key": "stickers",
+      "title": "Subject 8 / Portal — Kiss-Cut Sticker",
+      "description": "The profile that opened the Paradox Universe, as a kiss-cut vinyl sticker. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nDurable white vinyl, scratch and water resistant, easy peel backing. Sizes from 2 to 6 in. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": [
+        "sci-fi sticker",
+        "alien sticker",
+        "cinematic sticker",
+        "vinyl sticker",
+        "kiss-cut sticker",
+        "laptop sticker",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "film sticker",
+        "ai art sticker",
+        "portal sticker",
+        "black sticker"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "kiss-cut",
+            "sticker"
+          ],
+          [
+            "kiss cut",
+            "sticker"
+          ]
+        ],
+        "must_not": [
+          "sheet",
+          "holographic",
+          "roll",
+          "label",
+          "die-cut",
+          "die cut",
+          "magnet"
+        ]
+      },
+      "providers": [
+        "Printify Choice",
+        "Stickers",
+        "SPOKE",
+        "Print Geek"
+      ],
+      "sizes": null,
+      "colors": null,
+      "image": "merch/print/final-hoodie-flat.png",
+      "positions": [
+        "front"
+      ],
+      "fit": "contain",
+      "margin": 0.6,
+      "min_price": 399
     }
   ]
 }
