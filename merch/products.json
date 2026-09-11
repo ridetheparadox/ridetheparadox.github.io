@@ -24,7 +24,7 @@
       "providers": ["Monster Digital", "SwiftPOD", "Printify Choice", "Underground Threads"],
       "sizes": ["S", "M", "L", "XL", "2XL", "3XL"],
       "colors": ["Black"],
-      "image": "merch/print/final-hoodie.png",
+      "image": "merch/print/final-hoodie-flat.png",
       "positions": ["front"],
       "margin": 0.55,
       "min_price": 4999
@@ -32,7 +32,7 @@
     {
       "key": "tote",
       "title": "Subject 8 / Desert — Tote Bag",
-      "description": "Coffee in the desert. Subject 8 and a companion, two cups, a table in the middle of nowhere. The still from the Subject 8 Desert sequence, printed edge to edge on both sides — an ordinary moment from an extraordinary world. The PARADOX wordmark sits small at the foot of the print.\n\nAll-over print on spun polyester canvas with cotton web handles, 16 × 16 in. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "description": "Coffee in the desert. Subject 8 and a companion, two cups, a table in the middle of nowhere. The still from the Subject 8 Desert sequence, printed edge to edge on both sides — an ordinary moment from an extraordinary world. The PARADOX wordmark sits small at the foot of the print.\n\nAll-over print shoulder tote, spun polyester with white web straps, about 16 × 16 in. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
       "tags": ["sci-fi tote bag", "alien tote bag", "surreal tote", "art tote bag", "desert art", "coffee art", "cinematic tote", "all over print tote", "blue alien", "paradox universe", "subject 8", "film still", "ai art tote"],
       "blueprint": {"tries": [["aop", "tote"], ["all over", "tote"], ["tote", "bag"]], "must_not": ["weekender", "laptop", "beach"]},
       "providers": ["Underground Threads", "Printify Choice", "Duplium", "MWW On Demand"],
@@ -40,8 +40,8 @@
       "colors": null,
       "image": "merch/print/final-tote.png",
       "positions": ["front", "back"],
-      "margin": 0.55,
-      "min_price": 2999
+      "margin": 0.47,
+      "min_price": 3499
     }
   ]
 }

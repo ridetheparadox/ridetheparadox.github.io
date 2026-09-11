@@ -27,6 +27,13 @@ PUBLISH = os.environ.get("PUBLISH", "false").lower() == "true"
 FORCE = os.environ.get("FORCE", "false").lower() == "true"
 ONLY = [k for k in os.environ.get("ONLY", "").split(",") if k]
 RESULTS = "merch/published.json"
+# Products to re-upload and rewrite in place; taken from merch/publish.json so
+# the workflow file itself never needs to change.
+REFRESH = [k for k in os.environ.get("REFRESH", "").split(",") if k] or (
+    json.load(open("merch/publish.json")).get("refresh", []) if os.path.exists("merch/publish.json") else [])
+PUBLISH_FIELDS = {"title": True, "description": True, "images": True,
+                  "variants": True, "tags": True, "keyFeatures": True,
+                  "shipping_template": True}
 
 
 def call(method, path, body=None):
@@ -97,6 +104,43 @@ def price_for(cost, margin, floor):
     return max(price, floor)
 
 
+def refresh_product(prod, existing):
+    """Re-upload the artwork and rewrite listing, placement and prices on an
+    existing product, keeping its id, blueprint, provider and variants."""
+    key, pid = prod["key"], existing["product_id"]
+    current = call("GET", f"shops/{SHOP}/products/{pid}.json")
+    up = call("POST", "uploads/images.json",
+              {"file_name": os.path.basename(prod["image"]), "url": f"{RAW_BASE}/{prod['image']}"})
+    print(f"[{key}] re-uploaded {up.get('file_name')} {up.get('width')}x{up.get('height')} -> {up['id']}")
+    enabled = [v for v in current.get("variants", []) if v.get("is_enabled")]
+    ids = [v["id"] for v in enabled]
+    priced = [{"id": v["id"], "price": price_for(v["cost"], prod["margin"], prod.get("min_price", 0)),
+               "is_enabled": True} for v in enabled]
+    body = {
+        "title": prod["title"],
+        "description": prod["description"],
+        "tags": prod["tags"],
+        "variants": priced,
+        "print_areas": [{
+            "variant_ids": ids,
+            "placeholders": [
+                {"position": pos, "images": [{"id": up["id"], "x": 0.5, "y": 0.5, "scale": 1, "angle": 0}]}
+                for pos in prod["positions"]],
+        }],
+    }
+    call("PUT", f"shops/{SHOP}/products/{pid}.json", body)
+    time.sleep(15)  # Printify re-renders mockups after an update
+    final = call("GET", f"shops/{SHOP}/products/{pid}.json")
+    prices = [p["price"] for p in priced]
+    existing.update({
+        "title": prod["title"], "variants": len(priced),
+        "price_min": min(prices), "price_max": max(prices),
+        "mockups": [im.get("src") for im in final.get("images", [])][:8],
+    })
+    print(f"[{key}] refreshed product {pid}: {len(priced)} variants "
+          f"${min(prices)/100:.2f}–${max(prices)/100:.2f} at ≥{prod['margin']:.0%} margin")
+
+
 def main():
     if not TOKEN:
         sys.exit("error: PRINTIFY_API_TOKEN is not set (add it as a repository secret)")
@@ -115,7 +159,17 @@ def main():
         if ONLY and key not in ONLY:
             continue
         if key in results and not FORCE:
-            print(f"[{key}] already created as product {results[key]['product_id']}; skipping")
+            existing = results[key]
+            pid = existing["product_id"]
+            if key in REFRESH:
+                refresh_product(prod, existing)
+            if PUBLISH and not existing.get("published"):
+                call("POST", f"shops/{SHOP}/products/{pid}/publish.json", PUBLISH_FIELDS)
+                existing["published"] = True
+                print(f"[{key}] publish requested for product {pid}")
+            if key not in REFRESH and not PUBLISH:
+                print(f"[{key}] already created as product {pid}; skipping")
+            json.dump(results, open(RESULTS, "w"), indent=2)
             continue
 
         bp = find_blueprint(prod["blueprint"], blueprints)
@@ -169,10 +223,7 @@ def main():
               f"at ≥{prod['margin']:.0%} margin")
 
         if PUBLISH:
-            call("POST", f"shops/{SHOP}/products/{pid}/publish.json",
-                 {"title": True, "description": True, "images": True,
-                  "variants": True, "tags": True, "keyFeatures": True,
-                  "shipping_template": True})
+            call("POST", f"shops/{SHOP}/products/{pid}/publish.json", PUBLISH_FIELDS)
             print(f"[{key}] publish requested")
 
         final = call("GET", f"shops/{SHOP}/products/{pid}.json")
