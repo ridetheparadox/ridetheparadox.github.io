@@ -36,6 +36,8 @@ REFRESH = [k for k in os.environ.get("REFRESH", "").split(",") if k] or (
 DRY_RUN = os.environ.get("DRY_RUN", "").lower() == "true" or bool(
     json.load(open("merch/publish.json")).get("dry_run", False) if os.path.exists("merch/publish.json") else False)
 RESOLVED = "merch/resolved.json"
+# Catalogue search: blueprint titles matching each term go to merch/resolved.json.
+SEARCH = json.load(open("merch/publish.json")).get("search", []) if os.path.exists("merch/publish.json") else []
 # Products to remove from Printify (and from the record); from merch/publish.json.
 DELETE = json.load(open("merch/publish.json")).get("delete", []) if os.path.exists("merch/publish.json") else []
 PUBLISH_FIELDS = {"title": True, "description": True, "images": True,
@@ -260,6 +262,16 @@ def main():
     blueprints = call("GET", "catalog/blueprints.json")
     print(f"  {len(blueprints)} blueprints")
 
+    if SEARCH:
+        hits = {}
+        for term in SEARCH:
+            hits[term] = [f"#{b['id']} {b.get('brand', '')} {b.get('model', '')} — {b.get('title', '')}".strip()
+                          for b in blueprints
+                          if term.lower() in f"{b.get('brand', '')} {b.get('model', '')} {b.get('title', '')}".lower()]
+        resolved["_search"] = hits
+        json.dump(resolved, open(RESOLVED, "w"), indent=2)
+        print(f"search: {sum(len(v) for v in hits.values())} blueprint hits for {len(SEARCH)} terms")
+
     for prod in manifest["products"]:
         key = prod["key"]
         if ONLY and key not in ONLY:
@@ -279,6 +291,11 @@ def main():
             continue
 
         bp = find_blueprint(prod["blueprint"], blueprints)
+        if not bp and DRY_RUN:
+            resolved[key] = {"unresolved": prod["blueprint"]}
+            json.dump(resolved, open(RESOLVED, "w"), indent=2)
+            print(f"[{key}] dry run: no blueprint matched {prod['blueprint']}")
+            continue
         if not bp:
             sys.exit(f"[{key}] no blueprint matched {prod['blueprint']}")
         providers = call("GET", f"catalog/blueprints/{bp['id']}/print_providers.json")
