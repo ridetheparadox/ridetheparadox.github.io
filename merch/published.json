@@ -9,7 +9,7 @@
     "variants": 2,
     "price_min": 2799,
     "price_max": 2999,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/101110/94682/subject-8-portal-matte-poster.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/101110/94723/subject-8-portal-matte-poster.jpg?camera_label=front-2",
@@ -32,7 +32,7 @@
     "variants": 6,
     "price_min": 5299,
     "price_max": 6099,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98424/subject-8-portal-heavyweight-hoodie.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98425/subject-8-portal-heavyweight-hoodie.jpg?camera_label=back",
@@ -51,7 +51,7 @@
     "variants": 1,
     "price_min": 3999,
     "price_max": 3999,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/22535/subject-8-desert-tote-bag.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/22536/subject-8-desert-tote-bag.jpg?camera_label=back",
