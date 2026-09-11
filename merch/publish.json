@@ -1,12 +1,14 @@
 {
   "publish": false,
   "only": [
-    "cctee",
     "ziphoodie",
     "tank"
   ],
   "force": false,
-  "refresh": [],
+  "refresh": [
+    "ziphoodie",
+    "tank"
+  ],
   "dry_run": false,
-  "touched": "2026-09-11T17:58:28Z"
+  "touched": "2026-09-11T18:00:03Z"
 }

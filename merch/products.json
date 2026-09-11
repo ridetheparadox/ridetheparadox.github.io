@@ -510,7 +510,7 @@
       ],
       "image": "merch/print/final-hoodie-flat.png",
       "fit": "contain",
-      "margin": 0.55
+      "margin": 0.45
     },
     {
       "key": "tank",
@@ -581,7 +581,7 @@
       ],
       "image": "merch/print/final-hoodie-flat.png",
       "fit": "contain",
-      "margin": 0.55
+      "margin": 0.5
     }
   ]
 }
