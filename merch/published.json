@@ -68,11 +68,54 @@
     "print_provider": "Monster Digital",
     "print_provider_id": 29,
     "variants": 6,
-    "price_min": 9999,
-    "price_max": 9999,
+    "price_min": 2999,
+    "price_max": 3799,
     "published": false,
-    "mockups": [],
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102044/subject-8-portal-tee.jpg?camera_label=front-2",
+      "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102045/subject-8-portal-tee.jpg?camera_label=back-2",
+      "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102046/subject-8-portal-tee.jpg?camera_label=folded",
+      "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102048/subject-8-portal-tee.jpg?camera_label=hanging-1"
+    ],
     "url": "https://printify.com/app/store/28205039/products/6aa43a9500fe80474e053c29",
     "note": "created by the failed run of 2026-09-11 17:30 UTC before pricing; adopted for refresh"
+  },
+  "crewneck": {
+    "product_id": "6aa43b1e037bdfa3d80afea5",
+    "title": "Subject 8 / Portal \u2014 Crewneck Sweatshirt",
+    "blueprint": "Gildan 18000 \u2014 Unisex Heavy Blend\u2122 Crewneck Sweatshirt",
+    "blueprint_id": 49,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "variants": 6,
+    "price_min": 4499,
+    "price_max": 5299,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/98502/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/98503/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/100648/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=folded",
+      "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/128101/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=folded-2"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa43b1e037bdfa3d80afea5"
+  },
+  "longsleeve": {
+    "product_id": "6aa43b270e687794d70145c0",
+    "title": "Subject 8 / Portal \u2014 Long Sleeve Tee",
+    "blueprint": "Gildan 2400 \u2014 Unisex Ultra Cotton Long Sleeve Tee",
+    "blueprint_id": 80,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "variants": 6,
+    "price_min": 3499,
+    "price_max": 3899,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/105264/subject-8-portal-long-sleeve-tee.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/105265/subject-8-portal-long-sleeve-tee.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/131080/subject-8-portal-long-sleeve-tee.jpg?camera_label=collar-closeup",
+      "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/131081/subject-8-portal-long-sleeve-tee.jpg?camera_label=person-left"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa43b270e687794d70145c0"
   }
 }
