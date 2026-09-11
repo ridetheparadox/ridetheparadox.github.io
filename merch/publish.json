@@ -1,5 +1,5 @@
 {
-  "publish": false,
+  "publish": true,
   "only": [
     "phonecase",
     "canvas",
@@ -8,5 +8,5 @@
   "force": false,
   "refresh": [],
   "dry_run": false,
-  "touched": "2026-09-11T21:18:35Z"
+  "touched": "2026-09-11T21:29:04Z"
 }
