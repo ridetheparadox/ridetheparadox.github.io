@@ -145,8 +145,8 @@
     "print_provider": "Monster Digital",
     "print_provider_id": 29,
     "variants": 6,
-    "price_min": 6999,
-    "price_max": 7999,
+    "price_min": 5699,
+    "price_max": 6599,
     "published": false,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/110719/subject-8-portal-full-zip-hoodie.jpg?camera_label=front-2",
@@ -164,8 +164,8 @@
     "print_provider": "Monster Digital",
     "print_provider_id": 29,
     "variants": 6,
-    "price_min": 3299,
-    "price_max": 3799,
+    "price_min": 2999,
+    "price_max": 3499,
     "published": false,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa4416c99804710910505e9/24639/101889/subject-8-portal-jersey-tank.jpg?camera_label=front",
