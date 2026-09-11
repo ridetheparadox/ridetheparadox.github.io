@@ -112,10 +112,13 @@ def refresh_product(prod, existing):
     up = call("POST", "uploads/images.json",
               {"file_name": os.path.basename(prod["image"]), "url": f"{RAW_BASE}/{prod['image']}"})
     print(f"[{key}] re-uploaded {up.get('file_name')} {up.get('width')}x{up.get('height')} -> {up['id']}")
-    enabled = [v for v in current.get("variants", []) if v.get("is_enabled")]
-    ids = [v["id"] for v in enabled]
-    priced = [{"id": v["id"], "price": price_for(v["cost"], prod["margin"], prod.get("min_price", 0)),
-               "is_enabled": True} for v in enabled]
+    # Printify validates an update against every variant on the product, so
+    # send them all: enabled ones re-priced, disabled ones left as they are.
+    all_variants = current.get("variants", [])
+    ids = [v["id"] for v in all_variants]
+    priced = [{"id": v["id"],
+               "price": price_for(v["cost"], prod["margin"], prod.get("min_price", 0)) if v.get("is_enabled") else v["price"],
+               "is_enabled": bool(v.get("is_enabled"))} for v in all_variants]
     body = {
         "title": prod["title"],
         "description": prod["description"],
@@ -131,13 +134,13 @@ def refresh_product(prod, existing):
     call("PUT", f"shops/{SHOP}/products/{pid}.json", body)
     time.sleep(15)  # Printify re-renders mockups after an update
     final = call("GET", f"shops/{SHOP}/products/{pid}.json")
-    prices = [p["price"] for p in priced]
+    prices = [p["price"] for p in priced if p["is_enabled"]]
     existing.update({
-        "title": prod["title"], "variants": len(priced),
+        "title": prod["title"], "variants": len(prices),
         "price_min": min(prices), "price_max": max(prices),
         "mockups": [im.get("src") for im in final.get("images", [])][:8],
     })
-    print(f"[{key}] refreshed product {pid}: {len(priced)} variants "
+    print(f"[{key}] refreshed product {pid}: {len(prices)} variants "
           f"${min(prices)/100:.2f}–${max(prices)/100:.2f} at ≥{prod['margin']:.0%} margin")
 
 
@@ -219,7 +222,7 @@ def main():
             lo = p if lo is None else min(lo, p)
             hi = p if hi is None else max(hi, p)
         call("PUT", f"shops/{SHOP}/products/{pid}.json", {"variants": priced})
-        print(f"[{key}] priced {len(priced)} variants ${lo/100:.2f}–${hi/100:.2f} "
+        print(f"[{key}] priced {len(prices)} variants ${lo/100:.2f}–${hi/100:.2f} "
               f"at ≥{prod['margin']:.0%} margin")
 
         if PUBLISH:
