@@ -253,7 +253,7 @@
     "variants": 5,
     "price_min": 7999,
     "price_max": 18999,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88303/103231/subject-8-portal-framed-canvas.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88303/103751/subject-8-portal-framed-canvas.jpg?camera_label=side",
@@ -276,7 +276,7 @@
     "variants": 1,
     "price_min": 9899,
     "price_max": 9899,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa47b6e69f184ccf30b2f98/41659/3384/subject-8-portal-sherpa-fleece-blanket.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa47b6e69f184ccf30b2f98/41659/3386/subject-8-portal-sherpa-fleece-blanket.jpg?camera_label=folded",
@@ -295,7 +295,7 @@
     "variants": 3,
     "price_min": 20299,
     "price_max": 38399,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78319/34921/subject-8-portal-acrylic-print.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78319/35292/subject-8-portal-acrylic-print.jpg?camera_label=back",
