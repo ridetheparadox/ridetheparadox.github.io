@@ -117,5 +117,61 @@
       "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/131081/subject-8-portal-long-sleeve-tee.jpg?camera_label=person-left"
     ],
     "url": "https://printify.com/app/store/28205039/products/6aa43b270e687794d70145c0"
+  },
+  "cctee": {
+    "product_id": "6aa4415a4d6f4af8a003353d",
+    "title": "Subject 8 / Portal \u2014 Garment-Dyed Heavyweight Tee",
+    "blueprint": "Comfort Colors\u00ae 1717 \u2014 Unisex Garment-Dyed T-shirt",
+    "blueprint_id": 706,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "variants": 6,
+    "price_min": 3499,
+    "price_max": 3699,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/98445/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/98446/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/100629/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=folded",
+      "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/126095/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=person-5-context"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa4415a4d6f4af8a003353d"
+  },
+  "ziphoodie": {
+    "product_id": "6aa441674d6f4af8a0033541",
+    "title": "Subject 8 / Portal \u2014 Full-Zip Hoodie",
+    "blueprint": "Gildan 18600 \u2014 Unisex Heavy Blend\u2122 Full Zip Hooded Sweatshirt",
+    "blueprint_id": 66,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "variants": 6,
+    "price_min": 6999,
+    "price_max": 7999,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/110719/subject-8-portal-full-zip-hoodie.jpg?camera_label=front-2",
+      "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/110720/subject-8-portal-full-zip-hoodie.jpg?camera_label=back-2",
+      "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/152763/subject-8-portal-full-zip-hoodie.jpg?camera_label=person-1-front",
+      "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/152764/subject-8-portal-full-zip-hoodie.jpg?camera_label=person-1-back"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa441674d6f4af8a0033541"
+  },
+  "tank": {
+    "product_id": "6aa4416c99804710910505e9",
+    "title": "Subject 8 / Portal \u2014 Jersey Tank",
+    "blueprint": "Bella+Canvas 3480 \u2014 Unisex Jersey Tank",
+    "blueprint_id": 39,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "variants": 6,
+    "price_min": 3299,
+    "price_max": 3799,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa4416c99804710910505e9/24639/101889/subject-8-portal-jersey-tank.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa4416c99804710910505e9/24639/101892/subject-8-portal-jersey-tank.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa4416c99804710910505e9/24639/119051/subject-8-portal-jersey-tank.jpg?camera_label=size-chart"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa4416c99804710910505e9"
   }
 }
