@@ -1,5 +1,5 @@
 {
-  "publish": true,
+  "publish": false,
   "only": [
     "tee",
     "crewneck",
@@ -7,5 +7,5 @@
   ],
   "force": false,
   "refresh": [],
-  "touched": "2026-09-11T17:45:09Z"
+  "touched": "2026-09-11T17:46:51Z"
 }
