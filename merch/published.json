@@ -1,0 +1,63 @@
+{
+  "poster": {
+    "product_id": "6aa351dc15eccea9ce0c1ec0",
+    "title": "Subject 8 / Portal \u2014 Matte Poster",
+    "blueprint": "Generic brand  \u2014 Matte Vertical Posters",
+    "blueprint_id": 282,
+    "print_provider": "Sensaria",
+    "print_provider_id": 2,
+    "variants": 2,
+    "price_min": 2799,
+    "price_max": 2999,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/101110/94682/subject-8-portal-matte-poster.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/101110/94723/subject-8-portal-matte-poster.jpg?camera_label=front-2",
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/101110/99401/subject-8-portal-matte-poster.jpg?camera_label=close-up",
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/101110/95143/subject-8-portal-matte-poster.jpg?camera_label=context-1",
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/94696/subject-8-portal-matte-poster.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/94734/subject-8-portal-matte-poster.jpg?camera_label=front-2",
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/99410/subject-8-portal-matte-poster.jpg?camera_label=close-up",
+      "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/95153/subject-8-portal-matte-poster.jpg?camera_label=context-1"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa351dc15eccea9ce0c1ec0"
+  },
+  "hoodie": {
+    "product_id": "6aa351e515eccea9ce0c1ec4",
+    "title": "Subject 8 / Portal \u2014 Heavyweight Hoodie",
+    "blueprint": "Gildan 18500 \u2014 Unisex Heavy Blend\u2122 Hooded Sweatshirt",
+    "blueprint_id": 77,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "variants": 6,
+    "price_min": 5299,
+    "price_max": 6099,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98424/subject-8-portal-heavyweight-hoodie.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98425/subject-8-portal-heavyweight-hoodie.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98426/subject-8-portal-heavyweight-hoodie.jpg?camera_label=back-2",
+      "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98432/subject-8-portal-heavyweight-hoodie.jpg?camera_label=folded"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa351e515eccea9ce0c1ec4"
+  },
+  "tote": {
+    "product_id": "6aa351eed23ce0a24e0c4117",
+    "title": "Subject 8 / Desert \u2014 Tote Bag",
+    "blueprint": "Generic brand  \u2014 Shoulder Tote Bag (AOP)",
+    "blueprint_id": 836,
+    "print_provider": "Print Clever",
+    "print_provider_id": 72,
+    "variants": 1,
+    "price_min": 4599,
+    "price_max": 4599,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/22535/subject-8-desert-tote-bag.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/22536/subject-8-desert-tote-bag.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/23043/subject-8-desert-tote-bag.jpg?camera_label=on-person",
+      "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/23044/subject-8-desert-tote-bag.jpg?camera_label=context-1"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa351eed23ce0a24e0c4117"
+  }
+}
