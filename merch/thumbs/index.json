@@ -411,5 +411,68 @@
     "mode": "RGB",
     "bytes": 59924,
     "thumb": "merch/thumbs/printify-mug-right.jpg"
+  },
+  "printify-framedcanvas-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 73822,
+    "thumb": "merch/thumbs/printify-framedcanvas-front.jpg"
+  },
+  "printify-framedcanvas-context.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 112267,
+    "thumb": "merch/thumbs/printify-framedcanvas-context.jpg"
+  },
+  "printify-framedcanvas-side.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 67218,
+    "thumb": "merch/thumbs/printify-framedcanvas-side.jpg"
+  },
+  "printify-acrylic-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 265593,
+    "thumb": "merch/thumbs/printify-acrylic-front.jpg"
+  },
+  "printify-acrylic-context.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 311300,
+    "thumb": "merch/thumbs/printify-acrylic-context.jpg"
+  },
+  "printify-acrylic-closeup.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 224575,
+    "thumb": "merch/thumbs/printify-acrylic-closeup.jpg"
+  },
+  "printify-sherpa-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 484960,
+    "thumb": "merch/thumbs/printify-sherpa-front.jpg"
+  },
+  "printify-sherpa-context.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 899213,
+    "thumb": "merch/thumbs/printify-sherpa-context.jpg"
+  },
+  "printify-sherpa-folded.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 418209,
+    "thumb": "merch/thumbs/printify-sherpa-folded.jpg"
   }
 }
