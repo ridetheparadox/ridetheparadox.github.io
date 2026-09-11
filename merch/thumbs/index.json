@@ -222,5 +222,89 @@
     "mode": "RGB",
     "bytes": 462023,
     "thumb": "merch/thumbs/printify-tote-context-1.jpg"
+  },
+  "printify-tee-front-2.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 62852,
+    "thumb": "merch/thumbs/printify-tee-front-2.jpg"
+  },
+  "printify-tee-back-2.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 40799,
+    "thumb": "merch/thumbs/printify-tee-back-2.jpg"
+  },
+  "printify-tee-folded.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 69425,
+    "thumb": "merch/thumbs/printify-tee-folded.jpg"
+  },
+  "printify-tee-hanging-1.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 69862,
+    "thumb": "merch/thumbs/printify-tee-hanging-1.jpg"
+  },
+  "printify-crewneck-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 67810,
+    "thumb": "merch/thumbs/printify-crewneck-front.jpg"
+  },
+  "printify-crewneck-back.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 51623,
+    "thumb": "merch/thumbs/printify-crewneck-back.jpg"
+  },
+  "printify-crewneck-folded.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 66872,
+    "thumb": "merch/thumbs/printify-crewneck-folded.jpg"
+  },
+  "printify-crewneck-folded-2.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 353482,
+    "thumb": "merch/thumbs/printify-crewneck-folded-2.jpg"
+  },
+  "printify-longsleeve-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 51233,
+    "thumb": "merch/thumbs/printify-longsleeve-front.jpg"
+  },
+  "printify-longsleeve-back.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 41757,
+    "thumb": "merch/thumbs/printify-longsleeve-back.jpg"
+  },
+  "printify-longsleeve-collar-closeup.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 126991,
+    "thumb": "merch/thumbs/printify-longsleeve-collar-closeup.jpg"
+  },
+  "printify-longsleeve-person-left.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 62177,
+    "thumb": "merch/thumbs/printify-longsleeve-person-left.jpg"
   }
 }
