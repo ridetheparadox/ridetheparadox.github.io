@@ -49,8 +49,8 @@
     "print_provider": "Print Clever",
     "print_provider_id": 72,
     "variants": 1,
-    "price_min": 4599,
-    "price_max": 4599,
+    "price_min": 3999,
+    "price_max": 3999,
     "published": false,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/22535/subject-8-desert-tote-bag.jpg?camera_label=front",
