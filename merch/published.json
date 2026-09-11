@@ -184,7 +184,7 @@
     "variants": 90,
     "price_min": 3299,
     "price_max": 3299,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa470598fbb1047c6066980/75383/22089/subject-8-portal-phone-tough-case.jpg?camera_label=front-and-side",
       "https://images-api.printify.com/mockup/6aa470598fbb1047c6066980/75383/22527/subject-8-portal-phone-tough-case.jpg?camera_label=context",
@@ -207,7 +207,7 @@
     "variants": 3,
     "price_min": 4999,
     "price_max": 11199,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa47065c1d9d1c942006fb3/82234/53167/subject-8-portal-stretched-canvas.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa47065c1d9d1c942006fb3/82234/52547/subject-8-portal-stretched-canvas.jpg?camera_label=side",
@@ -230,7 +230,7 @@
     "variants": 2,
     "price_min": 1799,
     "price_max": 1899,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa4706d5fe185a2da0b5b03/65217/6405/subject-8-portal-black-mug.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa4706d5fe185a2da0b5b03/65217/6407/subject-8-portal-black-mug.jpg?camera_label=right",
