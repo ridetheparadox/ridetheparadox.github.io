@@ -138,5 +138,89 @@
     "mode": "RGB",
     "bytes": 5151119,
     "thumb": "merch/thumbs/final-mockup-tote.jpg"
+  },
+  "printify-poster-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 63657,
+    "thumb": "merch/thumbs/printify-poster-front.jpg"
+  },
+  "printify-poster-front-2.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 62710,
+    "thumb": "merch/thumbs/printify-poster-front-2.jpg"
+  },
+  "printify-poster-close-up.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 69265,
+    "thumb": "merch/thumbs/printify-poster-close-up.jpg"
+  },
+  "printify-poster-context-1.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 306526,
+    "thumb": "merch/thumbs/printify-poster-context-1.jpg"
+  },
+  "printify-hoodie-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 60381,
+    "thumb": "merch/thumbs/printify-hoodie-front.jpg"
+  },
+  "printify-hoodie-back.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 47818,
+    "thumb": "merch/thumbs/printify-hoodie-back.jpg"
+  },
+  "printify-hoodie-back-2.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 43870,
+    "thumb": "merch/thumbs/printify-hoodie-back-2.jpg"
+  },
+  "printify-hoodie-folded.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 63878,
+    "thumb": "merch/thumbs/printify-hoodie-folded.jpg"
+  },
+  "printify-tote-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 283869,
+    "thumb": "merch/thumbs/printify-tote-front.jpg"
+  },
+  "printify-tote-back.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 285191,
+    "thumb": "merch/thumbs/printify-tote-back.jpg"
+  },
+  "printify-tote-on-person.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 357759,
+    "thumb": "merch/thumbs/printify-tote-on-person.jpg"
+  },
+  "printify-tote-context-1.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 452340,
+    "thumb": "merch/thumbs/printify-tote-context-1.jpg"
   }
 }
