@@ -2,13 +2,11 @@
   "publish": false,
   "only": [
     "framedcanvas",
-    "sherpa",
-    "denimjacket",
     "acrylic",
-    "comforter"
+    "sherpa"
   ],
   "force": false,
   "refresh": [],
-  "dry_run": true,
-  "touched": "2026-09-11T22:02:51Z"
+  "dry_run": false,
+  "touched": "2026-09-11T22:05:54Z"
 }

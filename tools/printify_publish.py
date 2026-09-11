@@ -203,6 +203,25 @@ def placement(up, cat_variants, positions, fit="contain", align="center", copies
     return out
 
 
+def print_areas_for(up, cat_variants, variant_ids, prod):
+    """One print area per distinct placeholder shape, so a listing that mixes
+    shapes (canvas sizes, phone models) gets a placement computed for each
+    shape instead of one compromise applied to all of them."""
+    by_id = {v["id"]: v for v in cat_variants}
+    groups = {}
+    for vid in variant_ids:
+        v = by_id.get(vid)
+        dims = tuple(placeholder_dims([v], pos) for pos in prod["positions"]) if v else ()
+        groups.setdefault(dims, []).append(vid)
+    out = []
+    for dims, ids in groups.items():
+        vs = [by_id[i] for i in ids if i in by_id]
+        out.append({"variant_ids": ids,
+                    "placeholders": placement(up, vs, prod["positions"], prod.get("fit", "contain"),
+                                              prod.get("align", "center"), prod.get("copies"))})
+    return out
+
+
 def refresh_product(prod, existing):
     """Re-upload the artwork and rewrite listing, placement and prices on an
     existing product, keeping its id, blueprint, provider and variants."""
@@ -228,7 +247,7 @@ def refresh_product(prod, existing):
         "description": prod["description"],
         "tags": prod["tags"],
         "variants": priced,
-        "print_areas": [{"variant_ids": ids, "placeholders": placement(up, cat.get("variants", []), prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))}],
+        "print_areas": print_areas_for(up, cat.get("variants", []), ids, prod),
     }
     call("PUT", f"shops/{SHOP}/products/{pid}.json", body)
     time.sleep(15)  # Printify re-renders mockups after an update
@@ -314,8 +333,9 @@ def main():
             all_variants = cat.get("variants", [])
             strict = [v for v in all_variants if variant_allowed(prod, v)]
             size = image_size(prod["image"]) or (None, None)
-            places = placement({"id": "dry-run", "width": size[0], "height": size[1]},
-                               chosen or all_variants, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))
+            areas = print_areas_for({"id": "dry-run", "width": size[0], "height": size[1]}, all_variants,
+                                    [v["id"] for v in (chosen or all_variants)], prod)
+            by_id = {v["id"]: v for v in all_variants}
             resolved[key] = {
                 "blueprint": f"{bp['brand']} {bp['model']} — {bp['title']}", "blueprint_id": bp["id"],
                 "print_provider": pp["title"], "print_provider_id": pp["id"],
@@ -326,9 +346,13 @@ def main():
                 "positions_available": sorted({ph.get("position") for v in all_variants
                                                for ph in (v.get("placeholders") or []) if ph.get("position")}),
                 "image": {"path": prod["image"], "width": size[0], "height": size[1]},
-                "placements": [{"position": pl["position"], "placeholder": placeholder_dims(chosen, pl["position"]),
-                                "scale": pl["images"][0]["scale"], "y": pl["images"][0]["y"],
-                                "x": [im["x"] for im in pl["images"]]} for pl in places],
+                "placements": [{"variants": len(a["variant_ids"]),
+                                "titles": [by_id[i].get("title") for i in a["variant_ids"][:4]],
+                                "placeholders": [{"position": pl["position"],
+                                                  "placeholder": placeholder_dims([by_id[a["variant_ids"][0]]], pl["position"]),
+                                                  "scale": pl["images"][0]["scale"], "y": pl["images"][0]["y"],
+                                                  "x": [im["x"] for im in pl["images"]]} for pl in a["placeholders"]]}
+                               for a in areas],
             }
             if not strict:
                 print(f"[{key}] WARNING: no catalogue variant matched colours {prod.get('colors')} / sizes {prod.get('sizes')}")
@@ -349,7 +373,7 @@ def main():
             "blueprint_id": bp["id"],
             "print_provider_id": pp["id"],
             "variants": [{"id": i, "price": 9999, "is_enabled": True} for i in ids],
-            "print_areas": [{"variant_ids": ids, "placeholders": placement(up, chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))}],
+            "print_areas": print_areas_for(up, chosen, ids, prod),
         }
         created = call("POST", f"shops/{SHOP}/products.json", body)
         pid = created["id"]

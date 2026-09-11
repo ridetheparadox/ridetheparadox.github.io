@@ -889,7 +889,7 @@
     {
       "key": "framedcanvas",
       "title": "Subject 8 / Portal — Framed Canvas",
-      "description": "The profile that opened the Paradox Universe, printed edge to edge on a matte canvas in a floating black frame. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nPoly-cotton canvas on a solid wood stretcher, pigment inks, set in a black wood floating frame with hanging hardware. Sizes to be confirmed.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "description": "The profile that opened the Paradox Universe, printed edge to edge on a matte canvas in a black floating frame. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nPoly-cotton canvas on a solid wood stretcher, pigment inks, set in a 1.25 in black wood floating frame with hanging hardware. Available in 12 × 16, 18 × 24, 24 × 32, 30 × 40 and 32 × 48 in.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
       "tags": [
         "sci-fi canvas",
         "alien canvas art",
@@ -922,8 +922,16 @@
         "Sensaria",
         "Print Geek"
       ],
-      "sizes": null,
-      "colors": null,
+      "sizes": [
+        "12x16(vertical)",
+        "18x24(vertical)",
+        "24x32(vertical)",
+        "30x40(vertical)",
+        "32x48(vertical)"
+      ],
+      "colors": [
+        "Black"
+      ],
       "image": "merch/print/final-canvas-flat.png",
       "positions": [
         "front"
@@ -936,7 +944,7 @@
     {
       "key": "sherpa",
       "title": "Subject 8 / Portal — Sherpa Fleece Blanket",
-      "description": "The profile that opened the Paradox Universe, printed across a sherpa fleece blanket. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nSoft polyester fleece print side, thick white sherpa on the reverse. Sizes to be confirmed.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "description": "The profile that opened the Paradox Universe, printed across a 60 × 80 in sherpa fleece blanket. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nSoft polyester fleece print side, thick white sherpa on the reverse, machine washable. One size, 60 × 80 in.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
       "tags": [
         "sci-fi blanket",
         "alien blanket",
@@ -971,9 +979,11 @@
         "MWW On Demand",
         "Print Geek"
       ],
-      "sizes": null,
+      "sizes": [
+        "60x80"
+      ],
       "colors": null,
-      "image": "merch/print/final-hoodie-flat.png",
+      "image": "merch/print/final-canvas-flat.png",
       "positions": [
         "front"
       ],
@@ -983,52 +993,9 @@
       "min_price": 6999
     },
     {
-      "key": "denimjacket",
-      "title": "Subject 8 / Portal — Denim Jacket",
-      "description": "The profile that opened the Paradox Universe, printed large across the back of a denim jacket. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nClassic trucker cut, button front, chest pockets. Sizes and colours to be confirmed.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
-      "tags": [
-        "sci-fi jacket",
-        "alien jacket",
-        "denim jacket",
-        "cinematic jacket",
-        "back print jacket",
-        "streetwear jacket",
-        "blue alien",
-        "paradox universe",
-        "subject 8",
-        "film jacket",
-        "ai art jacket",
-        "portal jacket",
-        "trucker jacket"
-      ],
-      "blueprint": {
-        "tries": [
-          [
-            "men's denim jacket"
-          ]
-        ],
-        "must_not": []
-      },
-      "providers": [
-        "Printify Choice",
-        "Monster Digital",
-        "SwiftPOD",
-        "Print Geek"
-      ],
-      "sizes": null,
-      "colors": null,
-      "image": "merch/print/final-hoodie-flat.png",
-      "positions": [
-        "back"
-      ],
-      "fit": "contain",
-      "margin": 0.5,
-      "min_price": 9999
-    },
-    {
       "key": "acrylic",
       "title": "Subject 8 / Portal — Acrylic Print",
-      "description": "The profile that opened the Paradox Universe, printed behind a quarter-inch sheet of glossy acrylic. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nCrystal-clear acrylic, French cleat hanging, the image floats off the wall. Sizes to be confirmed.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "description": "The profile that opened the Paradox Universe, printed behind a quarter-inch sheet of crystal-clear acrylic. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nGlossy acrylic face, white backing, French cleat hanging so the piece floats off the wall. Available in 16 × 20, 20 × 30 and 24 × 36 in.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
       "tags": [
         "sci-fi acrylic print",
         "alien wall art",
@@ -1059,61 +1026,20 @@
         "Print Geek",
         "Jondo"
       ],
-      "sizes": null,
+      "sizes": [
+        "16x20(vertical)",
+        "20x30(vertical)",
+        "24x36(vertical)"
+      ],
       "colors": null,
-      "image": "merch/print/final-hoodie-flat.png",
-      "positions": [
-        "front"
-      ],
-      "fit": "contain",
-      "margin": 0.5,
-      "min_price": 7999
-    },
-    {
-      "key": "comforter",
-      "title": "Subject 8 / Portal — Comforter",
-      "description": "The profile that opened the Paradox Universe, printed across a comforter. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nSizes to be confirmed.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
-      "tags": [
-        "sci-fi comforter",
-        "alien bedding",
-        "comforter",
-        "cinematic bedding",
-        "dark bedding",
-        "blue alien",
-        "paradox universe",
-        "subject 8",
-        "film bedding",
-        "ai art bedding",
-        "portal bedding",
-        "black comforter",
-        "alien comforter"
-      ],
-      "blueprint": {
-        "tries": [
-          [
-            "comforter"
-          ]
-        ],
-        "must_not": [
-          "cotton"
-        ]
-      },
-      "providers": [
-        "Printify Choice",
-        "Duplium",
-        "MWW On Demand",
-        "Print Geek"
-      ],
-      "sizes": null,
-      "colors": null,
-      "image": "merch/print/final-hoodie-flat.png",
+      "image": "merch/print/final-canvas-flat.png",
       "positions": [
         "front"
       ],
       "fit": "cover",
-      "align": "center",
       "margin": 0.5,
-      "min_price": 12999
+      "min_price": 9999,
+      "align": "center"
     }
   ]
 }
