@@ -5,27 +5,119 @@
       "key": "poster",
       "title": "Subject 8 / Portal — Matte Poster",
       "description": "Subject 8, lit from above in the portal chamber — the profile that opened the Paradox Universe. A still from the archive, printed on museum-grade matte paper with archival pigment inks: deep blacks, no glare, no yellowing. The PARADOX wordmark sits small at the foot of the print.\n\nAvailable in 12 × 16 and 18 × 24 in. Ships rolled in a rigid tube. Frame not included.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
-      "tags": ["sci-fi poster", "alien art print", "cinematic poster", "portrait poster", "matte poster", "film still print", "blue alien", "dark wall art", "portal art", "paradox universe", "subject 8", "ai art print", "space poster"],
-      "blueprint": {"tries": [["matte", "vertical", "poster"], ["matte", "poster"]], "must_not": ["framed", "canvas", "horizontal"]},
-      "providers": ["Sensaria", "Printify Choice", "Print Geek", "Ideju Druka"],
-      "sizes": ["12x16", "18x24"],
+      "tags": [
+        "sci-fi poster",
+        "alien art print",
+        "cinematic poster",
+        "portrait poster",
+        "matte poster",
+        "film still print",
+        "blue alien",
+        "dark wall art",
+        "portal art",
+        "paradox universe",
+        "subject 8",
+        "ai art print",
+        "space poster"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "matte",
+            "vertical",
+            "poster"
+          ],
+          [
+            "matte",
+            "poster"
+          ]
+        ],
+        "must_not": [
+          "framed",
+          "canvas",
+          "horizontal"
+        ]
+      },
+      "providers": [
+        "Sensaria",
+        "Printify Choice",
+        "Print Geek",
+        "Ideju Druka"
+      ],
+      "sizes": [
+        "12x16",
+        "18x24"
+      ],
       "colors": null,
       "image": "merch/print/final-poster.png",
-      "positions": ["front"],
-      "margin": 0.60,
+      "positions": [
+        "front"
+      ],
+      "margin": 0.6,
       "min_price": 2499
     },
     {
       "key": "hoodie",
       "title": "Subject 8 / Portal — Heavyweight Hoodie",
       "description": "The profile that opened the Paradox Universe, printed large on a heavyweight black hoodie. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image dissolves into the fleece with no box edge. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nGildan Heavy Blend: 50/50 cotton-poly fleece, double-lined hood, front pouch pocket. Unisex, S – 3XL. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
-      "tags": ["sci-fi hoodie", "alien hoodie", "cinematic hoodie", "graphic hoodie", "black hoodie", "streetwear hoodie", "blue alien", "paradox universe", "subject 8", "heavyweight hoodie", "unisex hoodie", "film hoodie", "ai art hoodie"],
-      "blueprint": {"tries": [["gildan", "heavy blend", "hooded"], ["gildan", "18500"], ["heavy blend", "hoodie"]], "must_not": ["youth", "zip", "toddler"]},
-      "providers": ["Monster Digital", "SwiftPOD", "Printify Choice", "Underground Threads"],
-      "sizes": ["S", "M", "L", "XL", "2XL", "3XL"],
-      "colors": ["Black"],
+      "tags": [
+        "sci-fi hoodie",
+        "alien hoodie",
+        "cinematic hoodie",
+        "graphic hoodie",
+        "black hoodie",
+        "streetwear hoodie",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "heavyweight hoodie",
+        "unisex hoodie",
+        "film hoodie",
+        "ai art hoodie"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "gildan",
+            "heavy blend",
+            "hooded"
+          ],
+          [
+            "gildan",
+            "18500"
+          ],
+          [
+            "heavy blend",
+            "hoodie"
+          ]
+        ],
+        "must_not": [
+          "youth",
+          "zip",
+          "toddler"
+        ]
+      },
+      "providers": [
+        "Monster Digital",
+        "SwiftPOD",
+        "Printify Choice",
+        "Underground Threads"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "colors": [
+        "Black"
+      ],
       "image": "merch/print/final-hoodie-flat.png",
-      "positions": ["front"],
+      "positions": [
+        "front"
+      ],
       "margin": 0.55,
       "min_price": 4999
     },
@@ -33,16 +125,253 @@
       "key": "tote",
       "title": "Subject 8 / Desert — Tote Bag",
       "description": "Coffee in the desert. Subject 8 and a companion, two cups, a table in the middle of nowhere. The still from the Subject 8 Desert sequence, printed edge to edge on both sides — an ordinary moment from an extraordinary world. The PARADOX wordmark sits small at the foot of the print.\n\nAll-over print shoulder tote, spun polyester with white web straps, about 16 × 16 in. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
-      "tags": ["sci-fi tote bag", "alien tote bag", "surreal tote", "art tote bag", "desert art", "coffee art", "cinematic tote", "all over print tote", "blue alien", "paradox universe", "subject 8", "film still", "ai art tote"],
-      "blueprint": {"tries": [["aop", "tote"], ["all over", "tote"], ["tote", "bag"]], "must_not": ["weekender", "laptop", "beach"]},
-      "providers": ["Underground Threads", "Printify Choice", "Duplium", "MWW On Demand"],
+      "tags": [
+        "sci-fi tote bag",
+        "alien tote bag",
+        "surreal tote",
+        "art tote bag",
+        "desert art",
+        "coffee art",
+        "cinematic tote",
+        "all over print tote",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "film still",
+        "ai art tote"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "aop",
+            "tote"
+          ],
+          [
+            "all over",
+            "tote"
+          ],
+          [
+            "tote",
+            "bag"
+          ]
+        ],
+        "must_not": [
+          "weekender",
+          "laptop",
+          "beach"
+        ]
+      },
+      "providers": [
+        "Underground Threads",
+        "Printify Choice",
+        "Duplium",
+        "MWW On Demand"
+      ],
       "sizes": null,
       "colors": null,
       "image": "merch/print/final-tote.png",
-      "positions": ["front", "back"],
+      "positions": [
+        "front",
+        "back"
+      ],
       "fit": "cover",
       "margin": 0.47,
       "min_price": 3499
+    },
+    {
+      "key": "tee",
+      "title": "Subject 8 / Portal — Tee",
+      "description": "The profile that opened the Paradox Universe, printed large on a black tee. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nBella+Canvas 3001: 100% Airlume combed ring-spun cotton, retail fit, side-seamed. Unisex, S – 3XL. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": [
+        "sci-fi t-shirt",
+        "alien t-shirt",
+        "cinematic tee",
+        "graphic tee",
+        "black t-shirt",
+        "streetwear tee",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "unisex t-shirt",
+        "film t-shirt",
+        "ai art t-shirt",
+        "portal tee"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "bella",
+            "3001",
+            "jersey short sleeve tee"
+          ],
+          [
+            "bella",
+            "3001"
+          ]
+        ],
+        "must_not": [
+          "cvc",
+          "heather",
+          "tri-blend",
+          "triblend",
+          "youth",
+          "toddler",
+          "long sleeve",
+          "tank",
+          "v-neck",
+          "women"
+        ]
+      },
+      "min_price": 2999,
+      "providers": [
+        "Monster Digital",
+        "SwiftPOD",
+        "Printify Choice",
+        "Underground Threads"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "image": "merch/print/final-hoodie-flat.png",
+      "positions": [
+        "front"
+      ],
+      "fit": "contain",
+      "margin": 0.55
+    },
+    {
+      "key": "crewneck",
+      "title": "Subject 8 / Portal — Crewneck Sweatshirt",
+      "description": "The profile that opened the Paradox Universe, printed large on a black crewneck. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nGildan Heavy Blend: 50/50 cotton-poly fleece, ribbed collar, cuffs and waistband. Unisex, S – 3XL. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": [
+        "sci-fi sweatshirt",
+        "alien sweatshirt",
+        "cinematic crewneck",
+        "graphic sweatshirt",
+        "black sweatshirt",
+        "streetwear crewneck",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "unisex sweatshirt",
+        "film sweatshirt",
+        "ai art sweatshirt",
+        "heavy blend crewneck"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "gildan",
+            "18000"
+          ],
+          [
+            "gildan",
+            "heavy blend",
+            "crewneck"
+          ]
+        ],
+        "must_not": [
+          "youth",
+          "hooded",
+          "zip",
+          "toddler"
+        ]
+      },
+      "min_price": 4499,
+      "providers": [
+        "Monster Digital",
+        "SwiftPOD",
+        "Printify Choice",
+        "Underground Threads"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "image": "merch/print/final-hoodie-flat.png",
+      "positions": [
+        "front"
+      ],
+      "fit": "contain",
+      "margin": 0.55
+    },
+    {
+      "key": "longsleeve",
+      "title": "Subject 8 / Portal — Long Sleeve Tee",
+      "description": "The profile that opened the Paradox Universe, printed large on a black long-sleeve tee. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nGildan Ultra Cotton: 100% cotton, ribbed cuffs, taped neck and shoulders. Unisex, S – 3XL. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "tags": [
+        "sci-fi long sleeve",
+        "alien long sleeve",
+        "cinematic tee",
+        "graphic long sleeve",
+        "black long sleeve",
+        "streetwear tee",
+        "blue alien",
+        "paradox universe",
+        "subject 8",
+        "unisex long sleeve",
+        "film t-shirt",
+        "ai art t-shirt",
+        "long sleeve tee"
+      ],
+      "blueprint": {
+        "tries": [
+          [
+            "gildan",
+            "2400"
+          ],
+          [
+            "gildan",
+            "ultra cotton",
+            "long sleeve"
+          ]
+        ],
+        "must_not": [
+          "youth",
+          "ladies",
+          "women",
+          "toddler"
+        ]
+      },
+      "min_price": 3499,
+      "providers": [
+        "Monster Digital",
+        "SwiftPOD",
+        "Printify Choice",
+        "Underground Threads"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "image": "merch/print/final-hoodie-flat.png",
+      "positions": [
+        "front"
+      ],
+      "fit": "contain",
+      "margin": 0.55
     }
   ]
 }

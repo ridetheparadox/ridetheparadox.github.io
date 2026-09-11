@@ -1,7 +1,11 @@
 {
-  "publish": true,
-  "only": [],
+  "publish": false,
+  "only": [
+    "tee",
+    "crewneck",
+    "longsleeve"
+  ],
   "force": false,
   "refresh": [],
-  "touched": "2026-09-11T01:30:53Z"
+  "touched": "2026-09-11T17:29:12Z"
 }
