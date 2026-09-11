@@ -242,5 +242,70 @@
       "https://images-api.printify.com/mockup/6aa4706d5fe185a2da0b5b03/104470/101585/subject-8-portal-black-mug.jpg?camera_label=back"
     ],
     "url": "https://printify.com/app/store/28205039/products/6aa4706d5fe185a2da0b5b03"
+  },
+  "framedcanvas": {
+    "product_id": "6aa47b696de8ba75bb0bfdba",
+    "title": "Subject 8 / Portal \u2014 Framed Canvas",
+    "blueprint": "Generic brand  \u2014 Matte Canvas, Framed (Multi-color)",
+    "blueprint_id": 944,
+    "print_provider": "Printify Choice",
+    "print_provider_id": 99,
+    "variants": 5,
+    "price_min": 7999,
+    "price_max": 18999,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88303/103231/subject-8-portal-framed-canvas.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88303/103751/subject-8-portal-framed-canvas.jpg?camera_label=side",
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88303/103672/subject-8-portal-framed-canvas.jpg?camera_label=context-1",
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88303/103534/subject-8-portal-framed-canvas.jpg?camera_label=context-2",
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88292/103215/subject-8-portal-framed-canvas.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88292/103735/subject-8-portal-framed-canvas.jpg?camera_label=side",
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88292/103654/subject-8-portal-framed-canvas.jpg?camera_label=context-1",
+      "https://images-api.printify.com/mockup/6aa47b696de8ba75bb0bfdba/88292/103518/subject-8-portal-framed-canvas.jpg?camera_label=context-2"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa47b696de8ba75bb0bfdba"
+  },
+  "sherpa": {
+    "product_id": "6aa47b6e69f184ccf30b2f98",
+    "title": "Subject 8 / Portal \u2014 Sherpa Fleece Blanket",
+    "blueprint": "Generic brand  \u2014 Sherpa Fleece Blanket",
+    "blueprint_id": 238,
+    "print_provider": "Printify Choice",
+    "print_provider_id": 99,
+    "variants": 1,
+    "price_min": 9899,
+    "price_max": 9899,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa47b6e69f184ccf30b2f98/41659/3384/subject-8-portal-sherpa-fleece-blanket.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa47b6e69f184ccf30b2f98/41659/3386/subject-8-portal-sherpa-fleece-blanket.jpg?camera_label=folded",
+      "https://images-api.printify.com/mockup/6aa47b6e69f184ccf30b2f98/41659/71529/subject-8-portal-sherpa-fleece-blanket.jpg?camera_label=context-1",
+      "https://images-api.printify.com/mockup/6aa47b6e69f184ccf30b2f98/41659/71530/subject-8-portal-sherpa-fleece-blanket.jpg?camera_label=context-2"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa47b6e69f184ccf30b2f98"
+  },
+  "acrylic": {
+    "product_id": "6aa47b7330f927c80e09a5c7",
+    "title": "Subject 8 / Portal \u2014 Acrylic Print",
+    "blueprint": "Generic brand  \u2014 Acrylic Prints (French Cleat Hanging) ",
+    "blueprint_id": 928,
+    "print_provider": "Acrylic Idea Factory",
+    "print_provider_id": 104,
+    "variants": 3,
+    "price_min": 20299,
+    "price_max": 38399,
+    "published": false,
+    "mockups": [
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78319/34921/subject-8-portal-acrylic-print.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78319/35292/subject-8-portal-acrylic-print.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78319/55929/subject-8-portal-acrylic-print.jpg?camera_label=close-up",
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78319/55202/subject-8-portal-acrylic-print.jpg?camera_label=context-1",
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78317/34989/subject-8-portal-acrylic-print.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78317/35294/subject-8-portal-acrylic-print.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78317/55931/subject-8-portal-acrylic-print.jpg?camera_label=close-up",
+      "https://images-api.printify.com/mockup/6aa47b7330f927c80e09a5c7/78317/55204/subject-8-portal-acrylic-print.jpg?camera_label=context-1"
+    ],
+    "url": "https://printify.com/app/store/28205039/products/6aa47b7330f927c80e09a5c7"
   }
 }
