@@ -1,5 +1,14 @@
 {
-  "final-mockup-hoodie.png": "https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/30596ad2-9597-406f-a38e-5c050728bb2a/6c6ddd22-833e-4a1b-b8f0-0e35cf74b3c9/Photoreal_e_commerce_product_photograph_of_a_black_heavyweig.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjZkODg3Y2Y5ZTQ2MjgzNyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc4OTIyOTc3NX0.CT7V-sn6yUBDdctBHfpTHXc9rmY762TagsAh9J3Q0xQ",
-  "final-mockup-poster.png": "https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/49b30986-8525-4386-8594-0f4ebec6dd10/443c5211-27b2-4f71-b842-e7b409c48d25/Photoreal_interior_product_photograph___art_is_the_finished_.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYmQzZmQxNjIzZTNlN2I0YiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc4OTIyMDE5NH0.mZoUCY1Tj_An35a-vKe0zLV7GncxcAwuqudXtyrJp4U",
-  "final-mockup-tote.png": "https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/1cddb35c-48b9-4101-920b-0a0141de90d8/08fde2be-6c17-4f01-9f38-8e13a0876cf3/Photoreal_e_commerce_product_photograph_of_a_square_all_over.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYzZlYTcyMDE4NWNkNzliOSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc4OTIyNDU3N30.DjYEDu1WV1ytKGNFwJtI0end2B0clQ_W1R-GEShzSG8"
+  "printify-poster-front.jpg": "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/94696/subject-8-portal-matte-poster.jpg?camera_label=front",
+  "printify-poster-front-2.jpg": "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/94734/subject-8-portal-matte-poster.jpg?camera_label=front-2",
+  "printify-poster-close-up.jpg": "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/99410/subject-8-portal-matte-poster.jpg?camera_label=close-up",
+  "printify-poster-context-1.jpg": "https://images-api.printify.com/mockup/6aa351dc15eccea9ce0c1ec0/43144/95153/subject-8-portal-matte-poster.jpg?camera_label=context-1",
+  "printify-hoodie-front.jpg": "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98424/subject-8-portal-heavyweight-hoodie.jpg?camera_label=front",
+  "printify-hoodie-back.jpg": "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98425/subject-8-portal-heavyweight-hoodie.jpg?camera_label=back",
+  "printify-hoodie-back-2.jpg": "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98426/subject-8-portal-heavyweight-hoodie.jpg?camera_label=back-2",
+  "printify-hoodie-folded.jpg": "https://images-api.printify.com/mockup/6aa351e515eccea9ce0c1ec4/32920/98432/subject-8-portal-heavyweight-hoodie.jpg?camera_label=folded",
+  "printify-tote-front.jpg": "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/22535/subject-8-desert-tote-bag.jpg?camera_label=front",
+  "printify-tote-back.jpg": "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/22536/subject-8-desert-tote-bag.jpg?camera_label=back",
+  "printify-tote-on-person.jpg": "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/23043/subject-8-desert-tote-bag.jpg?camera_label=on-person",
+  "printify-tote-context-1.jpg": "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/23044/subject-8-desert-tote-bag.jpg?camera_label=context-1"
 }
