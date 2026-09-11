@@ -59,5 +59,20 @@
       "https://images-api.printify.com/mockup/6aa351eed23ce0a24e0c4117/76241/23044/subject-8-desert-tote-bag.jpg?camera_label=context-1"
     ],
     "url": "https://printify.com/app/store/28205039/products/6aa351eed23ce0a24e0c4117"
+  },
+  "tee": {
+    "product_id": "6aa43a9500fe80474e053c29",
+    "title": "Subject 8 / Portal \u2014 Tee",
+    "blueprint": "Bella+Canvas 3001 \u2014 Unisex Jersey Short Sleeve Tee",
+    "blueprint_id": 12,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "variants": 6,
+    "price_min": 9999,
+    "price_max": 9999,
+    "published": false,
+    "mockups": [],
+    "url": "https://printify.com/app/store/28205039/products/6aa43a9500fe80474e053c29",
+    "note": "created by the failed run of 2026-09-11 17:30 UTC before pricing; adopted for refresh"
   }
 }

@@ -257,6 +257,16 @@ def main():
         created = call("POST", f"shops/{SHOP}/products.json", body)
         pid = created["id"]
         print(f"[{key}] created product {pid}")
+        # Record the product the moment it exists so a later failure can
+        # never leave an unrecorded orphan on Printify.
+        results[key] = {
+            "product_id": pid, "title": prod["title"],
+            "blueprint": f"{bp['brand']} {bp['model']} — {bp['title']}", "blueprint_id": bp["id"],
+            "print_provider": pp["title"], "print_provider_id": pp["id"],
+            "variants": len(ids), "price_min": None, "price_max": None, "published": False,
+            "mockups": [], "url": f"https://printify.com/app/store/{SHOP}/products/{pid}",
+        }
+        json.dump(results, open(RESULTS, "w"), indent=2)
 
         # Printify only reveals the per-variant cost on the created product, so
         # price in a second pass from the real numbers.
@@ -269,7 +279,7 @@ def main():
             lo = p if lo is None else min(lo, p)
             hi = p if hi is None else max(hi, p)
         call("PUT", f"shops/{SHOP}/products/{pid}.json", {"variants": priced})
-        print(f"[{key}] priced {len(prices)} variants ${lo/100:.2f}–${hi/100:.2f} "
+        print(f"[{key}] priced {len(priced)} variants ${lo/100:.2f}–${hi/100:.2f} "
               f"at ≥{prod['margin']:.0%} margin")
 
         if PUBLISH:
