@@ -128,7 +128,7 @@
     "variants": 6,
     "price_min": 3499,
     "price_max": 3699,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/98445/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/98446/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=back",
@@ -147,7 +147,7 @@
     "variants": 6,
     "price_min": 5699,
     "price_max": 6599,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/110719/subject-8-portal-full-zip-hoodie.jpg?camera_label=front-2",
       "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/110720/subject-8-portal-full-zip-hoodie.jpg?camera_label=back-2",
@@ -166,7 +166,7 @@
     "variants": 6,
     "price_min": 2999,
     "price_max": 3499,
-    "published": false,
+    "published": true,
     "mockups": [
       "https://images-api.printify.com/mockup/6aa4416c99804710910505e9/24639/101889/subject-8-portal-jersey-tank.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6aa4416c99804710910505e9/24639/101892/subject-8-portal-jersey-tank.jpg?camera_label=back",
