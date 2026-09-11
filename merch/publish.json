@@ -3,11 +3,10 @@
   "only": [
     "phonecase",
     "canvas",
-    "mug",
-    "stickers"
+    "mug"
   ],
   "force": false,
   "refresh": [],
-  "dry_run": true,
-  "touched": "2026-09-11T21:14:20Z"
+  "dry_run": false,
+  "touched": "2026-09-11T21:18:35Z"
 }

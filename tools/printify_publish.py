@@ -87,19 +87,15 @@ def pick_provider(prefs, providers):
 
 
 def choose_variants(spec, variants):
-    colors = [c.lower() for c in (spec.get("colors") or [])]
-    sizes = [norm(s) for s in (spec.get("sizes") or [])]
-    out = []
-    for v in variants:
-        opts = v.get("options") or {}
-        color = str(opts.get("color", "")).lower()
-        size = norm(opts.get("size", ""))
-        if colors and color and color not in colors:
-            continue
-        if sizes and size and size not in sizes:
-            continue
-        out.append(v)
-    return out or variants
+    """Catalogue variants that pass the listing's colour and size filters,
+    matched on the variant title ('Black / S', 'iPhone 15 Pro / Glossy',
+    '12″ x 16″ (Vertical) / 0.75\'\'') so it works for every product type."""
+    if not spec.get("colors") and not spec.get("sizes"):
+        return variants
+    out = [v for v in variants if variant_allowed(spec, v)]
+    if not out:
+        sys.exit(f"[{spec.get('key')}] no catalogue variant matched colours {spec.get('colors')} / sizes {spec.get('sizes')}")
+    return out
 
 
 def price_for(cost, margin, floor):
@@ -173,7 +169,7 @@ def fit_scale(img_w, img_h, dims):
     return round(min(1.0, (ph / pw) * (img_w / img_h)), 4)
 
 
-def placement(up, cat_variants, positions, fit="contain", align="center"):
+def placement(up, cat_variants, positions, fit="contain", align="center", copies=None):
     """contain: the whole image sits inside the print area (bands are unprinted).
     cover: the image fills the width, and if the area is taller than the image
     at that width it is enlarged until the height is covered too (the sides
@@ -194,8 +190,11 @@ def placement(up, cat_variants, positions, fit="contain", align="center"):
                 scaled_h = ih / iw * pw * s      # image height once placed
                 if scaled_h > ph and align == "bottom":
                     y = round(1 - (scaled_h / ph) / 2, 4)
-        out.append({"position": pos, "images": [{"id": up["id"], "x": 0.5, "y": y, "scale": s, "angle": 0}]})
-        print(f"    {pos}: placeholder {dims}, image {iw}x{ih}, fit {fit}/{align} -> scale {s}, y {y}")
+        # copies: x-centres for repeating the image across the area, e.g.
+        # [0.25, 0.75] puts one on each side of a mug handle.
+        xs = copies or [0.5]
+        out.append({"position": pos, "images": [{"id": up["id"], "x": x, "y": y, "scale": s, "angle": 0} for x in xs]})
+        print(f"    {pos}: placeholder {dims}, image {iw}x{ih}, fit {fit}/{align} -> scale {s}, y {y}, x {xs}")
     return out
 
 
@@ -224,7 +223,7 @@ def refresh_product(prod, existing):
         "description": prod["description"],
         "tags": prod["tags"],
         "variants": priced,
-        "print_areas": [{"variant_ids": ids, "placeholders": placement(up, cat.get("variants", []), prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"))}],
+        "print_areas": [{"variant_ids": ids, "placeholders": placement(up, cat.get("variants", []), prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))}],
     }
     call("PUT", f"shops/{SHOP}/products/{pid}.json", body)
     time.sleep(15)  # Printify re-renders mockups after an update
@@ -296,7 +295,7 @@ def main():
             strict = [v for v in all_variants if variant_allowed(prod, v)]
             size = image_size(prod["image"]) or (None, None)
             places = placement({"id": "dry-run", "width": size[0], "height": size[1]},
-                               chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"))
+                               chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))
             resolved[key] = {
                 "blueprint": f"{bp['brand']} {bp['model']} — {bp['title']}", "blueprint_id": bp["id"],
                 "print_provider": pp["title"], "print_provider_id": pp["id"],
@@ -308,7 +307,8 @@ def main():
                                                for ph in (v.get("placeholders") or []) if ph.get("position")}),
                 "image": {"path": prod["image"], "width": size[0], "height": size[1]},
                 "placements": [{"position": pl["position"], "placeholder": placeholder_dims(chosen, pl["position"]),
-                                "scale": pl["images"][0]["scale"], "y": pl["images"][0]["y"]} for pl in places],
+                                "scale": pl["images"][0]["scale"], "y": pl["images"][0]["y"],
+                                "x": [im["x"] for im in pl["images"]]} for pl in places],
             }
             if not strict:
                 print(f"[{key}] WARNING: no catalogue variant matched colours {prod.get('colors')} / sizes {prod.get('sizes')}")
@@ -329,7 +329,7 @@ def main():
             "blueprint_id": bp["id"],
             "print_provider_id": pp["id"],
             "variants": [{"id": i, "price": 9999, "is_enabled": True} for i in ids],
-            "print_areas": [{"variant_ids": ids, "placeholders": placement(up, chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"))}],
+            "print_areas": [{"variant_ids": ids, "placeholders": placement(up, chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))}],
         }
         created = call("POST", f"shops/{SHOP}/products.json", body)
         pid = created["id"]

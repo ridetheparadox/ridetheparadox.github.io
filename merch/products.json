@@ -586,12 +586,12 @@
     },
     {
       "key": "phonecase",
-      "title": "Subject 8 / Portal — iPhone Tough Case",
-      "description": "The profile that opened the Paradox Universe, printed edge to edge on a dual-layer tough case. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nImpact-resistant polycarbonate shell over a soft TPU liner, raised bezel, wireless-charging compatible. Glossy or matte finish. Printed to order for current iPhone models.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "title": "Subject 8 / Portal — Phone Tough Case",
+      "description": "The profile that opened the Paradox Universe, printed edge to edge on a dual-layer tough case. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nImpact-resistant polycarbonate shell over a soft TPU liner, raised bezel, wireless-charging compatible. Glossy or matte finish. Made for iPhone 13 through 18, Samsung Galaxy S22 through S26 and Google Pixel 7 through 9. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
       "tags": [
         "sci-fi phone case",
         "alien phone case",
-        "iphone tough case",
+        "tough phone case",
         "cinematic case",
         "black phone case",
         "graphic phone case",
@@ -599,9 +599,9 @@
         "paradox universe",
         "subject 8",
         "iphone case",
-        "film phone case",
-        "ai art phone case",
-        "portal case"
+        "galaxy case",
+        "pixel case",
+        "ai art phone case"
       ],
       "blueprint": {
         "tries": [
@@ -638,7 +638,53 @@
         "Print Geek",
         "Sunrise"
       ],
-      "sizes": null,
+      "sizes": [
+        "iPhone 13",
+        "iPhone 13 Mini",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "Samsung Galaxy S22",
+        "Samsung Galaxy S22 Plus",
+        "Samsung Galaxy S22 Ultra",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Plus",
+        "iPhone 14 Pro Max",
+        "Samsung Galaxy S23",
+        "Samsung Galaxy S23 Plus",
+        "Samsung Galaxy S23 Ultra",
+        "Google Pixel 7",
+        "iPhone 15",
+        "iPhone 15 Plus",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "Samsung Galaxy S24",
+        "Samsung Galaxy S24 Plus",
+        "Samsung Galaxy S24 Ultra",
+        "Google Pixel 8 Pro",
+        "Google Pixel 8",
+        "iPhone 16",
+        "iPhone 16 Plus",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max",
+        "Google Pixel 9",
+        "Google Pixel 9 Pro",
+        "Google Pixel 9 Pro XL",
+        "Samsung Galaxy S25",
+        "Samsung Galaxy S25 Plus",
+        "Samsung Galaxy S25 Ultra",
+        "iPhone 17",
+        "iPhone 17 Air",
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max",
+        "Samsung Galaxy S26",
+        "Samsung Galaxy S26 Plus",
+        "Samsung Galaxy S26 Ultra",
+        "iPhone 18 Pro",
+        "iPhone 18 Pro Max",
+        "iPhone 17e",
+        "iPhone 16e"
+      ],
       "colors": null,
       "image": "merch/print/final-phone-flat.png",
       "positions": [
@@ -720,7 +766,7 @@
     {
       "key": "mug",
       "title": "Subject 8 / Portal — Black Mug",
-      "description": "The profile that opened the Paradox Universe, on a glossy black ceramic mug. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nBlack ceramic, glossy finish, C-handle, microwave and dishwasher safe. 11 oz and 15 oz. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
+      "description": "The profile that opened the Paradox Universe, on both sides of a glossy black ceramic mug. Subject 8, lit from above in the portal chamber, in silver-blue on black — the image fades to black at its edges. The PARADOX wordmark and SUBJECT 8 set small beneath.\n\nBlack ceramic, glossy finish, C-handle, microwave and dishwasher safe. 11 oz and 15 oz. Printed to order.\n\n100% AI-generated / Human-directed. Every frame in the Paradox archive is synthetic imagery, shaped by a human eye.",
       "tags": [
         "sci-fi mug",
         "alien mug",
@@ -778,7 +824,11 @@
       ],
       "fit": "contain",
       "margin": 0.55,
-      "min_price": 1799
+      "min_price": 1799,
+      "copies": [
+        0.25,
+        0.75
+      ]
     },
     {
       "key": "stickers",
