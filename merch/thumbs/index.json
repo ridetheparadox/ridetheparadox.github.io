@@ -171,7 +171,7 @@
     "width": 1200,
     "height": 1200,
     "mode": "RGB",
-    "bytes": 60381,
+    "bytes": 57848,
     "thumb": "merch/thumbs/printify-hoodie-front.jpg"
   },
   "printify-hoodie-back.jpg": {
@@ -192,35 +192,35 @@
     "width": 1200,
     "height": 1200,
     "mode": "RGB",
-    "bytes": 63878,
+    "bytes": 59171,
     "thumb": "merch/thumbs/printify-hoodie-folded.jpg"
   },
   "printify-tote-front.jpg": {
     "width": 1200,
     "height": 1200,
     "mode": "RGB",
-    "bytes": 283869,
+    "bytes": 284083,
     "thumb": "merch/thumbs/printify-tote-front.jpg"
   },
   "printify-tote-back.jpg": {
     "width": 1200,
     "height": 1200,
     "mode": "RGB",
-    "bytes": 285191,
+    "bytes": 285330,
     "thumb": "merch/thumbs/printify-tote-back.jpg"
   },
   "printify-tote-on-person.jpg": {
     "width": 1200,
     "height": 1200,
     "mode": "RGB",
-    "bytes": 357759,
+    "bytes": 357711,
     "thumb": "merch/thumbs/printify-tote-on-person.jpg"
   },
   "printify-tote-context-1.jpg": {
     "width": 1200,
     "height": 1200,
     "mode": "RGB",
-    "bytes": 452340,
+    "bytes": 452409,
     "thumb": "merch/thumbs/printify-tote-context-1.jpg"
   }
 }
