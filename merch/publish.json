@@ -1,36 +1,14 @@
 {
   "publish": false,
   "only": [
-    "_none"
+    "framedcanvas",
+    "sherpa",
+    "denimjacket",
+    "acrylic",
+    "comforter"
   ],
   "force": false,
   "refresh": [],
   "dry_run": true,
-  "search": [
-    "framed canvas",
-    "acrylic",
-    "metal print",
-    "comforter",
-    "duvet",
-    "blanket",
-    "jacket",
-    "skateboard",
-    "rug",
-    "tapestry",
-    "curtain",
-    "backpack",
-    "puzzle",
-    "bedspread",
-    "quilt",
-    "hooded",
-    "windbreaker",
-    "denim",
-    "leather",
-    "yoga",
-    "weekender",
-    "duffel",
-    "clock",
-    "canvas"
-  ],
-  "touched": "2026-09-11T22:00:45Z"
+  "touched": "2026-09-11T22:02:51Z"
 }

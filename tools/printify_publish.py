@@ -95,6 +95,9 @@ def choose_variants(spec, variants):
     if not spec.get("colors") and not spec.get("sizes"):
         return variants
     out = [v for v in variants if variant_allowed(spec, v)]
+    if not out and DRY_RUN:
+        print(f"[{spec.get('key')}] WARNING: no catalogue variant matched colours {spec.get('colors')} / sizes {spec.get('sizes')}")
+        return []
     if not out:
         sys.exit(f"[{spec.get('key')}] no catalogue variant matched colours {spec.get('colors')} / sizes {spec.get('sizes')}")
     return out
@@ -312,7 +315,7 @@ def main():
             strict = [v for v in all_variants if variant_allowed(prod, v)]
             size = image_size(prod["image"]) or (None, None)
             places = placement({"id": "dry-run", "width": size[0], "height": size[1]},
-                               chosen, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))
+                               chosen or all_variants, prod["positions"], prod.get("fit", "contain"), prod.get("align", "center"), prod.get("copies"))
             resolved[key] = {
                 "blueprint": f"{bp['brand']} {bp['model']} — {bp['title']}", "blueprint_id": bp["id"],
                 "print_provider": pp["title"], "print_provider_id": pp["id"],
