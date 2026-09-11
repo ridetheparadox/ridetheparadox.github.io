@@ -348,5 +348,68 @@
     "mode": "RGB",
     "bytes": 47784,
     "thumb": "merch/thumbs/printify-tank-front.jpg"
+  },
+  "printify-phonecase-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 84598,
+    "thumb": "merch/thumbs/printify-phonecase-front.jpg"
+  },
+  "printify-phonecase-context.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 74381,
+    "thumb": "merch/thumbs/printify-phonecase-context.jpg"
+  },
+  "printify-phonecase-front-2.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 82434,
+    "thumb": "merch/thumbs/printify-phonecase-front-2.jpg"
+  },
+  "printify-canvas-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 63516,
+    "thumb": "merch/thumbs/printify-canvas-front.jpg"
+  },
+  "printify-canvas-side.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 65545,
+    "thumb": "merch/thumbs/printify-canvas-side.jpg"
+  },
+  "printify-canvas-context.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 119131,
+    "thumb": "merch/thumbs/printify-canvas-context.jpg"
+  },
+  "printify-mug-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 46218,
+    "thumb": "merch/thumbs/printify-mug-front.jpg"
+  },
+  "printify-mug-left.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 59724,
+    "thumb": "merch/thumbs/printify-mug-left.jpg"
+  },
+  "printify-mug-right.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 59924,
+    "thumb": "merch/thumbs/printify-mug-right.jpg"
   }
 }
