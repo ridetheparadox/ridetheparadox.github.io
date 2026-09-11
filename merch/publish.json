@@ -1,10 +1,7 @@
 {
-  "publish": false,
+  "publish": true,
   "only": [],
   "force": false,
-  "refresh": [
-    "hoodie",
-    "tote"
-  ],
-  "touched": "2026-09-11T01:20:04Z"
+  "refresh": [],
+  "touched": "2026-09-11T01:30:53Z"
 }
