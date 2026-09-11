@@ -104,6 +104,58 @@ def price_for(cost, margin, floor):
     return max(price, floor)
 
 
+def variant_allowed(spec, v):
+    """Does a product variant ('Black / S') pass the listing's colour and size filters?"""
+    parts = [p.strip() for p in str(v.get("title", "")).split("/")]
+    colors = [c.lower() for c in (spec.get("colors") or [])]
+    sizes = [norm(s) for s in (spec.get("sizes") or [])]
+    if colors and not any(p.lower() in colors for p in parts):
+        return False
+    if sizes and not any(norm(p) in sizes for p in parts):
+        return False
+    return True
+
+
+def placeholder_dims(cat_variants, position):
+    """Pixel size of a print area, from the first catalogue variant that has it."""
+    for v in cat_variants:
+        for ph in v.get("placeholders") or []:
+            if ph.get("position") == position and ph.get("width") and ph.get("height"):
+                return ph["width"], ph["height"]
+    return None
+
+
+def fit_scale(img_w, img_h, dims):
+    """Printify's scale is the image width as a fraction of the placeholder
+    width, so a taller image at scale 1 overflows top and bottom. Shrink it
+    until the whole image sits inside the print area."""
+    if not dims or not img_w or not img_h:
+        return 1
+    pw, ph = dims
+    return round(min(1.0, (ph / pw) * (img_w / img_h)), 4)
+
+
+def placement(up, cat_variants, positions, fit="contain"):
+    """contain: the whole image sits inside the print area (bands are unprinted).
+    cover: the image fills the width; if it is then taller than the area, it is
+    slid so the bottom edges line up and the crop comes off the top."""
+    out = []
+    iw, ih = up.get("width"), up.get("height")
+    for pos in positions:
+        dims = placeholder_dims(cat_variants, pos)
+        s, y = 1, 0.5
+        if fit == "contain":
+            s = fit_scale(iw, ih, dims)
+        elif dims and iw and ih:
+            pw, ph = dims
+            scaled_h = ih / iw * pw          # image height once its width fills the area
+            if scaled_h > ph:
+                y = round(1 - (scaled_h / ph) / 2, 4)
+        out.append({"position": pos, "images": [{"id": up["id"], "x": 0.5, "y": y, "scale": s, "angle": 0}]})
+        print(f"    {pos}: placeholder {dims}, image {iw}x{ih}, fit {fit} -> scale {s}, y {y}")
+    return out
+
+
 def refresh_product(prod, existing):
     """Re-upload the artwork and rewrite listing, placement and prices on an
     existing product, keeping its id, blueprint, provider and variants."""
@@ -112,24 +164,24 @@ def refresh_product(prod, existing):
     up = call("POST", "uploads/images.json",
               {"file_name": os.path.basename(prod["image"]), "url": f"{RAW_BASE}/{prod['image']}"})
     print(f"[{key}] re-uploaded {up.get('file_name')} {up.get('width')}x{up.get('height')} -> {up['id']}")
+    cat = call("GET", f"catalog/blueprints/{existing['blueprint_id']}/print_providers/{existing['print_provider_id']}/variants.json")
     # Printify validates an update against every variant on the product, so
     # send them all: enabled ones re-priced, disabled ones left as they are.
     all_variants = current.get("variants", [])
     ids = [v["id"] for v in all_variants]
-    priced = [{"id": v["id"],
-               "price": price_for(v["cost"], prod["margin"], prod.get("min_price", 0)) if v.get("is_enabled") else v["price"],
-               "is_enabled": bool(v.get("is_enabled"))} for v in all_variants]
+    priced = []
+    for v in all_variants:
+        on = bool(v.get("is_enabled")) and variant_allowed(prod, v)
+        priced.append({"id": v["id"],
+                       "price": price_for(v["cost"], prod["margin"], prod.get("min_price", 0)) if on else v["price"],
+                       "is_enabled": on})
+    print(f"[{key}] enabled: {', '.join(v.get('title', '?') for v, p in zip(all_variants, priced) if p['is_enabled'])}")
     body = {
         "title": prod["title"],
         "description": prod["description"],
         "tags": prod["tags"],
         "variants": priced,
-        "print_areas": [{
-            "variant_ids": ids,
-            "placeholders": [
-                {"position": pos, "images": [{"id": up["id"], "x": 0.5, "y": 0.5, "scale": 1, "angle": 0}]}
-                for pos in prod["positions"]],
-        }],
+        "print_areas": [{"variant_ids": ids, "placeholders": placement(up, cat.get("variants", []), prod["positions"], prod.get("fit", "contain"))}],
     }
     call("PUT", f"shops/{SHOP}/products/{pid}.json", body)
     time.sleep(15)  # Printify re-renders mockups after an update
@@ -200,12 +252,7 @@ def main():
             "blueprint_id": bp["id"],
             "print_provider_id": pp["id"],
             "variants": [{"id": i, "price": 9999, "is_enabled": True} for i in ids],
-            "print_areas": [{
-                "variant_ids": ids,
-                "placeholders": [
-                    {"position": pos, "images": [{"id": up["id"], "x": 0.5, "y": 0.5, "scale": 1, "angle": 0}]}
-                    for pos in prod["positions"]],
-            }],
+            "print_areas": [{"variant_ids": ids, "placeholders": placement(up, chosen, prod["positions"], prod.get("fit", "contain"))}],
         }
         created = call("POST", f"shops/{SHOP}/products.json", body)
         pid = created["id"]

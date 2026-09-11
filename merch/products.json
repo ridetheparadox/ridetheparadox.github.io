@@ -40,6 +40,7 @@
       "colors": null,
       "image": "merch/print/final-tote.png",
       "positions": ["front", "back"],
+      "fit": "cover",
       "margin": 0.47,
       "min_price": 3499
     }
