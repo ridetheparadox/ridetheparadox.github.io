@@ -1,14 +1,8 @@
 {
-  "printify-tee-front-2.jpg": "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102044/subject-8-portal-tee.jpg?camera_label=front-2&_=1789147976",
-  "printify-tee-back-2.jpg": "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102045/subject-8-portal-tee.jpg?camera_label=back-2&_=1789147976",
-  "printify-tee-folded.jpg": "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102046/subject-8-portal-tee.jpg?camera_label=folded&_=1789147976",
-  "printify-tee-hanging-1.jpg": "https://images-api.printify.com/mockup/6aa43a9500fe80474e053c29/18102/102048/subject-8-portal-tee.jpg?camera_label=hanging-1&_=1789147976",
-  "printify-crewneck-front.jpg": "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/98502/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=front&_=1789147976",
-  "printify-crewneck-back.jpg": "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/98503/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=back&_=1789147976",
-  "printify-crewneck-folded.jpg": "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/100648/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=folded&_=1789147976",
-  "printify-crewneck-folded-2.jpg": "https://images-api.printify.com/mockup/6aa43b1e037bdfa3d80afea5/25459/128101/subject-8-portal-crewneck-sweatshirt.jpg?camera_label=folded-2&_=1789147976",
-  "printify-longsleeve-front.jpg": "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/105264/subject-8-portal-long-sleeve-tee.jpg?camera_label=front&_=1789147976",
-  "printify-longsleeve-back.jpg": "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/105265/subject-8-portal-long-sleeve-tee.jpg?camera_label=back&_=1789147976",
-  "printify-longsleeve-collar-closeup.jpg": "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/131080/subject-8-portal-long-sleeve-tee.jpg?camera_label=collar-closeup&_=1789147976",
-  "printify-longsleeve-person-left.jpg": "https://images-api.printify.com/mockup/6aa43b270e687794d70145c0/33798/131081/subject-8-portal-long-sleeve-tee.jpg?camera_label=person-left&_=1789147976"
+  "printify-cctee-front.jpg": "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/98445/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=front&_=1789149692",
+  "printify-cctee-person.jpg": "https://images-api.printify.com/mockup/6aa4415a4d6f4af8a003353d/73204/126095/subject-8-portal-garment-dyed-heavyweight-tee.jpg?camera_label=person-5-context&_=1789149692",
+  "printify-ziphoodie-back.jpg": "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/110720/subject-8-portal-full-zip-hoodie.jpg?camera_label=back-2&_=1789149692",
+  "printify-ziphoodie-front.jpg": "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/110719/subject-8-portal-full-zip-hoodie.jpg?camera_label=front-2&_=1789149692",
+  "printify-ziphoodie-person-back.jpg": "https://images-api.printify.com/mockup/6aa441674d6f4af8a0033541/31950/152764/subject-8-portal-full-zip-hoodie.jpg?camera_label=person-1-back&_=1789149692",
+  "printify-tank-front.jpg": "https://images-api.printify.com/mockup/6aa4416c99804710910505e9/24639/101889/subject-8-portal-jersey-tank.jpg?camera_label=front&_=1789149692"
 }
