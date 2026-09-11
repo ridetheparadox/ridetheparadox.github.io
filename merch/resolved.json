@@ -1,72 +1,201 @@
 {
-  "cctee": {
-    "blueprint": "Comfort Colors\u00ae 1717 \u2014 Unisex Garment-Dyed T-shirt",
-    "blueprint_id": 706,
-    "print_provider": "Monster Digital",
-    "print_provider_id": 29,
+  "phonecase": {
+    "blueprint": "Generic brand  \u2014 Tough Cases",
+    "blueprint_id": 421,
+    "print_provider": "WOYC",
+    "print_provider_id": 23,
     "providers_available": [
-      "Printify Choice",
-      "Dimona Tee",
-      "Fulfill Engine",
-      "Shirt Monkey",
-      "Marco Fine Arts",
-      "Printful",
-      "SwiftPOD",
-      "Print Geek",
-      "The Print Bar",
-      "Monster Digital"
+      "WOYC"
     ],
-    "variants_total": 230,
-    "variants_matched": 6,
+    "variants_total": 136,
+    "variants_matched": 136,
     "matched_titles": [
-      "Black / S",
-      "Black / M",
-      "Black / L",
-      "Black / XL",
-      "Black / 2XL",
-      "Black / 3XL"
+      "iPhone 8 / Glossy",
+      "iPhone 8 / Matte",
+      "iPhone 8 Plus / Glossy",
+      "iPhone 8 Plus / Matte",
+      "iPhone X / Glossy",
+      "iPhone X / Matte",
+      "iPhone XR / Glossy",
+      "iPhone XR / Matte",
+      "iPhone XS / Glossy",
+      "iPhone XS / Matte",
+      "iPhone XS MAX / Glossy",
+      "iPhone XS MAX / Matte",
+      "iPhone 11 / Glossy",
+      "iPhone 11 / Matte",
+      "iPhone 11 Pro / Glossy",
+      "iPhone 11 Pro / Matte",
+      "iPhone 11 Pro Max / Glossy",
+      "iPhone 11 Pro Max / Matte",
+      "Samsung Galaxy S20 / Glossy",
+      "Samsung Galaxy S20 / Matte",
+      "Samsung Galaxy S20 Ultra / Glossy",
+      "Samsung Galaxy S20 Ultra / Matte",
+      "Samsung Galaxy S20+ / Glossy",
+      "Samsung Galaxy S20+ / Matte",
+      "iPhone 12 Mini / Glossy",
+      "iPhone 12 Mini / Matte",
+      "iPhone 12 / Glossy",
+      "iPhone 12 / Matte",
+      "iPhone 12 Pro / Glossy",
+      "iPhone 12 Pro / Matte",
+      "iPhone 12 Pro Max / Glossy",
+      "iPhone 12 Pro Max / Matte",
+      "iPhone 13 / Glossy",
+      "iPhone 13 / Matte",
+      "iPhone 13 Mini / Glossy",
+      "iPhone 13 Mini / Matte",
+      "iPhone 13 Pro / Glossy",
+      "iPhone 13 Pro / Matte",
+      "iPhone 13 Pro Max / Glossy",
+      "iPhone 13 Pro Max / Matte",
+      "Samsung Galaxy S21 / Glossy",
+      "Samsung Galaxy S21 / Matte",
+      "Samsung Galaxy S21 Plus / Glossy",
+      "Samsung Galaxy S21 Plus / Matte",
+      "Samsung Galaxy S21 Ultra / Glossy",
+      "Samsung Galaxy S21 Ultra / Matte",
+      "Google Pixel 6 / Glossy",
+      "Google Pixel 6 / Matte",
+      "Samsung Galaxy S20 FE / Glossy",
+      "Samsung Galaxy S20 FE / Matte",
+      "Samsung Galaxy S21 FE / Glossy",
+      "Samsung Galaxy S21 FE / Matte",
+      "Samsung Galaxy S22 / Glossy",
+      "Samsung Galaxy S22 / Matte",
+      "Samsung Galaxy S22 Plus / Glossy",
+      "Samsung Galaxy S22 Plus / Matte",
+      "Samsung Galaxy S22 Ultra / Glossy",
+      "Samsung Galaxy S22 Ultra / Matte",
+      "iPhone 14 / Glossy",
+      "iPhone 14 / Matte",
+      "iPhone 14 Pro / Glossy",
+      "iPhone 14 Pro / Matte",
+      "iPhone 14 Plus / Glossy",
+      "iPhone 14 Plus / Matte",
+      "iPhone 14 Pro Max / Glossy",
+      "iPhone 14 Pro Max / Matte",
+      "Samsung Galaxy S23 / Glossy",
+      "Samsung Galaxy S23 / Matte",
+      "Samsung Galaxy S23 Plus / Glossy",
+      "Samsung Galaxy S23 Plus / Matte",
+      "Samsung Galaxy S23 Ultra / Glossy",
+      "Samsung Galaxy S23 Ultra / Matte",
+      "Google Pixel 7 / Glossy",
+      "Google Pixel 7 / Matte",
+      "Google Pixel 6 Pro / Glossy",
+      "Google Pixel 6 Pro / Matte",
+      "iPhone 15 / Glossy",
+      "iPhone 15 / Matte",
+      "iPhone 15 Plus / Glossy",
+      "iPhone 15 Plus / Matte",
+      "iPhone 15 Pro / Glossy",
+      "iPhone 15 Pro / Matte",
+      "iPhone 15 Pro Max / Glossy",
+      "iPhone 15 Pro Max / Matte",
+      "Samsung Galaxy S24 / Glossy",
+      "Samsung Galaxy S24 / Matte",
+      "Samsung Galaxy S24 Plus / Glossy",
+      "Samsung Galaxy S24 Plus / Matte",
+      "Samsung Galaxy S24 Ultra / Glossy",
+      "Samsung Galaxy S24 Ultra / Matte",
+      "Google Pixel 8 Pro / Glossy",
+      "Google Pixel 8 Pro / Matte",
+      "Google Pixel 8 / Glossy",
+      "Google Pixel 8 / Matte",
+      "iPhone 16 / Glossy",
+      "iPhone 16 / Matte",
+      "iPhone 16 Plus / Glossy",
+      "iPhone 16 Plus / Matte",
+      "iPhone 16 Pro / Glossy",
+      "iPhone 16 Pro / Matte",
+      "iPhone 16 Pro Max / Glossy",
+      "iPhone 16 Pro Max / Matte",
+      "Google Pixel 9 / Glossy",
+      "Google Pixel 9 / Matte",
+      "Google Pixel 9 Pro / Glossy",
+      "Google Pixel 9 Pro / Matte",
+      "Google Pixel 9 Pro XL / Glossy",
+      "Google Pixel 9 Pro XL / Matte",
+      "Samsung Galaxy S25 / Glossy",
+      "Samsung Galaxy S25 / Matte",
+      "Samsung Galaxy S25 Plus / Glossy",
+      "Samsung Galaxy S25 Plus / Matte",
+      "Samsung Galaxy S25 Ultra / Glossy",
+      "Samsung Galaxy S25 Ultra / Matte",
+      "iPhone 17 / Glossy",
+      "iPhone 17 / Matte",
+      "iPhone 17 Air / Glossy",
+      "iPhone 17 Air / Matte",
+      "iPhone 17 Pro / Glossy",
+      "iPhone 17 Pro / Matte",
+      "iPhone 17 Pro Max / Glossy",
+      "iPhone 17 Pro Max / Matte",
+      "Samsung Galaxy S26 / Glossy",
+      "Samsung Galaxy S26 / Matte",
+      "Samsung Galaxy S26 Plus / Glossy",
+      "Samsung Galaxy S26 Plus / Matte",
+      "Samsung Galaxy S26 Ultra / Glossy",
+      "Samsung Galaxy S26 Ultra / Matte",
+      "iPhone 18 Pro / Glossy",
+      "iPhone 18 Pro / Matte",
+      "iPhone 18 Pro Max / Glossy",
+      "iPhone 18 Pro Max / Matte",
+      "iPhone 17e / Glossy",
+      "iPhone 17e / Matte",
+      "iPhone 16e / Glossy",
+      "iPhone 16e / Matte"
     ],
     "colours_available": [
-      "Bay",
-      "Berry",
-      "Black",
-      "Blossom",
-      "Blue Jean",
-      "Blue Spruce",
-      "Brick",
-      "Butter",
-      "Chalky Mint",
-      "Chambray",
-      "Chili",
-      "Crimson",
-      "Crunchberry",
-      "Espresso",
-      "Flo Blue",
-      "Graphite",
-      "Grey",
-      "Island Reef",
-      "Ivory",
-      "Lagoon Blue",
-      "Light Green",
-      "Moss",
-      "Mustard",
-      "Navy",
-      "Neon Pink",
-      "Orchid",
-      "Pepper",
-      "Red",
-      "Sapphire",
-      "Violet",
-      "Watermelon",
-      "White",
-      "Yam"
+      ""
     ],
     "positions_available": [
-      "back",
       "front"
     ],
     "image": {
-      "path": "merch/print/final-hoodie-flat.png",
+      "path": "merch/print/final-phone-flat.png",
+      "width": 2240,
+      "height": 4800
+    },
+    "placements": [
+      {
+        "position": "front",
+        "placeholder": [
+          1152,
+          1853
+        ],
+        "scale": 1.0,
+        "y": 0.5
+      }
+    ]
+  },
+  "canvas": {
+    "blueprint": "Generic brand  \u2014 Matte Canvas, Stretched, 0.75\" (Multi-Size)",
+    "blueprint_id": 937,
+    "print_provider": "Printify Choice",
+    "print_provider_id": 99,
+    "providers_available": [
+      "Printify Choice",
+      "SwiftPOD",
+      "Roma Imaging",
+      "Jondo"
+    ],
+    "variants_total": 68,
+    "variants_matched": 3,
+    "matched_titles": [
+      "12\u2033 x 16\u2033 (Vertical) / 0.75''",
+      "18\u2033 x 24\u2033 (Vertical) / 0.75''",
+      "24\" x 32\" (Vertical) / 0.75''"
+    ],
+    "colours_available": [
+      ""
+    ],
+    "positions_available": [
+      "front"
+    ],
+    "image": {
+      "path": "merch/print/final-canvas-flat.png",
       "width": 3584,
       "height": 4800
     },
@@ -74,100 +203,37 @@
       {
         "position": "front",
         "placeholder": [
-          3461,
-          3955
+          3600,
+          4800
         ],
-        "scale": 0.8532,
+        "scale": 1.0,
         "y": 0.5
       }
     ]
   },
-  "ziphoodie": {
-    "blueprint": "Gildan 18600 \u2014 Unisex Heavy Blend\u2122 Full Zip Hooded Sweatshirt",
-    "blueprint_id": 66,
-    "print_provider": "Monster Digital",
-    "print_provider_id": 29,
+  "mug": {
+    "blueprint": "Generic brand  \u2014 Black Mug (11oz, 15oz)",
+    "blueprint_id": 479,
+    "print_provider": "Printify Choice",
+    "print_provider_id": 99,
     "providers_available": [
-      "Fulfill Engine",
-      "The Print Bar",
-      "Duplium",
-      "SwiftPOD",
-      "Printify Choice",
-      "Monster Digital"
-    ],
-    "variants_total": 24,
-    "variants_matched": 6,
-    "matched_titles": [
-      "S / Black",
-      "M / Black",
-      "L / Black",
-      "XL / Black",
-      "2XL / Black",
-      "3XL / Black"
-    ],
-    "colours_available": [
-      "Black",
-      "Dark Heather",
-      "Navy",
-      "Sport Grey"
-    ],
-    "positions_available": [
-      "back",
-      "front"
-    ],
-    "image": {
-      "path": "merch/print/final-hoodie-flat.png",
-      "width": 3584,
-      "height": 4800
-    },
-    "placements": [
-      {
-        "position": "back",
-        "placeholder": [
-          3461,
-          3955
-        ],
-        "scale": 0.8532,
-        "y": 0.5
-      }
-    ]
-  },
-  "tank": {
-    "blueprint": "Bella+Canvas 3480 \u2014 Unisex Jersey Tank",
-    "blueprint_id": 39,
-    "print_provider": "Monster Digital",
-    "print_provider_id": 29,
-    "providers_available": [
-      "Printify Choice",
-      "Marco Fine Arts",
-      "T Shirt and Sons",
-      "Textildruck Europa",
-      "SwiftPOD",
-      "Print Clever",
+      "District Photo",
+      "Colorway",
       "Monster Digital",
-      "Print Geek",
-      "OPT OnDemand"
+      "Harrier",
+      "Printify Choice"
     ],
-    "variants_total": 18,
-    "variants_matched": 6,
+    "variants_total": 2,
+    "variants_matched": 2,
     "matched_titles": [
-      "L / Black",
-      "M / Black",
-      "S / Black",
-      "XL / Black",
-      "XS / Black",
-      "2XL / Black"
+      "11oz",
+      "15oz"
     ],
     "colours_available": [
-      "Black",
-      "Navy",
-      "Red",
-      "White"
+      ""
     ],
     "positions_available": [
-      "back",
-      "front",
-      "neck"
+      "front"
     ],
     "image": {
       "path": "merch/print/final-hoodie-flat.png",
@@ -178,10 +244,50 @@
       {
         "position": "front",
         "placeholder": [
-          3000,
-          3600
+          2327,
+          1086
         ],
-        "scale": 0.896,
+        "scale": 0.3485,
+        "y": 0.5
+      }
+    ]
+  },
+  "stickers": {
+    "blueprint": "Generic brand  \u2014 Kiss-Cut Stickers",
+    "blueprint_id": 400,
+    "print_provider": "Printify Choice",
+    "print_provider_id": 99,
+    "providers_available": [
+      "SPOKE Custom Products",
+      "Printify Choice"
+    ],
+    "variants_total": 4,
+    "variants_matched": 4,
+    "matched_titles": [
+      "2\" \u00d7 2\" / White",
+      "3\" \u00d7 3\" / White",
+      "4\" \u00d7 4\" / White",
+      "6\" \u00d7 6\" / White"
+    ],
+    "colours_available": [
+      ""
+    ],
+    "positions_available": [
+      "front"
+    ],
+    "image": {
+      "path": "merch/print/final-hoodie-flat.png",
+      "width": 3584,
+      "height": 4800
+    },
+    "placements": [
+      {
+        "position": "front",
+        "placeholder": [
+          559,
+          559
+        ],
+        "scale": 0.7467,
         "y": 0.5
       }
     ]
