@@ -1,0 +1,189 @@
+{
+  "cctee": {
+    "blueprint": "Comfort Colors\u00ae 1717 \u2014 Unisex Garment-Dyed T-shirt",
+    "blueprint_id": 706,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "providers_available": [
+      "Printify Choice",
+      "Dimona Tee",
+      "Fulfill Engine",
+      "Shirt Monkey",
+      "Marco Fine Arts",
+      "Printful",
+      "SwiftPOD",
+      "Print Geek",
+      "The Print Bar",
+      "Monster Digital"
+    ],
+    "variants_total": 230,
+    "variants_matched": 6,
+    "matched_titles": [
+      "Black / S",
+      "Black / M",
+      "Black / L",
+      "Black / XL",
+      "Black / 2XL",
+      "Black / 3XL"
+    ],
+    "colours_available": [
+      "Bay",
+      "Berry",
+      "Black",
+      "Blossom",
+      "Blue Jean",
+      "Blue Spruce",
+      "Brick",
+      "Butter",
+      "Chalky Mint",
+      "Chambray",
+      "Chili",
+      "Crimson",
+      "Crunchberry",
+      "Espresso",
+      "Flo Blue",
+      "Graphite",
+      "Grey",
+      "Island Reef",
+      "Ivory",
+      "Lagoon Blue",
+      "Light Green",
+      "Moss",
+      "Mustard",
+      "Navy",
+      "Neon Pink",
+      "Orchid",
+      "Pepper",
+      "Red",
+      "Sapphire",
+      "Violet",
+      "Watermelon",
+      "White",
+      "Yam"
+    ],
+    "positions_available": [
+      "back",
+      "front"
+    ],
+    "image": {
+      "path": "merch/print/final-hoodie-flat.png",
+      "width": 3584,
+      "height": 4800
+    },
+    "placements": [
+      {
+        "position": "front",
+        "placeholder": [
+          3461,
+          3955
+        ],
+        "scale": 0.8532,
+        "y": 0.5
+      }
+    ]
+  },
+  "ziphoodie": {
+    "blueprint": "Gildan 18600 \u2014 Unisex Heavy Blend\u2122 Full Zip Hooded Sweatshirt",
+    "blueprint_id": 66,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "providers_available": [
+      "Fulfill Engine",
+      "The Print Bar",
+      "Duplium",
+      "SwiftPOD",
+      "Printify Choice",
+      "Monster Digital"
+    ],
+    "variants_total": 24,
+    "variants_matched": 6,
+    "matched_titles": [
+      "S / Black",
+      "M / Black",
+      "L / Black",
+      "XL / Black",
+      "2XL / Black",
+      "3XL / Black"
+    ],
+    "colours_available": [
+      "Black",
+      "Dark Heather",
+      "Navy",
+      "Sport Grey"
+    ],
+    "positions_available": [
+      "back",
+      "front"
+    ],
+    "image": {
+      "path": "merch/print/final-hoodie-flat.png",
+      "width": 3584,
+      "height": 4800
+    },
+    "placements": [
+      {
+        "position": "back",
+        "placeholder": [
+          3461,
+          3955
+        ],
+        "scale": 0.8532,
+        "y": 0.5
+      }
+    ]
+  },
+  "tank": {
+    "blueprint": "Bella+Canvas 3480 \u2014 Unisex Jersey Tank",
+    "blueprint_id": 39,
+    "print_provider": "Monster Digital",
+    "print_provider_id": 29,
+    "providers_available": [
+      "Printify Choice",
+      "Marco Fine Arts",
+      "T Shirt and Sons",
+      "Textildruck Europa",
+      "SwiftPOD",
+      "Print Clever",
+      "Monster Digital",
+      "Print Geek",
+      "OPT OnDemand"
+    ],
+    "variants_total": 18,
+    "variants_matched": 6,
+    "matched_titles": [
+      "L / Black",
+      "M / Black",
+      "S / Black",
+      "XL / Black",
+      "XS / Black",
+      "2XL / Black"
+    ],
+    "colours_available": [
+      "Black",
+      "Navy",
+      "Red",
+      "White"
+    ],
+    "positions_available": [
+      "back",
+      "front",
+      "neck"
+    ],
+    "image": {
+      "path": "merch/print/final-hoodie-flat.png",
+      "width": 3584,
+      "height": 4800
+    },
+    "placements": [
+      {
+        "position": "front",
+        "placeholder": [
+          3000,
+          3600
+        ],
+        "scale": 0.896,
+        "y": 0.5
+      }
+    ]
+  }
+}
