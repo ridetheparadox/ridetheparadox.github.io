@@ -35,6 +35,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add merch/published.json 2>/dev/null || true
+          git add -- merch/published.json 2>/dev/null || true
+          git add -- merch/resolved.json 2>/dev/null || true
           git commit -m "Record Printify products created by workflow" || echo "nothing to commit"
           git push

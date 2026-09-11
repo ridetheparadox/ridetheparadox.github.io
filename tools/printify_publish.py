@@ -31,6 +31,11 @@ RESULTS = "merch/published.json"
 # the workflow file itself never needs to change.
 REFRESH = [k for k in os.environ.get("REFRESH", "").split(",") if k] or (
     json.load(open("merch/publish.json")).get("refresh", []) if os.path.exists("merch/publish.json") else [])
+# Dry run: resolve blueprint, provider, variants and placement for new products
+# and write them to merch/resolved.json without uploading or creating anything.
+DRY_RUN = os.environ.get("DRY_RUN", "").lower() == "true" or bool(
+    json.load(open("merch/publish.json")).get("dry_run", False) if os.path.exists("merch/publish.json") else False)
+RESOLVED = "merch/resolved.json"
 PUBLISH_FIELDS = {"title": True, "description": True, "images": True,
                   "variants": True, "tags": True, "keyFeatures": True,
                   "shipping_template": True}
@@ -114,6 +119,28 @@ def variant_allowed(spec, v):
     if sizes and not any(norm(p) in sizes for p in parts):
         return False
     return True
+
+
+def image_size(path):
+    """Width and height of a local PNG or JPEG, read from the file header."""
+    import struct
+    with open(path, "rb") as f:
+        head = f.read(26)
+        if head[:8] == b"\x89PNG\r\n\x1a\n":
+            return struct.unpack(">II", head[16:24])
+        if head[:2] == b"\xff\xd8":
+            f.seek(2)
+            while True:
+                marker = f.read(2)
+                if len(marker) < 2 or marker[0] != 0xFF:
+                    return None
+                if marker[1] in (0xC0, 0xC1, 0xC2):
+                    f.read(3)
+                    h, w = struct.unpack(">HH", f.read(4))
+                    return w, h
+                (seglen,) = struct.unpack(">H", f.read(2))
+                f.seek(seglen - 2, 1)
+    return None
 
 
 def placeholder_dims(cat_variants, position):
@@ -204,6 +231,7 @@ def main():
 
     manifest = json.load(open("merch/products.json"))
     results = json.load(open(RESULTS)) if os.path.exists(RESULTS) else {}
+    resolved = {}
 
     print("resolving catalogue…")
     blueprints = call("GET", "catalog/blueprints.json")
@@ -238,6 +266,31 @@ def main():
         chosen = choose_variants(prod, cat.get("variants", []))
         print(f"[{key}] {bp['brand']} {bp['model']} — {bp['title']} (#{bp['id']}) "
               f"via {pp['title']} (#{pp['id']}), {len(chosen)} variants")
+
+        if DRY_RUN:
+            all_variants = cat.get("variants", [])
+            strict = [v for v in all_variants if variant_allowed(prod, v)]
+            size = image_size(prod["image"]) or (None, None)
+            places = placement({"id": "dry-run", "width": size[0], "height": size[1]},
+                               chosen, prod["positions"], prod.get("fit", "contain"))
+            resolved[key] = {
+                "blueprint": f"{bp['brand']} {bp['model']} — {bp['title']}", "blueprint_id": bp["id"],
+                "print_provider": pp["title"], "print_provider_id": pp["id"],
+                "providers_available": [p["title"] for p in providers],
+                "variants_total": len(all_variants), "variants_matched": len(strict),
+                "matched_titles": [v.get("title") for v in strict],
+                "colours_available": sorted({str((v.get("options") or {}).get("color", "")) for v in all_variants}),
+                "positions_available": sorted({ph.get("position") for v in all_variants
+                                               for ph in (v.get("placeholders") or []) if ph.get("position")}),
+                "image": {"path": prod["image"], "width": size[0], "height": size[1]},
+                "placements": [{"position": pl["position"], "placeholder": placeholder_dims(chosen, pl["position"]),
+                                "scale": pl["images"][0]["scale"], "y": pl["images"][0]["y"]} for pl in places],
+            }
+            if not strict:
+                print(f"[{key}] WARNING: no catalogue variant matched colours {prod.get('colors')} / sizes {prod.get('sizes')}")
+            print(f"[{key}] dry run: {len(strict)} of {len(all_variants)} variants match; nothing created")
+            json.dump(resolved, open(RESOLVED, "w"), indent=2)
+            continue
 
         image_url = f"{RAW_BASE}/{prod['image']}"
         up = call("POST", "uploads/images.json",
@@ -302,6 +355,8 @@ def main():
         }
         json.dump(results, open(RESULTS, "w"), indent=2)
 
+    if DRY_RUN:
+        print(f"dry run: {len(resolved)} products resolved in {RESOLVED}")
     print(f"done: {len(results)} products recorded in {RESULTS}")
 
 

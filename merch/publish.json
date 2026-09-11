@@ -1,11 +1,12 @@
 {
   "publish": false,
   "only": [
-    "tee",
-    "crewneck",
-    "longsleeve"
+    "cctee",
+    "ziphoodie",
+    "tank"
   ],
   "force": false,
   "refresh": [],
-  "touched": "2026-09-11T17:46:51Z"
+  "dry_run": true,
+  "touched": "2026-09-11T17:57:14Z"
 }
