@@ -306,5 +306,47 @@
     "mode": "RGB",
     "bytes": 62177,
     "thumb": "merch/thumbs/printify-longsleeve-person-left.jpg"
+  },
+  "printify-cctee-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 58387,
+    "thumb": "merch/thumbs/printify-cctee-front.jpg"
+  },
+  "printify-cctee-person.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 183729,
+    "thumb": "merch/thumbs/printify-cctee-person.jpg"
+  },
+  "printify-ziphoodie-back.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 58091,
+    "thumb": "merch/thumbs/printify-ziphoodie-back.jpg"
+  },
+  "printify-ziphoodie-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 52323,
+    "thumb": "merch/thumbs/printify-ziphoodie-front.jpg"
+  },
+  "printify-ziphoodie-person-back.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 72954,
+    "thumb": "merch/thumbs/printify-ziphoodie-person-back.jpg"
+  },
+  "printify-tank-front.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "bytes": 47784,
+    "thumb": "merch/thumbs/printify-tank-front.jpg"
   }
 }
