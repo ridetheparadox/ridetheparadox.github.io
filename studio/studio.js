@@ -23,6 +23,7 @@
   let targetY = y;
   let targetX = 0;
   let mouseX = 0;
+  let targetPointerY = 0, pointerY = 0;
   let frameId = 0;
   let lastFrame = 0;
   let scenes = [];
@@ -54,9 +55,10 @@
     frameId = 0;
     const dt = clamp(time - (lastFrame || time - 16), 1, 64);
     lastFrame = time;
-    const ease = 1 - Math.exp(-dt / 90);
+    const ease = 1 - Math.exp(-dt / 155);
     y = paused ? targetY : y + (targetY - y) * ease;
     mouseX += (targetX - mouseX) * ease;
+    pointerY += (targetPointerY - pointerY) * ease;
     progressBar.style.transform = `scaleX(${clamp(targetY / Math.max(1, pageHeight - viewport))})`;
     let chapter = chapters[0];
     for (const item of chapters) if (targetY + viewport * 0.45 >= item.top) chapter = item;
@@ -95,17 +97,24 @@
             dy = state.progress * 30;
           } else dy = -state.progress * 115 * mobileFactor;
         }
-        layer.element.style.transform = `translate3d(${dx.toFixed(2)}px,${dy.toFixed(2)}px,0) scale(${scale.toFixed(4)})`;
+        const visual = layer.element.matches('.hero-image,.chapter-media,.film-card,.cathedral-film');
+        const center = clamp((y + viewport * .5 - scene.top) / Math.max(1, scene.height), 0, 1) - .5;
+        const tiltY = visual ? (mouseX * 2.4 + center * 3) * mobileFactor : 0;
+        const tiltX = visual ? (-pointerY * 1.8 - center * 2) * mobileFactor : 0;
+        if (visual) { dx += mouseX * 12 * mobileFactor; dy += pointerY * 8 * mobileFactor; }
+        layer.element.style.transform = `translate3d(${dx.toFixed(2)}px,${dy.toFixed(2)}px,0) rotateX(${tiltX.toFixed(3)}deg) rotateY(${tiltY.toFixed(3)}deg) scale(${scale.toFixed(4)})`;
       }
     }
-    if (Math.abs(targetY - y) > 0.15 || Math.abs(targetX - mouseX) > 0.002) requestFrame();
+    if (Math.abs(targetY - y) > 0.15 || Math.abs(targetX - mouseX) > 0.002 || Math.abs(targetPointerY - pointerY) > 0.002) requestFrame();
   }
   window.addEventListener('scroll', () => { targetY = window.scrollY; requestFrame(); }, { passive: true });
   window.addEventListener('pointermove', event => {
     if (event.pointerType !== 'mouse' || narrow.matches || paused) return;
     targetX = (event.clientX / window.innerWidth - 0.5) * 2;
+    targetPointerY = (event.clientY / window.innerHeight - 0.5) * 2;
     requestFrame();
   }, { passive: true });
+  document.documentElement.addEventListener('pointerleave', () => { targetX = 0; targetPointerY = 0; requestFrame(); });
   window.addEventListener('resize', measure, { passive: true });
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(document.body);
   document.fonts?.ready.then(measure);

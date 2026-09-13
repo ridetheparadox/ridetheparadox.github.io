@@ -33,3 +33,13 @@
 .hero-beach .hero-copy{top:34%}.hero-beach .hero-play{bottom:18%}
 .subject8-poster{margin:0;padding:0 var(--gutter) 80px;background:var(--bg)}.subject8-poster img{width:min(100%,1080px);height:auto;margin:auto}.subject8-poster figcaption{max-width:1080px;margin:14px auto 0;color:var(--muted);font-size:12px}
 @media(max-width:700px){.hero-beach .hero-image{left:0;right:0;top:0;bottom:0}.hero-beach .hero-video{object-position:50% 40%}.hero-beach .hero-shade{background:linear-gradient(90deg,#080a0b88,transparent 95%),linear-gradient(0deg,#080a0bee 0%,#080a0b55 25%,#080a0b25 60%,#080a0b88)}.hero-beach .hero-copy{top:35%}.hero-beach .hero-annotation{top:20%}.hero-beach .hero-play{bottom:16%}.subject8-poster{padding:0 0 55px}.subject8-poster figcaption{padding:0 24px}}
+
+/* Cathedral film and restrained perspective: native scrolling stays accessible. */
+.cathedral-scene{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:6vw;padding:100px var(--gutter) 130px;min-height:105vh;background:#0d0c0f;perspective:1400px}
+.cathedral-atmosphere{position:absolute;inset:-15%;z-index:-1;background:radial-gradient(ellipse at 75% 45%,#b96d7940,transparent 52%),radial-gradient(ellipse at 20% 80%,#293c4538,transparent 50%);pointer-events:none}
+.cathedral-copy{position:relative;z-index:2}.cathedral-copy .eyebrow{color:#cfa5ac}.cathedral-copy h2{font-size:clamp(42px,5.8vw,100px);margin:26px 0 30px}.cathedral-copy h2 em{color:#d9b2ba}.cathedral-copy p{color:var(--muted);line-height:1.8}.cathedral-copy .text-link{margin-top:30px}
+.cathedral-film{margin:0;justify-self:center;width:min(100%,430px);position:relative}.cathedral-screen{display:block;padding:0;width:100%;aspect-ratio:9/16;position:relative;box-shadow:0 35px 90px #0009,0 0 55px #c6889514;overflow:hidden;background:#191216}.cathedral-screen video{width:100%;height:100%;object-fit:contain}.cathedral-film figcaption{margin-top:18px;color:var(--muted);font-size:12px}
+.hero-sticky,.chapter-sticky,.selected{perspective:1600px}.depth-layer{backface-visibility:hidden}.chapter-media{box-shadow:0 35px 100px #0007}.film-card{transform-origin:center 45%}
+@media(max-width:700px){.cathedral-scene{grid-template-columns:1fr;gap:40px;padding:65px 24px 80px;min-height:0}.cathedral-copy h2{font-size:clamp(42px,10vw,70px)}.cathedral-film{width:min(100%,380px)}.cathedral-copy p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.depth-layer{transform:none!important}}
+.motion-paused .depth-layer{transform:none!important}
