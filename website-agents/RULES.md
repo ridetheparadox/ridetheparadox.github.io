@@ -9,7 +9,7 @@
 > **Applies to:** Claude (Claude Code, cloud projects), Astra / Sol (OpenAI Codex), DeepSeek,
 > and any future model. Same rules, no exceptions by model.
 >
-> **Owner:** Edwin Aguirre (PARADOX). He holds final authority. Operators propose; he merges.
+> **Owner:** PARADOX. He holds final authority. Operators propose; he merges.
 
 ---
 
@@ -31,7 +31,7 @@ curated films, private pricing. It is a portfolio, not a blog and not a shop.
 ## 2. HARD RULES — never break these
 
 1. **A merge to `main` is a publish.** Both hosts deploy from `main` automatically. Therefore:
-   work on a branch, open a pull request, describe the change, and STOP. Edwin merges. No
+   work on a branch, open a pull request, describe the change, and STOP. PARADOX merges. No
    operator merges its own pull request, ever, even for a typo.
 2. **No public prices.** Pricing is private and by enquiry. Never add a price, a rate, a
    "from $" or a package tier anywhere on either site, including structured data.
@@ -77,7 +77,7 @@ curated films, private pricing. It is a portfolio, not a blog and not a shop.
    size-table regeneration and diff it. Do not decode or play video in your context; a byte
    count from the filesystem is the check.
 5. Open a pull request. Title: what changed. Body: why, what you verified, what you did not
-   verify, and anything Edwin must decide. Link the handoff entry.
+   verify, and anything PARADOX must decide. Link the handoff entry.
 6. Append an entry to `website-agents/HANDOFF.md` on the same branch (format below).
 7. Stop. Do not merge. Do not deploy. Do not touch Cloudflare or GitHub settings.
 

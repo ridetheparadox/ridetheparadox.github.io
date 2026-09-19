@@ -15,6 +15,6 @@ those, stop and say so.
 3. `website-agents/CREDIT_DISCIPLINE.md` — how not to burn the budget.
 
 **The one rule you cannot miss:** a merge to `main` publishes to the public internet on both
-hosts. Work on a branch, open a pull request, write your handoff entry, and stop. Edwin merges.
+hosts. Work on a branch, open a pull request, write your handoff entry, and stop. PARADOX merges.
 
 Applies to Claude, Astra / Sol (Codex), DeepSeek and any model that follows. Same rules.

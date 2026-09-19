@@ -11,7 +11,7 @@ Format for every entry:
 Task: one line, the owner's words.
 Changed: files touched, one line each.
 Verified: what was checked and how. What was NOT checked.
-Needs Edwin: any decision or approval still open.
+Needs PARADOX: any decision or approval still open.
 Cost: rough context used; the most expensive step.
 ```
 
@@ -24,6 +24,6 @@ Changed: added `AGENTS.md`, `CLAUDE.md`, `website-agents/RULES.md`, `website-age
 Verified: repo cloned read-only; both live addresses, the Formspree endpoint, the GA4 id, the
 liability limit, the worker's size table and the routes file confirmed from the files. Nothing
 decoded, nothing played.
-Needs Edwin: merge the pull request; then create the Claude project on this repo with the
+Needs PARADOX: merge the pull request; then create the Claude project on this repo with the
 one-line instruction in `CLAUDE.md`.
 Cost: small; the most expensive step was the initial clone (416 MB) which sits on D:\Website.

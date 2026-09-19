@@ -24,7 +24,7 @@ None of that was judgement work. All of it belongs to scripts.
 ## THE RULES — paste verbatim
 
 ```
-CREDIT DISCIPLINE — read before doing anything (ruled by Edwin, 2026-09-16)
+CREDIT DISCIPLINE — read before doing anything (ruled by PARADOX, 2026-09-16)
 
 On 2026-09-13 you spent almost the entire weekly budget in one day. The ledger shows why:
 two sessions that created 1,208 and 962 files by hand, a website session that validated
@@ -42,14 +42,14 @@ These rules exist so it never happens again.
    PASS/FAIL and read that line. A video file is never read into the conversation.
 
 3. TIMERS ONLY WHEN EDWIN ASKS, AND THEY FAIL LOUDLY. You never create a heartbeat,
-   scheduled task, loop or poll on your own. When Edwin asks for one ("check X every
+   scheduled task, loop or poll on your own. When PARADOX asks for one ("check X every
    hour tonight"), you may set it up, with these limits:
    - It does exactly the check he named. Each run reads the startup files, does the
      one check, writes a one-line result to the log, and closes. Nothing else.
    - Cap it: no more than one run per hour, no more than 12 runs before it needs
      his say-so to continue, and each run stops itself at 5 minutes.
    - If a run is rejected, blocked, times out or cannot do the check, it STOPS THE
-     WHOLE TIMER, deletes or disables it, and tells Edwin what failed and why. It
+     WHOLE TIMER, deletes or disables it, and tells PARADOX what failed and why. It
      never retries on its own and never keeps a broken timer alive.
    - Every timer is logged in the timer register (in this repository: a `Timers` section at the top of `website-agents/HANDOFF.md`) with its
      name, what it checks, when it started, who asked, and its cap. Anything running
