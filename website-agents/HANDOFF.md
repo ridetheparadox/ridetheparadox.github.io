@@ -35,3 +35,11 @@ Changed: root `index.html` and `studio/links/index.html` lead old bio traffic to
 Verified: desktop and mobile previews inspected; JS syntax and diff whitespace checked; 47 page references, 93 film paths, form endpoint, legal routes and offer links checked locally. No form submission, deployment or social profile edit.
 Needs PARADOX: review the local preview and diff; approve a pull request and later merge separately. This branch starts from pending `claude/website-agent-rules` (PR #2).
 Cost: modest context; visual inspection and the local repository clone were the largest steps. JEV code gate CLEAR (0 block, 0 review; 17,521 input tokens), report `portal.patch.jev-prgate.md` in the local review folder.
+
+## 2026-09-24 — GPT-6 Sol — sol/unified-portal — REVIEW READY
+Task: Simplify the first-film acknowledgement; keep the exact 25% off with code offer in the site test; prepare a shareable GitHub Pages link.
+Changed: `studio/index.html` replaces three required film checkboxes with one age and Terms of Use acknowledgement, while keeping the AI notice and a privacy link.
+Changed: `studio/portal.css` styles the privacy link in the film dialog. The local `work/check_site.py` test now checks the simplified film form and the exact Runway offer text.
+Verified: first-film dialog inspected in a clean browser origin; unchecked form blocked entry, and close dismissed the dialog. Static test passes (47 references, 93 film paths, exact offer text), JS syntax and diff whitespace pass. JEV code review CLEAR (0 block, 0 review; 9,627 input tokens). No form submission, analytics change, deployment, or social profile edit.
+Needs PARADOX: approve the pull request and later merge as separate public actions. The proposed public share URL is https://ridetheparadox.github.io/ after deployment. Analytics implementation needs a specific ruling because the 2026-09-20 no-observability instruction conflicts with this request; the user was asked to clarify.
+Cost: modest context; browser interaction and the JEV code gate were the largest steps.
