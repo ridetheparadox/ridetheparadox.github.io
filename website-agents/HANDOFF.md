@@ -51,3 +51,10 @@ Changed: `studio/cookies.html` and `studio/privacy.html` now disclose optional G
 Verified: local site test checks 47 references, 93 film paths, all five portal identifiers, and the exact Runway "25% off with code PARADOX25" offer. Node analytics test checks no GA4 script on Essential only, portal event after opt-in, and no new event after revocation. JS syntax and diff whitespace pass. The signed-in PARADOX GA4 property shows recent traffic, but an email-preferences prompt prevented inspecting account settings without changing preferences. JEV code review CLEAR; decision review findings resolved and graded. No form submission or public deployment.
 Needs PARADOX: review this pull request and merge it personally after pending rules PR #2. Once deployed, share https://ridetheparadox.github.io/ on socials; it redirects to the unified studio portal. GA4 event counts can be checked after real consenting visits.
 Cost: moderate context; legal research, browser account inspection, and JEV gates were the largest steps.
+Done: Local unified portal, simplified film acknowledgement, consented GA4 portal events, and approved legal disclosures are ready for PR review.
+Proof: `python work/check_site.py` PASS; `node work/analytics_test.js` PASS; both JS syntax checks PASS; `git diff --check` PASS; JEV code review CLEAR.
+PARADOX next:
+1. Merge the pending website-rules PR #2.
+2. Review and merge this unified-portal PR when ready to publish.
+Open questions: The GA4 account's retention setting was not verified because an email-preferences prompt blocks the admin screen; no account preference was changed.
+Context cost: moderate; account inspection and JEV review were the largest steps.
