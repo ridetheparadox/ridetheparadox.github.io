@@ -12,10 +12,8 @@ var PDX_META_PIXEL_ID = '';   // e.g. '1234567890123' — Meta Pixel
 
 /* ---------------------------------------------------------------------------
  * CONSENT
- * The main site already asks, and stores the answer in localStorage as
- * `pdxCookies` = 'all' | 'essential'. Analytics loads ONLY on 'all'. That key is
- * shared across the whole netlify.app origin, so someone who accepted on the
- * main site is not asked again here.
+ * The main site asks and stores the answer in localStorage as
+ * `pdxCookies` = 'all' | 'essential'. Analytics loads ONLY on 'all'.
  *
  * The /links page has no gate by design — cold social traffic will not sit
  * through one — so it shows a small dismissable bar instead of a wall.
@@ -49,7 +47,14 @@ var PDX_META_PIXEL_ID = '';   // e.g. '1234567890123' — Meta Pixel
       window.dataLayer = window.dataLayer || [];
       window.gtag = function () { window.dataLayer.push(arguments); };
       window.gtag('js', new Date());
-      window.gtag('config', PDX_GA4_ID);
+      window.gtag('consent', 'default', {
+        analytics_storage: 'granted', ad_storage: 'denied',
+        ad_user_data: 'denied', ad_personalization: 'denied'
+      });
+      window.gtag('config', PDX_GA4_ID, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
     }
 
     if (PDX_META_PIXEL_ID) {
@@ -80,6 +85,7 @@ var PDX_META_PIXEL_ID = '';   // e.g. '1234567890123' — Meta Pixel
   }
 
   function trackOutbound(e) {
+    if (readConsent() !== 'all') return;
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var href = a.href || '';
@@ -103,6 +109,21 @@ var PDX_META_PIXEL_ID = '';   // e.g. '1234567890123' — Meta Pixel
   }
 
   document.addEventListener('click', trackOutbound, true);
+
+  /* Stable portal names also cover the internal project-enquiry card. */
+  function trackPortal(e) {
+    if (readConsent() !== 'all' || !window.gtag) return;
+    var a = e.target && e.target.closest ? e.target.closest('a[data-portal]') : null;
+    if (!a) return;
+    var portal = a.getAttribute('data-portal');
+    if (!/^(start_project|subject_8|shop|openart|runway)$/.test(portal)) return;
+    try {
+      window.gtag('event', 'portal_' + portal, {
+        transport_type: 'beacon'
+      });
+    } catch (err) { /* never let analytics break a link */ }
+  }
+  document.addEventListener('click', trackPortal, true);
 
   /* --------------------------------------------------------------------- */
   /* The consent bar — only ever shown when no answer is stored yet.        */
