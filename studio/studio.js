@@ -30,6 +30,19 @@
   let chapters = [];
   let viewport = window.innerHeight;
   let pageHeight = document.documentElement.scrollHeight;
+  const codeButton = $('.portal-copy-code');
+  if (codeButton) {
+    const codeStatus = $('.portal-code-status');
+    codeButton.addEventListener('click', async () => {
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText('PARADOX25');
+        codeStatus.textContent = 'Code copied.';
+      } catch {
+        codeStatus.textContent = 'Code: PARADOX25. Select it above to copy.';
+      }
+    });
+  }
   const motionButton = $('#motion-toggle');
   const progressBar = $('.scroll-progress span');
   const journeyLabel = $('.journey-position');
