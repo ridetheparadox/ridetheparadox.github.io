@@ -1,0 +1,35 @@
+/* Destinations at the beginning of the studio journey. */
+.header-explore{display:none}
+.portals{position:relative;background:#0b1012;border-top:1px solid #ffffff20;border-bottom:1px solid #ffffff20}
+.portals:before{content:"";position:absolute;inset:0 0 auto;height:220px;pointer-events:none;background:radial-gradient(ellipse at 75% 0%,#34515925,transparent 70%)}
+.portals-heading{position:relative;display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:52px}
+.portals-heading .eyebrow{color:#a9bec1}
+.portals-heading h2{font-size:clamp(46px,5.3vw,86px);margin-top:23px;line-height:.92}
+.portals-heading h2 em{font-size:1.2em;color:#c6dfe2}
+.portals-heading>p{color:#aebdbd;font-size:16px;line-height:1.7;padding-bottom:4px}
+.portals-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:#ffffff2b;border:1px solid #ffffff2b}
+.portal-card{grid-column:span 2;min-height:245px;background:#10191d;padding:29px 31px;display:flex;flex-direction:column;align-items:flex-start;position:relative;transition:background .25s ease}
+a.portal-card:hover,.portal-card:focus-within{background:#18292d}
+.portal-card .eyebrow{color:#9eb7ba;font-size:10px;letter-spacing:.16em}
+.portal-card-title{font-size:clamp(22px,2.1vw,34px);letter-spacing:-.045em;line-height:1.13;margin-top:40px;display:flex;justify-content:space-between;gap:14px;width:100%}
+.portal-card-title span{font-size:23px;color:#b8d6d9;transition:transform .2s ease}
+a.portal-card:hover .portal-card-title span,.portal-card-title:hover span{transform:translate(3px,-3px)}
+.portal-card-detail{display:block;margin-top:16px;color:#b3c0bf;font-size:13px;line-height:1.6;max-width:345px}
+.portal-card-detail strong{font-weight:600;color:#f2f6f4;white-space:nowrap}
+.portal-project{grid-column:span 3;background:#c9dadc;color:#102125}
+.portals-grid>.portal-card:nth-child(2){grid-column:span 3}
+.portal-project:hover{background:#d9e7e8!important}
+.portal-project .eyebrow,.portal-project .portal-card-title span,.portal-project .portal-card-detail{color:#3d5d62}
+.portal-project .portal-card-title{font-size:clamp(28px,2.8vw,44px)}
+.portal-runway{grid-column:span 2}
+.portal-runway .portal-card-title{max-width:100%;color:var(--ink)}
+.portal-copy-code{margin-top:16px;border:1px solid #a6c0c4;padding:8px 12px;color:#d7e8e9;font-size:11px;letter-spacing:.08em;min-height:38px}
+.portal-copy-code:hover{background:#c9dadc;color:#102125}
+.portal-code-status{font-size:11px;color:#c4dcdf;margin-top:7px}
+.portal-code-status:empty{display:none}
+@media(max-width:1000px){.portals-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portal-card,.portal-project,.portal-runway,.portals-grid>.portal-card:nth-child(2){grid-column:span 1}.portal-card{min-height:225px}.portal-project{grid-column:span 2;min-height:210px}.portal-runway{min-height:225px}}
+@media(max-width:700px){.site-header{gap:11px}.header-explore{display:flex;font-size:12px;align-items:center;gap:5px;color:#d6e7e8;margin-left:auto}.header-enquiry{gap:5px}.header-enquiry span{font-size:17px}.portals{padding-top:64px;padding-bottom:68px}.portals-heading{display:block;margin-bottom:30px}.portals-heading h2{font-size:clamp(41px,11vw,64px);margin-top:15px}.portals-heading>p{margin-top:20px;font-size:14px}.portals-grid{display:block;background:none;border:0}.portal-card,.portal-project,.portal-runway{min-height:0;margin-bottom:1px;padding:23px 22px;background:#142025}.portal-project{background:#c9dadc}.portal-card-title,.portal-project .portal-card-title{font-size:26px;margin-top:15px}.portal-card-detail{font-size:12px;margin-top:10px}.portal-runway{padding-bottom:24px}.portal-copy-code{margin-top:15px}.hero-bottom .scroll-cue{font-size:11px}}
+@media(max-width:380px){.header-explore{font-size:11px}.header-enquiry{font-size:11px}.wordmark img{width:105px}.portal-card-title,.portal-project .portal-card-title{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.portal-card,.portal-card-title span{transition:none}}
+.entry-dialog .entry-privacy{color:#aebdbc;font-size:12px;line-height:1.6;margin:0}
+.entry-dialog .entry-privacy a{text-decoration:underline;text-underline-offset:3px}
