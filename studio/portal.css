@@ -17,7 +17,7 @@ a.portal-card:hover .portal-card-title span,.portal-card-title:hover span{transf
 .portal-card-detail{display:block;margin-top:16px;color:#b3c0bf;font-size:13px;line-height:1.6;max-width:345px}
 .portal-card-detail strong{font-weight:600;color:#f2f6f4;white-space:nowrap}
 .portal-project{grid-column:span 3;background:#c9dadc;color:#102125}
-.portals-grid>.portal-card:nth-child(2){grid-column:span 3}
+.portals-grid>.portal-card[data-portal="subject_8"]{grid-column:span 3}
 .portal-project:hover{background:#d9e7e8!important}
 .portal-project .eyebrow,.portal-project .portal-card-title span,.portal-project .portal-card-detail{color:#3d5d62}
 .portal-project .portal-card-title{font-size:clamp(28px,2.8vw,44px)}
@@ -27,9 +27,27 @@ a.portal-card:hover .portal-card-title span,.portal-card-title:hover span{transf
 .portal-copy-code:hover{background:#c9dadc;color:#102125}
 .portal-code-status{font-size:11px;color:#c4dcdf;margin-top:7px}
 .portal-code-status:empty{display:none}
-@media(max-width:1000px){.portals-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portal-card,.portal-project,.portal-runway,.portals-grid>.portal-card:nth-child(2){grid-column:span 1}.portal-card{min-height:225px}.portal-project{grid-column:span 2;min-height:210px}.portal-runway{min-height:225px}}
+@media(max-width:1000px){.portals-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portal-card,.portal-project,.portal-runway,.portals-grid>.portal-card[data-portal="subject_8"]{grid-column:span 1}.portal-card{min-height:225px}.portal-project{grid-column:span 2;min-height:210px}.portal-runway{min-height:225px}}
 @media(max-width:700px){.site-header{gap:11px}.header-explore{display:flex;font-size:12px;align-items:center;gap:5px;color:#d6e7e8;margin-left:auto}.header-enquiry{gap:5px}.header-enquiry span{font-size:17px}.portals{padding-top:64px;padding-bottom:68px}.portals-heading{display:block;margin-bottom:30px}.portals-heading h2{font-size:clamp(41px,11vw,64px);margin-top:15px}.portals-heading>p{margin-top:20px;font-size:14px}.portals-grid{display:block;background:none;border:0}.portal-card,.portal-project,.portal-runway{min-height:0;margin-bottom:1px;padding:23px 22px;background:#142025}.portal-project{background:#c9dadc}.portal-card-title,.portal-project .portal-card-title{font-size:26px;margin-top:15px}.portal-card-detail{font-size:12px;margin-top:10px}.portal-runway{padding-bottom:24px}.portal-copy-code{margin-top:15px}.hero-bottom .scroll-cue{font-size:11px}}
 @media(max-width:380px){.header-explore{font-size:11px}.header-enquiry{font-size:11px}.wordmark img{width:105px}.portal-card-title,.portal-project .portal-card-title{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.portal-card,.portal-card-title span{transition:none}}
 .entry-dialog .entry-privacy{color:#aebdbc;font-size:12px;line-height:1.6;margin:0}
 .entry-dialog .entry-privacy a{text-decoration:underline;text-underline-offset:3px}
+
+/* Featured digital product (The Subject 8 Reset) - full-width first card, same palette as the portals */
+.portal-product{grid-column:span 6;min-height:0;flex-direction:row;align-items:center;gap:38px;padding:28px 31px;overflow:hidden}
+.portal-product-cover{width:250px;height:324px;flex:none;object-fit:cover;object-position:center top;box-shadow:0 18px 40px #0008;transition:transform .6s ease}
+a.portal-product:hover .portal-product-cover{transform:scale(1.03)}
+.portal-product-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.portal-product .portal-card-title{margin-top:18px}
+.portal-product-sub{color:#c6dfe2;font-size:15px;letter-spacing:.02em;margin-top:6px}
+.portal-product .portal-card-detail{max-width:620px}
+.portal-product-price{margin-top:18px;display:flex;align-items:baseline;gap:10px;font-size:26px;letter-spacing:-.03em}
+.portal-product-price s{color:#7f9396;font-size:18px}
+.portal-product-price strong{color:#fff;font-weight:600}
+.portal-product-tag{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#0b1012;background:#c6dfe2;padding:4px 8px;border-radius:2px}
+.portal-product-buy{margin-top:18px;display:inline-block;border:1px solid #c6dfe2;color:#fff;padding:11px 26px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;transition:background .25s ease,color .25s ease}
+a.portal-product:hover .portal-product-buy{background:#c6dfe2;color:#0b1012}
+@media (max-width:760px){.portal-product{flex-direction:column;align-items:flex-start;gap:24px;padding:24px 22px}.portal-product-cover{width:200px;height:259px}}
+
+@media(max-width:1000px){.portals-grid>.portal-product{grid-column:1/-1}}
