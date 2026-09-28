@@ -51,3 +51,13 @@ a.portal-product:hover .portal-product-buy{background:#c6dfe2;color:#0b1012}
 @media (max-width:760px){.portal-product{flex-direction:column;align-items:flex-start;gap:24px;padding:24px 22px}.portal-product-cover{width:200px;height:259px}}
 
 @media(max-width:1000px){.portals-grid>.portal-product{grid-column:1/-1}}
+
+/* Lift the workbook: featured row above the portals heading + 'New' link in the hero (2026-09-28) */
+.portals-featured{margin-bottom:56px}
+.portals-featured>.portal-product{grid-column:1/-1}
+#reset{scroll-margin-top:90px}
+.hero-offer{display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:10px 16px 10px 10px;border:1px solid #c6dfe266;background:#0b1012b3;backdrop-filter:blur(6px);color:#e8f1f2;font-size:13px;letter-spacing:.02em;text-decoration:none;transition:background .25s ease,border-color .25s ease}
+.hero-offer:hover{background:#18292dcc;border-color:#c6dfe2}
+.hero-offer-new{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#0b1012;background:#c6dfe2;padding:4px 8px}
+.hero-offer-price{color:#fff;font-weight:600}.hero-offer-price s{color:#8fa3a6;font-weight:400;margin-right:4px}
+@media (max-width:700px){.hero-offer{font-size:12px;gap:9px;flex-wrap:wrap;max-width:100%}}
