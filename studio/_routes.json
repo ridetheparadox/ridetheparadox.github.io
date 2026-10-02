@@ -2,7 +2,8 @@
   "version": 1,
   "include": [
     "/clips/*",
-    "/reset/*"
+    "/reset/*",
+    "/wallpapers/*"
   ],
   "exclude": []
 }
