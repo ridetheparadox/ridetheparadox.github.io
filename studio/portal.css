@@ -61,3 +61,7 @@ a.portal-product:hover .portal-product-buy{background:#c6dfe2;color:#0b1012}
 .hero-offer-new{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#0b1012;background:#c6dfe2;padding:4px 8px}
 .hero-offer-price{color:#fff;font-weight:600}.hero-offer-price s{color:#8fa3a6;font-weight:400;margin-right:4px}
 @media (max-width:700px){.hero-offer{font-size:12px;gap:9px;flex-wrap:wrap;max-width:100%}}
+
+/* The Subject 8 Reset moved into the portals grid as card 06; the wallpaper pack leads the featured row (2026-10-02) */
+.portals-grid>.portal-reset{grid-column:1/-1;min-height:0}
+.portal-reset .portal-card-detail s{color:#7f9396}.portal-reset .portal-card-detail strong{color:#fff}
