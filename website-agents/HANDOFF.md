@@ -68,3 +68,12 @@ Verified: `node --check studio/ads/ads.js`; every local path in the page exists 
 Media: `studio/ads/media/EMBER-AND-OAK_15s_9x16.mp4` (15,541,491 bytes) and `EMBER-AND-OAK_poster_9x16.jpg` (220,864 bytes), copied byte-identical from PARADOX's folder `C:\PARADOX\BUSINESS\SMALL BUSINESS ADS\Ember and Oak (spec 2026-10-08)\` after PARADOX named it in the thread. Served as static files outside `/clips/`, so `VIDEO_SIZES` and `_routes.json` are untouched. The other two sample slots are "Coming soon".
 Needs PARADOX: check the clip on the branch preview, then merge; a Meta Pixel would need a separate ruling plus cookie/privacy updates.
 Cost: small; two headless screenshots were the largest step.
+
+## 2026-10-08 — Claude — claude/ads-enquiry-event — PR READY
+Task: Count quote requests from the /ads/ page so Google Ads can see which ads bring enquiries. PARADOX approved in the thread ("do 1 and 2").
+Changed: `studio/ads/ads.js` only. After Formspree confirms a submission, and only when `pdxCookies` is `all`, it sends GA4 event `generate_lead` with `lead_source: ads_page`. No form fields are sent. No new tracker, pixel or script.
+Verified: `node --check`; headless Chromium with Formspree intercepted (nothing reached Formspree): consent `all` fires exactly one `generate_lead`, consent `essential` fires none, success message unchanged.
+Legal: privacy and cookie pages already disclose GA4 "site interactions" and that form fields are not sent; not edited.
+Needs PARADOX: merge; then in GA4 mark `generate_lead` as a key event, link GA4 to Google Ads and import it as a conversion.
+Also in flight: two more spec ads (Halden water bottle, Northside Barber Co.) requested from the PRODUCTION session for the two "Coming soon" slots; they arrive as a separate PR.
+Cost: small.
