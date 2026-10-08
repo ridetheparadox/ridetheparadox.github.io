@@ -68,3 +68,11 @@ Verified: `node --check studio/ads/ads.js`; every local path in the page exists 
 Media: `studio/ads/media/EMBER-AND-OAK_15s_9x16.mp4` (15,541,491 bytes) and `EMBER-AND-OAK_poster_9x16.jpg` (220,864 bytes), copied byte-identical from PARADOX's folder `C:\PARADOX\BUSINESS\SMALL BUSINESS ADS\Ember and Oak (spec 2026-10-08)\` after PARADOX named it in the thread. Served as static files outside `/clips/`, so `VIDEO_SIZES` and `_routes.json` are untouched. The other two sample slots are "Coming soon".
 Needs PARADOX: check the clip on the branch preview, then merge; a Meta Pixel would need a separate ruling plus cookie/privacy updates.
 Cost: small; two headless screenshots were the largest step.
+
+## 2026-10-08 — Claude — claude/ads-quote-form — PR READY
+Task: make the /ads/ quote form tell PARADOX what kind of ad a lead wants and roughly what they can spend, so leads can be quoted.
+Ruling: PARADOX chose "Ranges + ad types" on 2026-10-08 after being told the form fields are locked and that budget ranges come close to the no-public-prices rule. These are the visitor's budget ranges, not PARADOX prices or package tiers. The dollar figures are the defaults Claude proposed; PARADOX can change them.
+Changed: `studio/ads/index.html` only. "What are we making?" (`service`, still required) now lists ad types: Product ad / online store; Restaurant, café or food; Local service; Real estate or venue; App, software or online business; Event or launch; Something else. "Budget" (`budget`) is now a required dropdown: Under $500, $500–1,500, $1,500–5,000, $5,000+, Not sure yet. Field names and the Formspree address are unchanged. The main studio form is untouched.
+Verified: headless Chromium at 390 wide, both selects required, no JS errors, no horizontal overflow; Formspree requests were intercepted and none was sent. No test submission.
+Needs PARADOX: check the form on the branch preview, then merge. Independent of PR #10; if both are open, either can merge first (this entry may need a trivial HANDOFF.md conflict fix).
+Cost: small.
