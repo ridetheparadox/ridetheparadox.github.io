@@ -1,5 +1,5 @@
 /* PARADOX ads landing page.
- * Sample videos load only when on screen and stay as posters on reduced motion or data-saver.
+ * Sample videos load only when on screen and stay as posters on reduced motion, data-saver or a failed load.
  * The enquiry form posts to the same Formspree endpoint as the studio page.
  * Analytics follows the studio's consent: GA4 loads only after "Allow analytics". */
 (() => {
@@ -17,7 +17,6 @@
     const probe = new Image();
     probe.onerror = () => showFallback(video);
     probe.src = video.getAttribute('poster');
-    video.addEventListener('error', () => showFallback(video));
   }
   if (!reduceMotion && !saveData && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {

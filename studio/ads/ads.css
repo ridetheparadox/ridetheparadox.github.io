@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;650;700&family=Instrument+Serif:ital@0;1&display=swap');
 /* PARADOX ads landing page. Self-contained: shares the studio's tokens, not its stylesheet. */
 :root{color-scheme:dark;--bg:#080a0b;--panel:#101415;--ink:#eceeea;--muted:#a2aaa9;--line:#ffffff26;--accent:#bdd4d9;--gutter:clamp(16px,5vw,88px);font-family:'DM Sans',Arial,sans-serif;font-synthesis:none}
-*{box-sizing:border-box}
+*{box-sizing:border-box}[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.55;overflow-x:hidden}
 button,input,select,textarea{font:inherit}button{color:inherit;cursor:pointer;border:0;background:none}
