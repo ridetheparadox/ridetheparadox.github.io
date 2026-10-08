@@ -58,3 +58,13 @@ PARADOX next:
 2. Review and merge this unified-portal PR when ready to publish.
 Open questions: The GA4 account's retention setting was not verified because an email-preferences prompt blocks the admin screen; no account preference was changed.
 Context cost: moderate; account inspection and JEV review were the largest steps.
+
+## 2026-10-08 — Claude — claude/ads-landing-page — PR READY
+Task: Concept 1 from the ads strategy: a separate landing page for paid-ad traffic that shows Paradox makes short ads for any business, not only sci-fi. PARADOX: "dont touch the main website".
+Changed: new files only, `studio/ads/index.html`, `studio/ads/ads.css`, `studio/ads/ads.js`. No existing site file edited; homepage, films, gate, legal pages, sitemap, worker and collection untouched.
+Form: copied byte for byte from `studio/index.html` (same Formspree endpoint and fields); only the privacy/terms links gained `../`. The email subject reads "PARADOX ADS ENQUIRY" so ad leads are recognisable. No test submission.
+Analytics: same consent gate and `links/analytics.js` as the studio page; no new tracker or pixel.
+Verified: `node --check studio/ads/ads.js`; every local path in the page exists except the two pending sample files; form diff identical; headless Chromium at 1440 and 390 wide, no horizontal overflow, no JS errors.
+Pending media: `studio/ads/media/ember-oak-coffee.mp4` and `.jpg`, a photoreal spec ad for a fictional coffee shop requested from the PRODUCTION session on PARADOX's instruction. Until they exist the page shows "In production" cards. The other two sample slots are "Coming soon".
+Needs PARADOX: approve the sample files by name; decide whether to merge before or after samples exist (recommended after); a Meta Pixel would need a separate ruling plus cookie/privacy updates.
+Cost: small; two headless screenshots were the largest step.
