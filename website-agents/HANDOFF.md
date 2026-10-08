@@ -75,5 +75,5 @@ Changed: `studio/ads/ads.js` only. After Formspree confirms a submission, and on
 Verified: `node --check`; headless Chromium with Formspree intercepted (nothing reached Formspree): consent `all` fires exactly one `generate_lead`, consent `essential` fires none, success message unchanged.
 Legal: privacy and cookie pages already disclose GA4 "site interactions" and that form fields are not sent; not edited.
 Needs PARADOX: merge; then in GA4 mark `generate_lead` as a key event, link GA4 to Google Ads and import it as a conversion.
-Also in flight: two more spec ads (Halden water bottle, Northside Barber Co.) requested from the PRODUCTION session for the two "Coming soon" slots; they arrive as a separate PR.
+Samples (added to this branch 2026-10-08 evening): `studio/ads/media/HALDEN_15s_9x16.mp4` (14,234,618 bytes), `HALDEN_poster_9x16.jpg` (196,914), `NORTHSIDE-BARBER-CO_15s_9x16.mp4` (14,454,767), `NORTHSIDE-BARBER-CO_poster_9x16.jpg` (159,510), copied byte-identical from PARADOX's `C:\PARADOX\BUSINESS\SMALL BUSINESS ADS\Halden (spec 2026-10-08)\` and `...\Northside Barber Co (spec 2026-10-08)\`. Both folder ledgers confirm these are the final DaVinci-graded cuts (Northside after the owner's clipper-macro cut). They replace the two "Coming soon" cards; the leftover "In production" label now reads "Sample ad".
 Cost: small.
