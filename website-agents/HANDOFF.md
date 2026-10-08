@@ -65,6 +65,6 @@ Changed: new files only, `studio/ads/index.html`, `studio/ads/ads.css`, `studio/
 Form: copied byte for byte from `studio/index.html` (same Formspree endpoint and fields); only the privacy/terms links gained `../`. The email subject reads "PARADOX ADS ENQUIRY" so ad leads are recognisable. No test submission.
 Analytics: same consent gate and `links/analytics.js` as the studio page; no new tracker or pixel.
 Verified: `node --check studio/ads/ads.js`; every local path in the page exists except the two pending sample files; form diff identical; headless Chromium at 1440 and 390 wide, no horizontal overflow, no JS errors.
-Pending media: `studio/ads/media/ember-oak-coffee.mp4` and `.jpg`, a photoreal spec ad for a fictional coffee shop requested from the PRODUCTION session on PARADOX's instruction. Until they exist the page shows "In production" cards. The other two sample slots are "Coming soon".
-Needs PARADOX: approve the sample files by name; decide whether to merge before or after samples exist (recommended after); a Meta Pixel would need a separate ruling plus cookie/privacy updates.
+Media: `studio/ads/media/EMBER-AND-OAK_15s_9x16.mp4` (15,541,491 bytes) and `EMBER-AND-OAK_poster_9x16.jpg` (220,864 bytes), copied byte-identical from PARADOX's folder `C:\PARADOX\BUSINESS\SMALL BUSINESS ADS\Ember and Oak (spec 2026-10-08)\` after PARADOX named it in the thread. Served as static files outside `/clips/`, so `VIDEO_SIZES` and `_routes.json` are untouched. The other two sample slots are "Coming soon".
+Needs PARADOX: check the clip on the branch preview, then merge; a Meta Pixel would need a separate ruling plus cookie/privacy updates.
 Cost: small; two headless screenshots were the largest step.
