@@ -1,5 +1,6 @@
 /* PARADOX ads landing page.
- * Sample videos load only when on screen and stay as posters on reduced motion, data-saver or a failed load.
+ * Sample videos load only when on screen. On reduced motion, data-saver or blocked autoplay they stay as posters
+ * with tap-to-play controls; a missing poster shows the sample's fallback card.
  * The enquiry form posts to the same Formspree endpoint as the studio page.
  * Analytics follows the studio's consent: GA4 loads only after "Allow analytics",
  * and a sent enquiry is counted as a `generate_lead` event without any form fields. */
@@ -14,18 +15,27 @@
   const saveData = navigator.connection?.saveData === true;
   const videos = [...document.querySelectorAll('.sample-video')];
   const showFallback = video => { video.hidden = true; video.parentElement.querySelector('.sample-fallback')?.classList.add('is-visible'); };
+  // When autoplay is off or blocked (reduced motion, data-saver, iPhone Low Power Mode), the poster
+  // gets native controls so the visitor can still tap to watch; nothing downloads until they do.
+  const tapToPlay = video => {
+    if (video.hidden || video.controls) return;
+    video.preload = 'none';
+    if (!video.getAttribute('src')) video.src = video.dataset.src;
+    video.controls = true;
+  };
   for (const video of videos) {
     const probe = new Image();
     probe.onerror = () => showFallback(video);
     probe.src = video.getAttribute('poster');
   }
-  if (!reduceMotion && !saveData && 'IntersectionObserver' in window) {
+  if (reduceMotion || saveData || !('IntersectionObserver' in window)) videos.forEach(tapToPlay);
+  else {
     const observer = new IntersectionObserver(entries => {
       for (const { target, isIntersecting } of entries) {
         if (target.hidden) continue;
         if (isIntersecting) {
           if (!target.src) target.src = target.dataset.src;
-          target.play().catch(() => {});
+          target.play().catch(error => { if (error?.name === 'NotAllowedError') tapToPlay(target); });
         } else target.pause();
       }
     }, { threshold: 0.35 });
