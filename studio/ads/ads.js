@@ -1,7 +1,8 @@
 /* PARADOX ads landing page.
  * Sample videos load only when on screen and stay as posters on reduced motion, data-saver or a failed load.
  * The enquiry form posts to the same Formspree endpoint as the studio page.
- * Analytics follows the studio's consent: GA4 loads only after "Allow analytics". */
+ * Analytics follows the studio's consent: GA4 loads only after "Allow analytics",
+ * and a sent enquiry is counted as a `generate_lead` event without any form fields. */
 (() => {
   'use strict';
   const $ = selector => document.querySelector(selector);
@@ -51,6 +52,8 @@
       const response = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' }, signal: controller.signal });
       if (!response.ok) throw new Error('Delivery not confirmed');
       form.reset();
+      // Count the enquiry in GA4 only after analytics consent; no form fields are sent.
+      if (read('pdxCookies') === 'all') { try { window.gtag?.('event', 'generate_lead', { lead_source: 'ads_page', transport_type: 'beacon' }); } catch {} }
       status.textContent = 'Thank you. Your enquiry has been received. We’ll be in touch by email.';
     } catch {
       const contact = document.createElement('a');
