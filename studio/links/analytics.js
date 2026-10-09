@@ -47,9 +47,13 @@ var PDX_META_PIXEL_ID = '';   // e.g. '1234567890123' — Meta Pixel
       window.dataLayer = window.dataLayer || [];
       window.gtag = function () { window.dataLayer.push(arguments); };
       window.gtag('js', new Date());
+      /* The /ads/ page sets PDX_AD_MEASUREMENT when the visitor allowed ad measurement there,
+         so Google Ads can credit enquiries to the ad that was clicked. Ad personalization
+         stays denied everywhere; every other page keeps ad storage denied. */
+      var adMeasurement = window.PDX_AD_MEASUREMENT === true ? 'granted' : 'denied';
       window.gtag('consent', 'default', {
-        analytics_storage: 'granted', ad_storage: 'denied',
-        ad_user_data: 'denied', ad_personalization: 'denied'
+        analytics_storage: 'granted', ad_storage: adMeasurement,
+        ad_user_data: adMeasurement, ad_personalization: 'denied'
       });
       window.gtag('config', PDX_GA4_ID, {
         allow_google_signals: false,
