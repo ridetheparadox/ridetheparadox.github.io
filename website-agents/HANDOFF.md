@@ -7,7 +7,7 @@
 Format for every entry:
 
 ```
-## YYYY-MM-DD — <model> — <branch> — <status: PR OPEN | MERGED BY EDWIN | ABANDONED>
+## YYYY-MM-DD — <model> — <branch> — <status: PR OPEN | MERGED BY THE OWNER | ABANDONED>
 Task: one line, the owner's words.
 Changed: files touched, one line each.
 Verified: what was checked and how. What was NOT checked.

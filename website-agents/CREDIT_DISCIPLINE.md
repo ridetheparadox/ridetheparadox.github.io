@@ -41,7 +41,7 @@ These rules exist so it never happens again.
    hash-compare video or images yourself. Write or call a Python checker that prints
    PASS/FAIL and read that line. A video file is never read into the conversation.
 
-3. TIMERS ONLY WHEN EDWIN ASKS, AND THEY FAIL LOUDLY. You never create a heartbeat,
+3. TIMERS ONLY WHEN THE OWNER ASKS, AND THEY FAIL LOUDLY. You never create a heartbeat,
    scheduled task, loop or poll on your own. When PARADOX asks for one ("check X every
    hour tonight"), you may set it up, with these limits:
    - It does exactly the check he named. Each run reads the startup files, does the
