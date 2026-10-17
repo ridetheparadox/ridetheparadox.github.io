@@ -120,7 +120,7 @@ var PDX_META_PIXEL_ID = '';   // e.g. '1234567890123' — Meta Pixel
     var a = e.target && e.target.closest ? e.target.closest('a[data-portal]') : null;
     if (!a) return;
     var portal = a.getAttribute('data-portal');
-    if (!/^(start_project|subject_8|shop|openart|runway)$/.test(portal)) return;
+    if (!/^(start_project|subject_8|shop|tiktok_shop|openart|runway)$/.test(portal)) return;
     try {
       window.gtag('event', 'portal_' + portal, {
         transport_type: 'beacon'
