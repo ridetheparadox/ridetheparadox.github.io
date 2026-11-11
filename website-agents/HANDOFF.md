@@ -105,3 +105,10 @@ Verified (local, worker run in Node with Stripe and assets stubbed): paid sessio
 Not verified: the live Cloudflare deploy and a real payment end to end.
 Needs PARADOX: (1) in Cloudflare Pages settings add the secret `COURSE_FILE_KEY` (value is in a local file on the PC, outside this repo), Production; (2) merge; (3) one real test purchase. Until (1) and (2) are done a buyer would pay and then see an error page, so the Payment Link is not on the public site yet. No page on the site links to the course yet; the Buy buttons come with the new home page.
 Cost: small.
+
+## 2026-11-10 — Claude — claude/course-v2 — PR READY
+Task: PARADOX added two pages and a starter kit to the course, so the two paid files need replacing.
+Changed: `studio/course/_f/` only. Both encrypted files replaced in place (same names, same key `COURSE_FILE_KEY`), so the worker is untouched. The course is now 32 pages; the zip adds a "starter kit" folder of five text files.
+Verified: each new file decrypts back to the source file byte for byte with the key on the PC. Not verified: a real purchase.
+Needs PARADOX: merge. Also still open: `RESET_FILE_KEY` was not in the Cloudflare Production secrets on 2026-11-10; the key file on the PC decrypts the live Reset and wallpaper files, so adding it there fixes those two downloads.
+Cost: small.
