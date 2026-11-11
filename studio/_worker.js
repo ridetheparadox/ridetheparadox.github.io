@@ -149,7 +149,7 @@ async function handleCourse(request, env, url) {
     if (await paidSession(id, env, COURSE_SKU)) {
       const q = encodeURIComponent(id);
       return resetPage('Your course', `<div class="eyebrow">Thank you / Payment received</div><h1>Make Your Own AI Character Clip</h1>
-<p>Your course is ready. Start with the course itself. The second download adds the three fill-in blueprints and the three full prompts as text files you can copy.</p>
+<p>Your course is ready. Start with the course itself. The second download adds the three fill-in blueprints, the three full prompts and a starter kit for Claude, as text files you can copy.</p>
 <a class="btn" href="/course/file?n=1&session_id=${q}">Download the course</a><br>
 <a class="btn" href="/course/file?n=2&session_id=${q}">Download course + prompt files (zip)</a>
 <p style="margin-top:28px;font-size:13px">Keep this page to download again. Personal use only. Trouble downloading? Email <a href="mailto:ridetheparadox@gmail.com">ridetheparadox@gmail.com</a> with your receipt.</p>`, 200);
