@@ -3,7 +3,8 @@
   "include": [
     "/clips/*",
     "/reset/*",
-    "/wallpapers/*"
+    "/wallpapers/*",
+    "/course/*"
   ],
   "exclude": []
 }
