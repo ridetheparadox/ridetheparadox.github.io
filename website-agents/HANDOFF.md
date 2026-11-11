@@ -126,3 +126,11 @@ Verified (local, Edge via Playwright, files served from this branch): no script 
 Not verified: real phones. The Cloudflare preview is checked in the PR.
 Needs PARADOX: look at the preview, then merge. To go back after merging, revert the merge commit.
 Cost: medium.
+
+## 2026-11-10 — Claude — claude/privacy-cloudflare-analytics — PR READY
+Task: PARADOX chose to keep Cloudflare Web Analytics on the studio site and asked for the privacy page to say so. Cloudflare adds its cookie-free beacon to every page through a Cloudflare setting, not through this repo, so it runs whatever a visitor picks in the cookie panel.
+Changed: studio/privacy.html only, 5 lines. Added a "Visit statistics (all visitors)" item to "What we collect". Named Cloudflare in "How we use it" and "Who we share it with". Added one sentence to "Your choices" saying Essential only does not turn the beacon off. Updated the date to 10 November 2026. Every other line, including its original line ending, is unchanged.
+Not changed: the cookie policy (the beacon sets no cookies), the terms and every other page.
+Verified: the diff is limited to those 5 lines. The Cloudflare preview of the page is checked in the PR.
+Needs PARADOX: merge. This is plain-language text, not legal advice; the page's own note already says to have it reviewed by an attorney.
+Cost: low.
